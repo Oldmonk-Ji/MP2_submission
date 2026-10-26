@@ -1,0 +1,19 @@
+{
+  "method": "Finite calibration grid for the newly trained quadratic expert",
+  "modes": [
+    "raw",
+    "row_normalized"
+  ],
+  "alphas": [
+    0.05,
+    0.1,
+    0.2,
+    0.25,
+    0.35,
+    0.5
+  ],
+  "validation_role": "Reused development/selection set, not an unbiased generalization estimate.",
+  "selection": "Highest val count subject to held>=1477; adopt only val>760; then held count and smaller alpha.",
+  "test_opened": false,
+  "source_hash": "a090ba912f73f3f96357810e3eaa0712111330b0d1dedb5ce5b8412232d62d97"
+}

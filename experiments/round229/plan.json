@@ -1,0 +1,9 @@
+{
+  "method": "Append quadratic expert score/row-mean/contrast to the incumbent fusion; unchanged 200-tree recipe.",
+  "source_hash": "0cd4a71e32cbc61e4e9eaee227eb2f7fed2c0b43846212e9e3a95d4ba3b7ea51",
+  "model_source": "round227_quadratic.py",
+  "auxiliary_training": "3-fold OOF for full fusion; 2-fold fit-only OOF plus fit-only model for held",
+  "selection": "Single fixed architecture; held>=1477 before validation, val>760 required",
+  "prior_evidence": "Quadratic standalone held1467; fixed blend held1479 but val759",
+  "test_opened": false
+}

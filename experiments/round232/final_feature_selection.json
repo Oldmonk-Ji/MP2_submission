@@ -1,0 +1,10 @@
+{
+  "best_new": {
+    "arm": "quadratic_raw025",
+    "correct": 762,
+    "bundle": "experiments/round232/bundle"
+  },
+  "selected": "round232",
+  "test_target_fixed_before_test": true,
+  "test_used_for_selection": false
+}

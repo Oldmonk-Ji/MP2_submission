@@ -1,3 +1,30 @@
+# HKU DASE7506 MP2 — current research and frozen results
+
+## New frozen candidate: round232
+
+**Validation 762/798; internal held 1479/1582; 15.7468 MiB; 146 interface
+samples passed. Its TEST score has not been measured.**
+
+This candidate adds a TRAIN-only quadratic expert over whitened candidate
+residuals and shared semantic context to the previous pipeline. Raw score
+weight 0.25 was selected using validation development, subject to the held
+threshold. It requires no new pretrained model or external data.
+
+Candidate checkpoint: experiments/round232/bundle/.
+Guarded prediction entrypoint: experiments/round232/frozen/method/entrypoint.py.
+Use the reproduction commands below with round214 replaced by round232;
+expected validation is 762. All original scored artifacts are preserved.
+
+Remote Xeon 8352V reproduction: validation 762/798; 467 validation questions
+took 26.99 seconds in separate fresh prediction/scoring processes, four
+threads. This is a timing proxy, not a new test evaluation.
+
+The existing report PDF documents round214 and must be updated if round232
+becomes the final submission. No website submission is implied by this repo.
+See deployment/README.md for isolated remote reproduction and timing.
+
+---
+
 # HKU DASE7506 MP2 — frozen round214
 
 Select one of four supplied GSM8K candidate solutions using comparative

@@ -1,0 +1,22 @@
+{
+  "rationale": "Per-row score normalization discards confidence. Test raw magnitude and a top2 confidence override.",
+  "grids": {
+    "raw_blend": [
+      0,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "top2_gap": [
+      0.5,
+      1.0,
+      2.0,
+      3.0
+    ]
+  },
+  "selection": "Within each family choose only by aggregate FIT design accuracy; no HELD/VAL grid.",
+  "thresholds_selected_from_fit_only": true,
+  "test_opened": false,
+  "source_hash": "2ba8492ca98e585e0e1e3936bb821e7c0126800bdf87e34c555f76f7afe954aa"
+}

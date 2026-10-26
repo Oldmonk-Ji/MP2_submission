@@ -4,6 +4,7 @@ import hashlib
 import json
 import shutil
 import tarfile
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "release" / "MP2_submission"
@@ -35,13 +36,21 @@ def main():
     for p in (ROOT / "experiments/round214").rglob("*"):
         if p.is_file() and "__pycache__" not in p.parts:
             copy(p.relative_to(ROOT))
+    if (ROOT / "experiments/round232/frozen/completion_manifest.json").exists():
+        for p in (ROOT / "experiments/round232").rglob("*"):
+            if p.is_file() and "__pycache__" not in p.parts:
+                copy(p.relative_to(ROOT))
     for r in ("round22", "round77", "round210", "round216", "round218",
-              "round219", "round220", "round221", "round222", "round223", "round224"):
+              "round219", "round220", "round221", "round222", "round223", "round224",
+              "round225", "round226", "round227", "round228", "round229", "round230",
+              "round231", "deployment_20261027"):
         for p in (ROOT / "experiments" / r).glob("*.json"):
             if p.stat().st_size < 1_000_000:
                 copy(p.relative_to(ROOT))
-    for p in (ROOT / "deployment").glob("*.py"):
-        copy(p.relative_to(ROOT))
+    for p in (ROOT / "deployment").iterdir():
+        if p.is_file() and p.suffix in (".py", ".sh", ".md"):
+            copy(p.relative_to(ROOT))
+    (DEST / ".gitattributes").write_text("* -text\n", encoding="utf-8")
     (DEST / ".gitignore").write_text(
         ".venv/\n__pycache__/\n*.pyc\n.deploy-private/\nremote-work/\n"
         "DASE7506-MP2-main/code/data/gsm8k_*.jsonl\n"
@@ -113,6 +122,36 @@ The remote deployment deliberately omits every test input/reference file.
 AI assistance: the original pipeline/report disclosed Claude Code; subsequent
 research, packaging and deployment assistance used OpenAI Codex.
 """, encoding="utf-8")
+    if (ROOT / "experiments/round232/frozen/completion_manifest.json").exists():
+        readme = DEST / "README.md"
+        readme.write_text("""# HKU DASE7506 MP2 — current research and frozen results
+
+## New frozen candidate: round232
+
+**Validation 762/798; internal held 1479/1582; 15.7468 MiB; 146 interface
+samples passed. Its TEST score has not been measured.**
+
+This candidate adds a TRAIN-only quadratic expert over whitened candidate
+residuals and shared semantic context to the previous pipeline. Raw score
+weight 0.25 was selected using validation development, subject to the held
+threshold. It requires no new pretrained model or external data.
+
+Candidate checkpoint: experiments/round232/bundle/.
+Guarded prediction entrypoint: experiments/round232/frozen/method/entrypoint.py.
+Use the reproduction commands below with round214 replaced by round232;
+expected validation is 762. All original scored artifacts are preserved.
+
+Remote Xeon 8352V reproduction: validation 762/798; 467 validation questions
+took 26.99 seconds in separate fresh prediction/scoring processes, four
+threads. This is a timing proxy, not a new test evaluation.
+
+The existing report PDF documents round214 and must be updated if round232
+becomes the final submission. No website submission is implied by this repo.
+See deployment/README.md for isolated remote reproduction and timing.
+
+---
+
+""" + readme.read_text(encoding="utf-8"), encoding="utf-8")
     manifest = {}
     for p in DEST.rglob("*"):
         if p.is_file() and ".git" not in p.parts and p.name != "release_manifest.json":
@@ -122,6 +161,11 @@ research, packaging and deployment assistance used OpenAI Codex.
     (DEST / "release_manifest.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     payload = PRIVATE / "mp2_train_validation_payload.tar.gz"
+    if "--public-only" in sys.argv:
+        print(json.dumps({"public_files":len(manifest),
+                          "public_bytes":sum(v["bytes"] for v in manifest.values()),
+                          "public_dir":str(DEST)}))
+        return
     with tarfile.open(payload, "w:gz", compresslevel=1) as tar:
         data = ROOT / "DASE7506-MP2-main/code/data"
         for split in ("train", "validation"):

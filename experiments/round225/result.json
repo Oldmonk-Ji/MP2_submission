@@ -1,0 +1,76 @@
+{
+  "alpha": 0,
+  "design": [
+    {
+      "alpha": 0,
+      "fold_gains": [
+        0,
+        0
+      ],
+      "correct": 2902,
+      "baseline": 2902,
+      "fixes": 0,
+      "harms": 0,
+      "changed": 0
+    },
+    {
+      "alpha": 0.1,
+      "fold_gains": [
+        -2,
+        3
+      ],
+      "correct": 2903,
+      "baseline": 2902,
+      "fixes": 8,
+      "harms": 7,
+      "changed": 201
+    },
+    {
+      "alpha": 0.25,
+      "fold_gains": [
+        -12,
+        9
+      ],
+      "correct": 2899,
+      "baseline": 2902,
+      "fixes": 21,
+      "harms": 24,
+      "changed": 454
+    },
+    {
+      "alpha": 0.5,
+      "fold_gains": [
+        -23,
+        -1
+      ],
+      "correct": 2878,
+      "baseline": 2902,
+      "fixes": 31,
+      "harms": 55,
+      "changed": 784
+    },
+    {
+      "alpha": 1.0,
+      "fold_gains": [
+        -50,
+        -18
+      ],
+      "correct": 2834,
+      "baseline": 2902,
+      "fixes": 49,
+      "harms": 117,
+      "changed": 1185
+    }
+  ],
+  "held": {
+    "correct": 1477,
+    "baseline": 1477,
+    "fixes": 0,
+    "harms": 0,
+    "changed": 0
+  },
+  "standalone_held": 1348,
+  "test_opened": false,
+  "validation_evaluated": false,
+  "seconds": 39.80650566518307
+}

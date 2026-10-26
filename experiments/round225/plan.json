@@ -1,0 +1,17 @@
+{
+  "method": "Hashed numeric-normalized distinguishing phrases crossed with question conditions and target words",
+  "source_hash": "f5b20d808a90952042ce9a0709d9cec98e66dd2b0f98ea0a5577d109b0be609e",
+  "C": 1,
+  "features": 65536,
+  "alphas": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "seed": 225225,
+  "selection": "Choose alpha on fit folds 0/1 only; require no loss in either design fold. Then held>=1477; only then VAL.",
+  "limitation": "Fit design is a reused development split; outer held is excluded from design training.",
+  "test_opened": false
+}

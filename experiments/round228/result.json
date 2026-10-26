@@ -1,0 +1,38 @@
+{
+  "227": {
+    "source": 227,
+    "alpha": 0.5,
+    "held": {
+      "correct": 1479,
+      "baseline": 1477,
+      "fixes": 12,
+      "harms": 10,
+      "changed": 261
+    },
+    "validation_evaluated": true,
+    "test_opened": false,
+    "validation": {
+      "correct": 759,
+      "baseline": 760,
+      "fixes": 3,
+      "harms": 4,
+      "changed": 112
+    },
+    "added_asset_bytes": 686712,
+    "seconds": 42.92296960949898
+  },
+  "225": {
+    "source": 225,
+    "alpha": 0.1,
+    "held": {
+      "correct": 1472,
+      "baseline": 1477,
+      "fixes": 4,
+      "harms": 9,
+      "changed": 124
+    },
+    "validation_evaluated": false,
+    "test_opened": false,
+    "seconds": 0.08387534320354462
+  }
+}

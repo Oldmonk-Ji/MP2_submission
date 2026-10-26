@@ -1,0 +1,15 @@
+{
+  "method": "round214 plus TRAIN-only whitened residual/context quadratic ranker; raw coefficient 0.25",
+  "held": 1479,
+  "validation": 762,
+  "asset_bytes": 16511713,
+  "test_opened": false,
+  "test_authorized": false,
+  "source_hashes": {
+    "round227_quadratic.py": "a5335bee19cb9199acd2c7ab3741c4fb1e5d3cd17792d300839a70831c5616c7",
+    "round228_design_selection.py": "e697bce0469c0f53b80793fec1c2d6b000806a455de43a12cc879f7a5b0ff04d",
+    "round231_validation_selection.py": "a090ba912f73f3f96357810e3eaa0712111330b0d1dedb5ce5b8412232d62d97",
+    "round232_selector.py": "92659b8f0bd3c1f19a90d934408f12219e320bb58343cfb9f240ca7697872348",
+    "round232_quadratic_inference.py": "d3e03ed97111a2e0b725ee311ed44d8255733d70b6ea4616f5f9ca62739cee13"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "reason": "Drop the additional per-design-fold nonnegative heuristic; use aggregate fit development accuracy.",
+  "selection_basis": "Only design records from train folds 0 and 1",
+  "held_alpha_sweep": false,
+  "validation_alpha_sweep": false,
+  "selected": {
+    "227": {
+      "alpha": 0.5,
+      "fold_gains": [
+        -1,
+        8
+      ],
+      "correct": 2909,
+      "baseline": 2902,
+      "fixes": 39,
+      "harms": 32,
+      "changed": 462
+    },
+    "225": {
+      "alpha": 0.1,
+      "fold_gains": [
+        -2,
+        3
+      ],
+      "correct": 2903,
+      "baseline": 2902,
+      "fixes": 8,
+      "harms": 7,
+      "changed": 201
+    }
+  },
+  "test_opened": false,
+  "source_hash": "e697bce0469c0f53b80793fec1c2d6b000806a455de43a12cc879f7a5b0ff04d"
+}

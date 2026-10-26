@@ -1,0 +1,176 @@
+{
+  "alpha": 0.25,
+  "design": [
+    {
+      "alpha": 0,
+      "fold_gains": [
+        0,
+        0
+      ],
+      "correct": 2902,
+      "baseline": 2902,
+      "fixes": 0,
+      "harms": 0,
+      "changed": 0
+    },
+    {
+      "alpha": 0.1,
+      "fold_gains": [
+        0,
+        -1
+      ],
+      "correct": 2901,
+      "baseline": 2902,
+      "fixes": 8,
+      "harms": 9,
+      "changed": 99
+    },
+    {
+      "alpha": 0.25,
+      "fold_gains": [
+        3,
+        0
+      ],
+      "correct": 2905,
+      "baseline": 2902,
+      "fixes": 24,
+      "harms": 21,
+      "changed": 228
+    },
+    {
+      "alpha": 0.5,
+      "fold_gains": [
+        -3,
+        1
+      ],
+      "correct": 2900,
+      "baseline": 2902,
+      "fixes": 36,
+      "harms": 38,
+      "changed": 418
+    },
+    {
+      "alpha": 1.0,
+      "fold_gains": [
+        -11,
+        -1
+      ],
+      "correct": 2890,
+      "baseline": 2902,
+      "fixes": 45,
+      "harms": 57,
+      "changed": 668
+    }
+  ],
+  "held": {
+    "correct": 1470,
+    "baseline": 1477,
+    "fixes": 5,
+    "harms": 12,
+    "changed": 150
+  },
+  "standalone_held": 1433,
+  "histories": {
+    "0": [
+      {
+        "epoch": 20,
+        "loss": 0.013760003112728082,
+        "seconds": 2.4581912457942963
+      },
+      {
+        "epoch": 40,
+        "loss": 0.0002960855585576,
+        "seconds": 4.849179111421108
+      },
+      {
+        "epoch": 60,
+        "loss": 0.011994701511185334,
+        "seconds": 7.240036487579346
+      },
+      {
+        "epoch": 80,
+        "loss": 0.0014053045972427236,
+        "seconds": 9.613035671412945
+      },
+      {
+        "epoch": 100,
+        "loss": 0.00023090749458834245,
+        "seconds": 11.934223711490631
+      },
+      {
+        "epoch": 120,
+        "loss": 0.005226705312917504,
+        "seconds": 14.2465351074934
+      }
+    ],
+    "1": [
+      {
+        "epoch": 20,
+        "loss": 0.005597386072677838,
+        "seconds": 2.3204569071531296
+      },
+      {
+        "epoch": 40,
+        "loss": 0.0006703112366009011,
+        "seconds": 4.647880747914314
+      },
+      {
+        "epoch": 60,
+        "loss": 0.0002354000004491893,
+        "seconds": 6.982217453420162
+      },
+      {
+        "epoch": 80,
+        "loss": 0.00010396362017198205,
+        "seconds": 9.282553561031818
+      },
+      {
+        "epoch": 100,
+        "loss": 8.432476107079116e-05,
+        "seconds": 11.603623859584332
+      },
+      {
+        "epoch": 120,
+        "loss": 0.00014248492301425234,
+        "seconds": 13.948178179562092
+      }
+    ],
+    "held_model": [
+      {
+        "epoch": 20,
+        "loss": 0.009052406004472402,
+        "seconds": 4.534165091812611
+      },
+      {
+        "epoch": 40,
+        "loss": 0.0003800103118906416,
+        "seconds": 8.989832989871502
+      },
+      {
+        "epoch": 60,
+        "loss": 0.008818294456051394,
+        "seconds": 13.41286090016365
+      },
+      {
+        "epoch": 80,
+        "loss": 0.0006264350525258484,
+        "seconds": 17.98628171533346
+      },
+      {
+        "epoch": 100,
+        "loss": 0.001159740367663299,
+        "seconds": 22.51772964000702
+      },
+      {
+        "epoch": 120,
+        "loss": 0.0001855479686735189,
+        "seconds": 27.150713123381138
+      }
+    ]
+  },
+  "standalone_asset_bytes": 2111610,
+  "contract_checks": "candidate permutation and batch invariance passed",
+  "test_opened": false,
+  "validation_evaluated": false,
+  "seconds": 73.82160196453333
+}

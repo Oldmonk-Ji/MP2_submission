@@ -1,0 +1,19 @@
+{
+  "method": "Scratch conditional residual encoder with explicit same-answer/opposing-answer pooling",
+  "source_hash": "4d18ff86a78098681be4805e7545367221cec8cf6b367beb67b1ff85346b73c5",
+  "seed": 226226,
+  "epochs": 120,
+  "external_weights": false,
+  "gpu_used": false,
+  "cpu_threads": 4,
+  "alphas": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "selection": "Design folds 0/1 choose alpha, no loss in either; held >=1477 gates first VAL evaluation.",
+  "resource_policy": "Standalone first; assess compression only if complementary gain is demonstrated.",
+  "test_opened": false
+}

@@ -1,0 +1,56 @@
+{
+  "raw_blend": {
+    "selected": {
+      "mode": "raw_blend",
+      "value": 0.5,
+      "correct": 2916,
+      "baseline": 2902,
+      "fixes": 37,
+      "harms": 23,
+      "changed": 326
+    },
+    "held": {
+      "correct": 1477,
+      "baseline": 1477,
+      "fixes": 9,
+      "harms": 9,
+      "changed": 205
+    },
+    "validation_evaluated": true,
+    "test_opened": false,
+    "validation": {
+      "correct": 759,
+      "baseline": 760,
+      "fixes": 3,
+      "harms": 4,
+      "changed": 89
+    }
+  },
+  "top2_gap": {
+    "selected": {
+      "mode": "top2_gap",
+      "value": 0.5,
+      "correct": 2906,
+      "baseline": 2902,
+      "fixes": 32,
+      "harms": 28,
+      "changed": 303
+    },
+    "held": {
+      "correct": 1482,
+      "baseline": 1477,
+      "fixes": 15,
+      "harms": 10,
+      "changed": 197
+    },
+    "validation_evaluated": true,
+    "test_opened": false,
+    "validation": {
+      "correct": 754,
+      "baseline": 760,
+      "fixes": 3,
+      "harms": 9,
+      "changed": 68
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "method": "Whitened residual128 x context32 bilinear and residual32 quadratic candidate ranker",
+  "source_hash": "a5335bee19cb9199acd2c7ab3741c4fb1e5d3cd17792d300839a70831c5616c7",
+  "C": 1,
+  "seed": 227227,
+  "alphas": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "selection": "Fit-fold alpha with nonnegative gain in both folds; held>=1477 before VAL.",
+  "pca": "Fitted separately on each training partition; no held fitting",
+  "test_opened": false
+}

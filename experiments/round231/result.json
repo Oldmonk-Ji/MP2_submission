@@ -1,0 +1,225 @@
+{
+  "records": [
+    {
+      "mode": "raw",
+      "alpha": 0.05,
+      "held": {
+        "correct": 1477,
+        "baseline": 1477,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 34
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 760,
+        "fixes": 1,
+        "harms": 0,
+        "changed": 9
+      }
+    },
+    {
+      "mode": "raw",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1477,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 61
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 760,
+        "fixes": 1,
+        "harms": 0,
+        "changed": 17
+      }
+    },
+    {
+      "mode": "raw",
+      "alpha": 0.2,
+      "held": {
+        "correct": 1478,
+        "baseline": 1477,
+        "fixes": 4,
+        "harms": 3,
+        "changed": 107
+      },
+      "validation": {
+        "correct": 762,
+        "baseline": 760,
+        "fixes": 2,
+        "harms": 0,
+        "changed": 41
+      }
+    },
+    {
+      "mode": "raw",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1477,
+        "fixes": 6,
+        "harms": 4,
+        "changed": 124
+      },
+      "validation": {
+        "correct": 762,
+        "baseline": 760,
+        "fixes": 3,
+        "harms": 1,
+        "changed": 50
+      }
+    },
+    {
+      "mode": "raw",
+      "alpha": 0.35,
+      "held": {
+        "correct": 1478,
+        "baseline": 1477,
+        "fixes": 7,
+        "harms": 6,
+        "changed": 154
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 760,
+        "fixes": 3,
+        "harms": 2,
+        "changed": 69
+      }
+    },
+    {
+      "mode": "raw",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1477,
+        "baseline": 1477,
+        "fixes": 9,
+        "harms": 9,
+        "changed": 205
+      },
+      "validation": {
+        "correct": 759,
+        "baseline": 760,
+        "fixes": 3,
+        "harms": 4,
+        "changed": 89
+      }
+    },
+    {
+      "mode": "row_normalized",
+      "alpha": 0.05,
+      "held": {
+        "correct": 1477,
+        "baseline": 1477,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 40
+      },
+      "validation": {
+        "correct": 760,
+        "baseline": 760,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 12
+      }
+    },
+    {
+      "mode": "row_normalized",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1477,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 72
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 760,
+        "fixes": 1,
+        "harms": 0,
+        "changed": 21
+      }
+    },
+    {
+      "mode": "row_normalized",
+      "alpha": 0.2,
+      "held": {
+        "correct": 1476,
+        "baseline": 1477,
+        "fixes": 4,
+        "harms": 5,
+        "changed": 136
+      }
+    },
+    {
+      "mode": "row_normalized",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1475,
+        "baseline": 1477,
+        "fixes": 4,
+        "harms": 6,
+        "changed": 163
+      }
+    },
+    {
+      "mode": "row_normalized",
+      "alpha": 0.35,
+      "held": {
+        "correct": 1479,
+        "baseline": 1477,
+        "fixes": 10,
+        "harms": 8,
+        "changed": 202
+      },
+      "validation": {
+        "correct": 762,
+        "baseline": 760,
+        "fixes": 3,
+        "harms": 1,
+        "changed": 78
+      }
+    },
+    {
+      "mode": "row_normalized",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1479,
+        "baseline": 1477,
+        "fixes": 12,
+        "harms": 10,
+        "changed": 261
+      },
+      "validation": {
+        "correct": 759,
+        "baseline": 760,
+        "fixes": 3,
+        "harms": 4,
+        "changed": 112
+      }
+    }
+  ],
+  "selected": {
+    "mode": "raw",
+    "alpha": 0.25,
+    "held": {
+      "correct": 1479,
+      "baseline": 1477,
+      "fixes": 6,
+      "harms": 4,
+      "changed": 124
+    },
+    "validation": {
+      "correct": 762,
+      "baseline": 760,
+      "fixes": 3,
+      "harms": 1,
+      "changed": 50
+    }
+  },
+  "test_opened": false
+}

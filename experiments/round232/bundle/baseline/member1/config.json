@@ -1,0 +1,16 @@
+{
+  "name": "ground_35",
+  "family": "mlp",
+  "features": "ground",
+  "loss": "mixed",
+  "width": 128,
+  "lr": 0.0003,
+  "weight_decay": 0.1,
+  "dropout": 0.15,
+  "seed": 20261014,
+  "ema": 0.98,
+  "fixed_epochs": 35,
+  "training_questions": 4743,
+  "training_partition": "round22 eligible official TRAIN rows",
+  "round22_plan_sha": "502af394b0197e9d9c8863b1bacd06e87aaa5cb6d19f01931bed72cac88f570a"
+}
