@@ -1,0 +1,15 @@
+{
+  "reason": "Fused eval attention CPU/CUDA discrepancy; disable fused eval path. Original 2e-4 agreement threshold retained.",
+  "maximum_observed_error": 0.0005699396133422852,
+  "unfused_error": 5.602836608886719e-06,
+  "training_gradient_path_unchanged": true,
+  "test_opened": false,
+  "source_hashes": {
+    "research\\round77_audit.py": "1c7c6dca3e0f9aeb8a4eca77400c5eb6e8e6db91e6f8b430f874f6db17a72544",
+    "research\\round77_nested.py": "940a3e879ce1ab9dedc9068073e3be87e7e9604bc99c951ef221345e449475a0",
+    "research\\round77_numerics.py": "12eaf489b64f9fe5c3f6cfb345953dd41e2a73ae01073d97f784732733779456",
+    "research\\round77_resume.py": "968adcdad1a6941d47a74200efd948db19d028b49de50fa4847a460e48ccbb87",
+    "research\\round77_selector.py": "055cd430f1da079aa1bb0febe3a27a623d01a1cc5376a4dec225568068ae38d7",
+    "research\\round77_train.py": "d75105aa7d1eb01e165c70fd80a631f1398dab81291acdce78ea2200f6baa303"
+  }
+}

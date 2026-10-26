@@ -1,0 +1,66 @@
+{
+  "readout.json": {
+    "bytes": 296,
+    "sha256": "b823efe0ea4f718e006358871899efc0bad1b9d1e7fbabfa6d22e9af4aa04723"
+  },
+  "kernel\\space.npz": {
+    "bytes": 730208,
+    "sha256": "14d2a45f3e179db9af66b0043d624c13d8324d4014f8089292529148dd72f6fa"
+  },
+  "baseline\\member0\\config.json": {
+    "bytes": 539,
+    "sha256": "5d2278698d9d31641f3bc7721433e416d3a7ca9d1a6406527a8c1e5a197e8290"
+  },
+  "baseline\\member0\\model.npz": {
+    "bytes": 1632888,
+    "sha256": "4d89be7794d1ee1481f1a0bf81bedd4eb47c22cdbca0457f2f568964265fde6a"
+  },
+  "baseline\\member1\\config.json": {
+    "bytes": 419,
+    "sha256": "b23cea4698f5d248617627a7e371604d67c1ba2e1af6ccb24912d0b017610717"
+  },
+  "baseline\\member1\\model.npz": {
+    "bytes": 1680728,
+    "sha256": "8ac034bf797c6acefcc294fbc818f1377514b535b763ba09a0585aa9c216c666"
+  },
+  "baseline\\member2\\config.json": {
+    "bytes": 419,
+    "sha256": "0cb9be57cbe52584ad176d8800c683cadf656a6281948a4bddc1139637a0de12"
+  },
+  "baseline\\member2\\model.npz": {
+    "bytes": 2730088,
+    "sha256": "83f6f04a260623fb7aa2db91e3bcaa842847c0b999fd5542102870fbe8198314"
+  },
+  "baseline\\member3\\config.json": {
+    "bytes": 352,
+    "sha256": "64865b27892ccf5a364636ecebd54b9cb73e098e2ddfb7c1e2786b0190256145"
+  },
+  "baseline\\member3\\model.npz": {
+    "bytes": 6929756,
+    "sha256": "80f38b1135e82741ba42b427a30cb0d041935228f1c34d85ccd2674da16b56b8"
+  },
+  "baseline\\member3\\vocabulary.json": {
+    "bytes": 988080,
+    "sha256": "6b74829ff1d957d522662a7c813b381551cf2efad73e0c0d8165ca6bb838d0ac"
+  },
+  "baseline\\member4\\config.json": {
+    "bytes": 127,
+    "sha256": "85885a6cf0ea851b835c210ff3e82d20f4654ce56516f56b71ea8a5a962eb117"
+  },
+  "baseline\\member4\\model.npz": {
+    "bytes": 400504,
+    "sha256": "13b7523109ba7f6ca0bf3fe2457e879f283f6766938a89d5908a1d2abffce0d0"
+  },
+  "baseline\\member4\\vocabulary.json": {
+    "bytes": 1259237,
+    "sha256": "2575d8a98c210a36db6b4f536f12ebe94dee4b23332f73b58b996956b10d89a7"
+  },
+  "kernel\\fixed\\config.json": {
+    "bytes": 93,
+    "sha256": "7b73301104ceb717355d203ddfec15bca0bcf63ce80717c906f648053475ee7a"
+  },
+  "kernel\\fixed\\model.npz": {
+    "bytes": 3820,
+    "sha256": "369000d40c683f28a80a808491b26b497ee97a7b91d47744af59ee291d840708"
+  }
+}

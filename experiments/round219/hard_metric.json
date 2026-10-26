@@ -1,0 +1,53 @@
+{
+  "base": {
+    "held": 1477,
+    "val": 759
+  },
+  "records": [
+    {
+      "name": "base",
+      "weights": null,
+      "held": 1477,
+      "held_hard": 592,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "name": "P",
+      "weights": null,
+      "held": 1476,
+      "held_hard": 591,
+      "val": 752,
+      "val_hard": 309
+    },
+    {
+      "name": "W",
+      "weights": null,
+      "held": 1476,
+      "held_hard": 591,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "name": "E",
+      "weights": null,
+      "held": 1484,
+      "held_hard": 599,
+      "val": 754,
+      "val_hard": 311
+    },
+    {
+      "name": "best_by_hard",
+      "weights": [
+        0,
+        0,
+        0.4
+      ],
+      "held": 1483,
+      "held_hard": 598,
+      "val": 750,
+      "val_hard": 307
+    }
+  ],
+  "test_opened": false
+}

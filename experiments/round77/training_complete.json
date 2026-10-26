@@ -1,0 +1,6 @@
+{
+  "resumed_seconds": 166.9177548000007,
+  "training_seconds": 503.72552919999,
+  "test_opened": false,
+  "cpu_cuda_agreement_without_relaxing_tolerance": true
+}

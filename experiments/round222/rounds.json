@@ -1,0 +1,127 @@
+{
+  "records": [
+    {
+      "tag": "rounds50",
+      "seeds": [
+        68068
+      ],
+      "val": 751,
+      "held": 1474,
+      "val_hard": 308,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "rounds100",
+      "seeds": [
+        68068
+      ],
+      "val": 752,
+      "held": 1474,
+      "val_hard": 309,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "rounds150",
+      "seeds": [
+        68068
+      ],
+      "val": 756,
+      "held": 1472,
+      "val_hard": 313,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "rounds200",
+      "seeds": [
+        68068
+      ],
+      "val": 759,
+      "held": 1477,
+      "val_hard": 316,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "rounds300",
+      "seeds": [
+        68068
+      ],
+      "val": 757,
+      "held": 1475,
+      "val_hard": 314,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "rounds400",
+      "seeds": [
+        68068
+      ],
+      "val": 757,
+      "held": 1473,
+      "val_hard": 314,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "rounds600",
+      "seeds": [
+        68068
+      ],
+      "val": 754,
+      "held": 1473,
+      "val_hard": 311,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "rounds800",
+      "seeds": [
+        68068
+      ],
+      "val": 754,
+      "held": 1475,
+      "val_hard": 311,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "lr0.05r300",
+      "seeds": [
+        68068
+      ],
+      "val": 755,
+      "held": 1471,
+      "val_hard": 312,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "lr0.05r500",
+      "seeds": [
+        68068
+      ],
+      "val": 757,
+      "held": 1473,
+      "val_hard": 314,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "lr0.015r600",
+      "seeds": [
+        68068
+      ],
+      "val": 754,
+      "held": 1474,
+      "val_hard": 311,
+      "val_base": 759,
+      "held_base": 1477
+    }
+  ],
+  "test_opened": false,
+  "seconds": 120.1341425999999
+}

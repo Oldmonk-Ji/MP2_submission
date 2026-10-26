@@ -1,0 +1,10 @@
+{
+  "best_new": {
+    "arm": "strict_events_ord",
+    "correct": 758,
+    "bundle": "experiments/round210/bundle_strict_events_ord"
+  },
+  "selected": "round104",
+  "test_target_fixed_before_test": true,
+  "test_used_for_selection": false
+}

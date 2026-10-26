@@ -1,0 +1,14 @@
+{
+  "method": "Refine strict-gap rule: fine tau sweep, top-2 restricted variant, logistic flip model on minimal features (2-fold swap design on fit folds). Held and VAL both reported.",
+  "taus": [
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    5.0,
+    6.0
+  ],
+  "source_sha256": "b99012718d70c7e3d39cf54e16e6c31cd5a8fffb0965461a4308e49d29c5ca02",
+  "test_opened": false
+}

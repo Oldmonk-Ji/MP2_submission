@@ -1,0 +1,286 @@
+{
+  "records": [
+    {
+      "kind": "parse_alignment",
+      "limit": 0,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "parse_alignment",
+      "limit": 0.5,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "parse_alignment",
+      "limit": 1,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "parse_alignment",
+      "limit": 2,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "parse_alignment",
+      "limit": 4,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "parse_alignment",
+      "limit": 8,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "parse_alignment",
+      "limit": 1000000.0,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "units",
+      "limit": 0,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "units",
+      "limit": 0.5,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "units",
+      "limit": 1,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "units",
+      "limit": 2,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "units",
+      "limit": 4,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "units",
+      "limit": 8,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "units",
+      "limit": 1000000.0,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "arithmetic_repair",
+      "limit": 0,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "arithmetic_repair",
+      "limit": 0.5,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "arithmetic_repair",
+      "limit": 1,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "arithmetic_repair",
+      "limit": 2,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "arithmetic_repair",
+      "limit": 4,
+      "held": 1477,
+      "held_hard": 592,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "arithmetic_repair",
+      "limit": 8,
+      "held": 1477,
+      "held_hard": 592,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "arithmetic_repair",
+      "limit": 1000000.0,
+      "held": 1477,
+      "held_hard": 592,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "combined",
+      "limit": 0,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "combined",
+      "limit": 0.5,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "combined",
+      "limit": 1,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "combined",
+      "limit": 2,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "kind": "combined",
+      "limit": 4,
+      "held": 1476,
+      "held_hard": 591,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "kind": "combined",
+      "limit": 8,
+      "held": 1476,
+      "held_hard": 591,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "kind": "combined",
+      "limit": 1000000.0,
+      "held": 1476,
+      "held_hard": 591,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "kind": "parse_and_repair",
+      "limit": 0,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "kind": "parse_and_repair",
+      "limit": 0.5,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "parse_and_repair",
+      "limit": 1,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "kind": "parse_and_repair",
+      "limit": 2,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "kind": "parse_and_repair",
+      "limit": 4,
+      "held": 1477,
+      "held_hard": 592,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "kind": "parse_and_repair",
+      "limit": 8,
+      "held": 1477,
+      "held_hard": 592,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "kind": "parse_and_repair",
+      "limit": 1000000.0,
+      "held": 1477,
+      "held_hard": 592,
+      "val": 759,
+      "val_hard": 316
+    }
+  ],
+  "test_opened": false,
+  "seconds": 4.71329440001864
+}

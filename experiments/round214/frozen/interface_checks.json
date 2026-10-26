@@ -1,0 +1,12 @@
+{
+  "cases": 137,
+  "all_passed": true,
+  "fresh_predictions_equal": true,
+  "batch_invariant": true,
+  "unseen_ids": true,
+  "candidate_permutation_answer_invariant": true,
+  "empty": true,
+  "identical_candidates": true,
+  "reference_reads_blocked": true,
+  "test_opened": false
+}

@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "D:\\anaconda3\\envs\\mp1\\python.exe",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "torch_training": "2.7.1+cu126",
+  "threads": 4,
+  "final_expert_training_seconds": 127.83872920000067,
+  "crossfit_training_seconds": 282.1990668999988,
+  "readout_fitting_seconds": 8.98930609999843,
+  "training_device": "cuda",
+  "training_gpu": "NVIDIA RTX A2000 Laptop GPU"
+}

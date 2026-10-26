@@ -1,0 +1,10 @@
+{
+  "best_new": {
+    "arm": "strict_gap_t3",
+    "correct": 760,
+    "bundle": "experiments/round214/bundle"
+  },
+  "selected": "round214",
+  "test_target_fixed_before_test": true,
+  "test_used_for_selection": false
+}

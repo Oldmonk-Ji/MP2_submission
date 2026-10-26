@@ -1,0 +1,41 @@
+{
+  "records": [
+    {
+      "name": "base",
+      "held": 1477,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "name": "P",
+      "held": 1476,
+      "val": 752,
+      "val_hard": 309
+    },
+    {
+      "name": "W",
+      "held": 1476,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "name": "E",
+      "held": 1484,
+      "val": 754,
+      "val_hard": 311
+    },
+    {
+      "name": "best_on_held",
+      "weights": [
+        0,
+        0.1,
+        0.3
+      ],
+      "held": 1481,
+      "val": 751,
+      "val_hard": 308
+    }
+  ],
+  "test_opened": false,
+  "seconds": 334.4425485000247
+}

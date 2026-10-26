@@ -1,0 +1,20 @@
+[
+  {
+    "train_fold": 0,
+    "eval_fold": 1,
+    "n_pairs": 424714,
+    "base": 1452,
+    "correct": 1450,
+    "fixes": 48,
+    "harms": 6
+  },
+  {
+    "train_fold": 1,
+    "eval_fold": 0,
+    "n_pairs": 440792,
+    "base": 1460,
+    "correct": 1450,
+    "fixes": 414,
+    "harms": 26
+  }
+]

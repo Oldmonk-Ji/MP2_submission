@@ -1,0 +1,20 @@
+{
+  "arms": [
+    "control",
+    "events",
+    "events_ord",
+    "strict",
+    "strict_events",
+    "strict_events_ord"
+  ],
+  "method": "Exact104 base plus (a) round209 strict mean score trained by round210_fit, (b) round210 event channels with and without ordinal binding. Same fixed 200-tree 7-leaf fusion; strict improvement over 759 required before TEST.",
+  "flags": {
+    "floor": true,
+    "taint": true,
+    "symbolic": true,
+    "divfall": true,
+    "ordinal": false
+  },
+  "source_sha256": "3462c180d1752c6098687e11594f565d362680245c56bd49510fc9b17bc9e8f6",
+  "test_opened": false
+}

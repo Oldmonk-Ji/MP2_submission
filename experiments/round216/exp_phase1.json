@@ -1,0 +1,112 @@
+{
+  "records": [
+    {
+      "label": "base",
+      "cfg": {},
+      "seeds": [
+        68068
+      ],
+      "train_rows": "all",
+      "weight": null,
+      "extra": false,
+      "val": 759,
+      "held": 1477,
+      "val_hard": 316,
+      "val_free": 443
+    },
+    {
+      "label": "base_seed5",
+      "cfg": {},
+      "seeds": [
+        68068,
+        7,
+        19,
+        73,
+        137
+      ],
+      "train_rows": "all",
+      "weight": null,
+      "extra": false,
+      "val": 759,
+      "held": 1477,
+      "val_hard": 316,
+      "val_free": 443
+    },
+    {
+      "label": "extra",
+      "cfg": {},
+      "seeds": [
+        68068
+      ],
+      "train_rows": "all",
+      "weight": null,
+      "extra": true,
+      "val": 759,
+      "held": 1474,
+      "val_hard": 316,
+      "val_free": 443
+    },
+    {
+      "label": "hard_only",
+      "cfg": {},
+      "seeds": [
+        68068
+      ],
+      "train_rows": "hard",
+      "weight": null,
+      "extra": false,
+      "val": 755,
+      "held": 1473,
+      "val_hard": 312,
+      "val_free": 443
+    },
+    {
+      "label": "hard3",
+      "cfg": {},
+      "seeds": [
+        68068
+      ],
+      "train_rows": "all",
+      "weight": "hard3",
+      "extra": false,
+      "val": 754,
+      "held": 1472,
+      "val_hard": 311,
+      "val_free": 443
+    },
+    {
+      "label": "extra_hard3",
+      "cfg": {},
+      "seeds": [
+        68068
+      ],
+      "train_rows": "all",
+      "weight": "hard3",
+      "extra": true,
+      "val": 757,
+      "held": 1477,
+      "val_hard": 314,
+      "val_free": 443
+    },
+    {
+      "label": "extra_seed5",
+      "cfg": {},
+      "seeds": [
+        68068,
+        7,
+        19,
+        73,
+        137
+      ],
+      "train_rows": "all",
+      "weight": null,
+      "extra": true,
+      "val": 759,
+      "held": 1474,
+      "val_hard": 316,
+      "val_free": 443
+    }
+  ],
+  "test_opened": false,
+  "seconds": 94.88353469996946
+}

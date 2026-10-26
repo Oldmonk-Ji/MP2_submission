@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "official_validation": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "validation",
+    "correct": 749,
+    "n": 798,
+    "accuracy": 93.85964912280701,
+    "scoring_seconds": 0.05337619999954768
+  },
+  "final_training_n": 4743,
+  "no_permanent_internal_holdout": true,
+  "no_evaluation_deletion": true,
+  "oof_group_disjoint": true,
+  "final_model_contains_no_cached_predictions": true,
+  "fresh_official_predictions_equal_research_predictions": true,
+  "permutation_max_absolute_error": 5.394637259903412e-06,
+  "inference_asset_bytes": 16357554,
+  "inference_asset_MiB": 15.59977912902832,
+  "local_cpu": "Intel Core i7-11800H",
+  "threads": 4,
+  "prediction_fresh_process_seconds": 5.5705417999997735,
+  "scoring_fresh_process_seconds": 0.29041549999965355,
+  "local_complete_validation_seconds": 5.860957299999427,
+  "timing_scope": "Full 798-question official validation, separate fresh prediction and scoring processes; not reference-machine 467-question test qualification.",
+  "test_opened": false,
+  "validation_opened": true,
+  "historical_rounds": {
+    "18": "unchanged",
+    "19": "unchanged",
+    "20": "unchanged",
+    "21": "unchanged"
+  },
+  "training_environment": {
+    "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda3\\envs\\mp1\\python.exe",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "torch_training": "2.7.1+cu126",
+    "threads": 4,
+    "final_expert_training_seconds": 127.83872920000067,
+    "crossfit_training_seconds": 282.1990668999988,
+    "readout_fitting_seconds": 8.98930609999843,
+    "training_device": "cuda",
+    "training_gpu": "NVIDIA RTX A2000 Laptop GPU"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "best_new": {
+    "arm": "positionless",
+    "correct": 751,
+    "bundle": "experiments/round77/bundle_positionless"
+  },
+  "selected": "round75",
+  "test_target_fixed_before_test": true,
+  "test_used_for_selection": false
+}

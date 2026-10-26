@@ -1,0 +1,10 @@
+{
+  "family": "text",
+  "mode": "reasoning",
+  "C": 100,
+  "ngram_range": [
+    1,
+    2
+  ],
+  "sublinear_tf": true
+}

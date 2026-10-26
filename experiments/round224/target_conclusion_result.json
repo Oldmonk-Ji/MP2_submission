@@ -1,0 +1,12 @@
+{
+  "hypothesis": "answer-window target and conclusion disagreement",
+  "training_rows": 3161,
+  "held_rows": 1582,
+  "old_held": 1477,
+  "new_held": 1470,
+  "changed": 117,
+  "fixes": 3,
+  "harms": 10,
+  "test_access": false,
+  "seconds": 6.4089724000077695
+}

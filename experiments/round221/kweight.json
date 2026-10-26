@@ -1,0 +1,69 @@
+{
+  "records": [
+    {
+      "label": "base",
+      "held": 1477,
+      "held_hard": 592,
+      "val": 759,
+      "val_hard": 316
+    },
+    {
+      "label": "k1x1.5",
+      "held": 1477,
+      "held_hard": 592,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "label": "k1x2.0",
+      "held": 1470,
+      "held_hard": 585,
+      "val": 756,
+      "val_hard": 313
+    },
+    {
+      "label": "k1x3.0",
+      "held": 1471,
+      "held_hard": 586,
+      "val": 756,
+      "val_hard": 313
+    },
+    {
+      "label": "k1x5.0",
+      "held": 1468,
+      "held_hard": 583,
+      "val": 754,
+      "val_hard": 311
+    },
+    {
+      "label": "kle2x2.0",
+      "held": 1477,
+      "held_hard": 592,
+      "val": 757,
+      "val_hard": 314
+    },
+    {
+      "label": "kle2x3.0",
+      "held": 1471,
+      "held_hard": 586,
+      "val": 758,
+      "val_hard": 315
+    },
+    {
+      "label": "only_kle2",
+      "held": 1471,
+      "held_hard": 586,
+      "val": 753,
+      "val_hard": 310
+    },
+    {
+      "label": "only_k1",
+      "held": 1451,
+      "held_hard": 566,
+      "val": 732,
+      "val_hard": 289
+    }
+  ],
+  "test_opened": false,
+  "seconds": 50.961395899998024
+}

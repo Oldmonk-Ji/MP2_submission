@@ -1,0 +1,14 @@
+{
+  "family": "mlp",
+  "features": "answer",
+  "loss": "uniform_positive",
+  "seed": 25025,
+  "width": 96,
+  "dropout": 0.2,
+  "lr": 0.0003,
+  "weight_decay": 0.1,
+  "ema": 0.98,
+  "epochs": 35,
+  "training_n": 4743,
+  "device": "cuda"
+}

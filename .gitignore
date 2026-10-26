@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.deploy-private/
+remote-work/
+DASE7506-MP2-main/code/data/gsm8k_*.jsonl
+DASE7506-MP2-main/code/data/candidates/
+experiments/round216/cache.npz
+experiments/round77/nested/

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "original_weights",
+    "n": 798,
+    "correct": 749,
+    "accuracy": 93.85964965820312,
+    "hard_n": 355,
+    "hard_correct": 306
+  },
+  {
+    "name": "original_plus_kernel",
+    "n": 798,
+    "correct": 748,
+    "accuracy": 93.73433685302734,
+    "hard_n": 355,
+    "hard_correct": 305
+  },
+  {
+    "name": "previous_internal_best",
+    "n": 798,
+    "correct": 745,
+    "accuracy": 93.3583984375,
+    "hard_n": 355,
+    "hard_correct": 302
+  }
+]

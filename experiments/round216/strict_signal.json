@@ -1,0 +1,32 @@
+{
+  "verified_per_row": {
+    "0": 135,
+    "1": 72,
+    "2": 123,
+    "3": 157,
+    "4": 311
+  },
+  "rows_any_verified": 663,
+  "hard_rows_any_verified": 296,
+  "hard_n": 355,
+  "chosen_verified_when_correct": 214,
+  "chosen_verified_when_wrong": 26,
+  "strict_argmax_hard": {
+    "correct": 234,
+    "n": 355,
+    "correct_free": 437
+  },
+  "verified_filter_hard": {
+    "correct": 259,
+    "n": 355,
+    "flips": 159,
+    "answer_changes": 88,
+    "fix": 13,
+    "harm": 71
+  },
+  "hard_errors": {
+    "n": 38,
+    "correct_verified": 23,
+    "any_verified": 32
+  }
+}

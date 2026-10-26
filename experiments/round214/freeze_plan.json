@@ -1,0 +1,9 @@
+{
+  "method": "exact104 fusion + gate, then strict-gap flip rule (tau=3.0, top-2 restricted, gate rows untouched). round213_scan design: fit oof design, held flat at 1477, VAL 760 (+1). Freeze candidate for the standard feature validation.",
+  "arm": "strict_gap_t3",
+  "correct": 760,
+  "asset_bytes": 15824973,
+  "strict_tau": 3.0,
+  "source_sha256": "07cecb85eea826a6ccac2ce5bbf8f72a43986d129d3207866b5d6bb549650030",
+  "test_opened": false
+}

@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "floor_markup": true,
+    "ceil_markup": true,
+    "symbolic_linear": true,
+    "taint_refinement": true,
+    "div_fraction_fallback": true,
+    "ordinal_flag": true
+  },
+  "method": "Same local103 65536-dimensional structure features over round209 strict-trace programs (floor/ceil markup, single-variable linear solves, taint refinement, fraction-quotient fallback). This is an additional optional trace branch on top of the exact104 readout; nothing frozen yet.",
+  "flags": {
+    "floor": true,
+    "taint": true,
+    "symbolic": true,
+    "divfall": true,
+    "ordinal": false
+  },
+  "source_hashes": {
+    "research\\round210_events.py": "0b1d44d6d1a24a13084455b6a601712c9a68f99239a8054f26b3eb87055a43af",
+    "research\\round210_features.py": "e3afaa0e232e80e78305bc8edf2fb97cd3665cf958418d9db7415ce406102559",
+    "research\\round210_fit.py": "7a9e056ca798ec623dfcd70cf19489bf3d4d7e97841d11ef657152eb46c7b90c",
+    "research\\round210_prepare.py": "4d26521349de6d86b0006b7cc7b03784eb9df25d19df7d1f83e6acfbf37c3f31",
+    "research\\round210_selector.py": "e67b113252f5bd4bae2662a5a70ea5e828f9c8b2d530f1667f491831f025d0d6",
+    "research\\round210_train.py": "bbe548b182e89f5c9efbd5ede0508e0b3508d2d595f26147a72d87f2a49b4135",
+    "research\\round21_adjudicate.py": "a8976d5f887aa8de851efbe3e036cf1ad8bacd4e9723dad35839c3d1463a3054",
+    "research\\round21_audit_quality.py": "375f9c0478b11460e68f4c391829147c1a0c9faf889fcf312265e14d532e7ac1",
+    "research\\round21_evaluate.py": "cd4bee15a9380508eacdb02bf1c0f9b6b2466c648939c37fcc9fdf274d99d63d"
+  },
+  "test_opened": false
+}

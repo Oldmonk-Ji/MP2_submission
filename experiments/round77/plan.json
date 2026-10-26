@@ -1,0 +1,21 @@
+{
+  "arms": [
+    "positionless",
+    "ordered"
+  ],
+  "epochs": 20,
+  "seed": 76076,
+  "reference_weight": 0.1,
+  "residual_penalty": 0.01,
+  "test_opened": false,
+  "nested_diagnostic": true,
+  "final_selection_threshold": 753,
+  "source_hashes": {
+    "research\\round76_model.py": "16330a30fffa91d035a6e0f3cdd2a21eff8d43ff63a421875f02f452f0408480",
+    "research\\round76_selector.py": "257fe20049f28103c614f29a4b8adefbc6b1a1afc50133ace370cb3df924de7a",
+    "research\\round76_text.py": "8c974cf130b6d5dd8564654f5a3a0b8a836670bf6818c034dd21f79f8f47f693",
+    "research\\round76_train.py": "81fc43b7ae275cc0b1abacc67e6ee78e1cf95b31c0d442fa021083f39d2b9474",
+    "research\\round77_nested.py": "940a3e879ce1ab9dedc9068073e3be87e7e9604bc99c951ef221345e449475a0",
+    "research\\round77_train.py": "d75105aa7d1eb01e165c70fd80a631f1398dab81291acdce78ea2200f6baa303"
+  }
+}

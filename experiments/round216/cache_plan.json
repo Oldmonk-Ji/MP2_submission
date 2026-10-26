@@ -1,0 +1,5 @@
+{
+  "method": "Cache exact104 fusion inputs, strict scores, verification masks and answer-cluster features for fast round216 experiments. No TEST access.",
+  "source_sha256": "d9c455caba7118f3095d00072751bd505fea64dfc2ff7072bcc4a942a3bcc681",
+  "test_opened": false
+}

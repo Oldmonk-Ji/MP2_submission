@@ -1,0 +1,226 @@
+[
+  {
+    "tag": "held",
+    "restrict": false,
+    "tau": 2.0,
+    "base": 1477,
+    "correct": 1467,
+    "flips": 46
+  },
+  {
+    "tag": "val",
+    "restrict": false,
+    "tau": 2.0,
+    "base": 759,
+    "correct": 754,
+    "flips": 32
+  },
+  {
+    "tag": "held",
+    "restrict": false,
+    "tau": 2.5,
+    "base": 1477,
+    "correct": 1475,
+    "flips": 25
+  },
+  {
+    "tag": "val",
+    "restrict": false,
+    "tau": 2.5,
+    "base": 759,
+    "correct": 757,
+    "flips": 14
+  },
+  {
+    "tag": "held",
+    "restrict": false,
+    "tau": 3.0,
+    "base": 1477,
+    "correct": 1476,
+    "flips": 11
+  },
+  {
+    "tag": "val",
+    "restrict": false,
+    "tau": 3.0,
+    "base": 759,
+    "correct": 760,
+    "flips": 4
+  },
+  {
+    "tag": "held",
+    "restrict": false,
+    "tau": 3.5,
+    "base": 1477,
+    "correct": 1477,
+    "flips": 8
+  },
+  {
+    "tag": "val",
+    "restrict": false,
+    "tau": 3.5,
+    "base": 759,
+    "correct": 759,
+    "flips": 0
+  },
+  {
+    "tag": "held",
+    "restrict": false,
+    "tau": 4.0,
+    "base": 1477,
+    "correct": 1477,
+    "flips": 3
+  },
+  {
+    "tag": "val",
+    "restrict": false,
+    "tau": 4.0,
+    "base": 759,
+    "correct": 759,
+    "flips": 0
+  },
+  {
+    "tag": "held",
+    "restrict": false,
+    "tau": 5.0,
+    "base": 1477,
+    "correct": 1477,
+    "flips": 0
+  },
+  {
+    "tag": "val",
+    "restrict": false,
+    "tau": 5.0,
+    "base": 759,
+    "correct": 759,
+    "flips": 0
+  },
+  {
+    "tag": "held",
+    "restrict": false,
+    "tau": 6.0,
+    "base": 1477,
+    "correct": 1477,
+    "flips": 0
+  },
+  {
+    "tag": "val",
+    "restrict": false,
+    "tau": 6.0,
+    "base": 759,
+    "correct": 759,
+    "flips": 0
+  },
+  {
+    "tag": "held",
+    "restrict": true,
+    "tau": 2.0,
+    "base": 1477,
+    "correct": 1475,
+    "flips": 19
+  },
+  {
+    "tag": "val",
+    "restrict": true,
+    "tau": 2.0,
+    "base": 759,
+    "correct": 759,
+    "flips": 12
+  },
+  {
+    "tag": "held",
+    "restrict": true,
+    "tau": 2.5,
+    "base": 1477,
+    "correct": 1476,
+    "flips": 9
+  },
+  {
+    "tag": "val",
+    "restrict": true,
+    "tau": 2.5,
+    "base": 759,
+    "correct": 760,
+    "flips": 6
+  },
+  {
+    "tag": "held",
+    "restrict": true,
+    "tau": 3.0,
+    "base": 1477,
+    "correct": 1477,
+    "flips": 3
+  },
+  {
+    "tag": "val",
+    "restrict": true,
+    "tau": 3.0,
+    "base": 759,
+    "correct": 760,
+    "flips": 2
+  },
+  {
+    "tag": "held",
+    "restrict": true,
+    "tau": 3.5,
+    "base": 1477,
+    "correct": 1478,
+    "flips": 2
+  },
+  {
+    "tag": "val",
+    "restrict": true,
+    "tau": 3.5,
+    "base": 759,
+    "correct": 759,
+    "flips": 0
+  },
+  {
+    "tag": "held",
+    "restrict": true,
+    "tau": 4.0,
+    "base": 1477,
+    "correct": 1478,
+    "flips": 1
+  },
+  {
+    "tag": "val",
+    "restrict": true,
+    "tau": 4.0,
+    "base": 759,
+    "correct": 759,
+    "flips": 0
+  },
+  {
+    "tag": "held",
+    "restrict": true,
+    "tau": 5.0,
+    "base": 1477,
+    "correct": 1477,
+    "flips": 0
+  },
+  {
+    "tag": "val",
+    "restrict": true,
+    "tau": 5.0,
+    "base": 759,
+    "correct": 759,
+    "flips": 0
+  },
+  {
+    "tag": "held",
+    "restrict": true,
+    "tau": 6.0,
+    "base": 1477,
+    "correct": 1477,
+    "flips": 0
+  },
+  {
+    "tag": "val",
+    "restrict": true,
+    "tau": 6.0,
+    "base": 759,
+    "correct": 759,
+    "flips": 0
+  }
+]

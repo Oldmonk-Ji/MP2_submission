@@ -1,0 +1,78 @@
+{
+  "records": [
+    {
+      "n": 1,
+      "held": 1473,
+      "held_hard": 588,
+      "val": 753,
+      "val_hard": 310
+    },
+    {
+      "n": 2,
+      "held": 1478,
+      "held_hard": 593,
+      "val": 755,
+      "val_hard": 312
+    },
+    {
+      "n": 3,
+      "held": 1477,
+      "held_hard": 592,
+      "val": 755,
+      "val_hard": 312
+    },
+    {
+      "n": 4,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 756,
+      "val_hard": 313
+    },
+    {
+      "n": 5,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 754,
+      "val_hard": 311
+    },
+    {
+      "n": 6,
+      "held": 1474,
+      "held_hard": 589,
+      "val": 754,
+      "val_hard": 311
+    },
+    {
+      "n": 7,
+      "held": 1475,
+      "held_hard": 590,
+      "val": 753,
+      "val_hard": 310
+    },
+    {
+      "n": 8,
+      "held": 1476,
+      "held_hard": 591,
+      "val": 753,
+      "val_hard": 310
+    }
+  ],
+  "params": {
+    "objective": "lambdarank",
+    "lambdarank_truncation_level": 1,
+    "metric": "None",
+    "num_leaves": 7,
+    "min_data_in_leaf": 100,
+    "learning_rate": 0.03,
+    "lambda_l2": 50,
+    "verbosity": -1,
+    "num_threads": 4,
+    "deterministic": true,
+    "force_col_wise": true,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "feature_fraction": 0.8
+  },
+  "test_opened": false,
+  "seconds": 43.1361704999581
+}

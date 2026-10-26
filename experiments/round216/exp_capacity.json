@@ -1,0 +1,61 @@
+{
+  "records": [
+    {
+      "tag": "grid0",
+      "seeds": [
+        68068
+      ],
+      "val": 759,
+      "held": 1477,
+      "val_hard": 316,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "grid1",
+      "seeds": [
+        68068
+      ],
+      "val": 754,
+      "held": 1468,
+      "val_hard": 311,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "grid2",
+      "seeds": [
+        68068
+      ],
+      "val": 755,
+      "held": 1470,
+      "val_hard": 312,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "grid3",
+      "seeds": [
+        68068
+      ],
+      "val": 754,
+      "held": 1476,
+      "val_hard": 311,
+      "val_base": 759,
+      "held_base": 1477
+    },
+    {
+      "tag": "grid4",
+      "seeds": [
+        68068
+      ],
+      "val": 757,
+      "held": 1471,
+      "val_hard": 314,
+      "val_base": 759,
+      "held_base": 1477
+    }
+  ],
+  "test_opened": false,
+  "seconds": 118.39223290001974
+}

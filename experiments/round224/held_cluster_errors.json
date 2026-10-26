@@ -1,0 +1,679 @@
+{
+  "split": "TRAIN held fold only",
+  "cluster": "2,1,1",
+  "error_count": 33,
+  "rows": [
+    {
+      "train_index": 54,
+      "question": "There are 3 rows of people relaxing at the beach. The first row is made up of 24 people until 3 people get up to wade in the water. 5 people from the second row, which originally held 20 people, go to join them. The third row is made up of 18 people. How many people are left relaxing on the beach?",
+      "selected": 3,
+      "parsed": [
+        "54",
+        "64",
+        "54",
+        "44"
+      ],
+      "correct": [
+        0,
+        2
+      ],
+      "conclusions": [
+        "We start with:\n\n- **First row**: 24 people  \n- **Second row**: 20 people  \n- **Third row**: 18 people  \n\n**Step 1**: 3 people from the **first row** join the **second row**.  \nSo, 24 - 3 = **21 people** are in the first row.  \n\n**Step 2**: 5 people from the **second row** join the **first row**.  \nSo, 20 - 5 = **15 people** are in the second row.  \n\n**Step 3**: Now, the total number of people is:  \n21 (first row) + 15 (second row) + 18 (third row) = **54 people**\n\n**Answer:**  \n#### <numeric answer> 54",
+        "We start with 3 rows of people relaxing on the beach:\n\n- **First row**: 24 people  \n- **Second row**: 20 people  \n- **Third row**: 18 people  \n\nNow, 3 people from the **first row** get up to wade in the water.  \n5 people from the **second row** join them.  \n\nSo, the number of people left is:\n\n- **First row**: 24 - 3 = 21  \n- **Second row**: 20 + 5 = 25  \n- **Third row**: 18  \n\nTotal people left = 21 + 25 + 18 = **64**\n\n#### <numeric answer> 64",
+        "ith 3 rows of people relaxing on the beach:\n\n- **First row**: 24 people  \n- **Second row**: 20 people  \n- **Third row**: 18 people  \n\n### Step 1: Add the people who are going to join the water\n\n- 3 people from the first row go to join the water.  \n- 5 people from the second row go to join the water.  \n\nSo, **3 + 5 = 8 people** are going to join the water.\n\n### Step 2: Subtract the people who are going to join the water from the total\n\n- First row: 24 - 3 = 21  \n- Second row: 20 - 5 = 15  \n- Third row: 18  \n- Total people left: 21 + 15 + 18 = **54**\n\n### Final Answer:  \n#### <numeric answer> 54",
+        "We are told:\n\n- **First row**: 24 people  \n- **3 people** get up to wade in the water → 24 - 3 = **21 people**  \n- **5 people** from the second row join them → 21 + 5 = **26 people**  \n- **Third row**: 18 people  \n\nSo, the total number of people left relaxing is:\n\n$$\n26 + 18 = \\boxed{44}\n$$\n\n#### Final answer: **44**."
+      ]
+    },
+    {
+      "train_index": 90,
+      "question": "Jenny's local library received 50 visitors on Monday. On Tuesday, the library received twice that number. On the remaining days of the week, an average of 20 visitors went to the library. What's the total number of visitors who went to the library that week?",
+      "selected": 0,
+      "parsed": [
+        "210",
+        "210",
+        "230",
+        "250"
+      ],
+      "correct": [
+        3
+      ],
+      "conclusions": [
+        " given:\n\n- On **Monday**, 50 visitors attended.\n- On **Tuesday**, the number of visitors was **twice** that of Monday: $ 2 \\times 50 = 100 $.\n- On the **remaining days** of the week (i.e., **Friday, Saturday, and Sunday**), the average number of visitors was **20**.\n\n### Step 1: Count the total days in a week\n\n- Monday + Tuesday + Friday + Saturday + Sunday = 5 days.\n\n### Step 2: Calculate the total number of visitors\n\n- Monday: 50  \n- Tuesday: 100  \n- Friday: 20  \n- Saturday: 20  \n- Sunday: 20  \n\n$$\n\\text{Total visitors} = 50 + 100 + 20 + 20 + 20 = 210\n$$\n\n### Final Answer:\n\n$$\n\\boxed{210}\n$$",
+        "Jenny's local library received:\n\n- 50 visitors on **Monday**  \n- Twice that number on **Tuesday**: $ 2 \\times 50 = 100 $ visitors  \n- On the **remaining 3 days** (Wednesday, Thursday, Friday), an average of **20 visitors** each.\n\n### Total number of visitors:\n\n$$\n50 + 100 + 3 \\times 20 = 50 + 100 + 60 = 210\n$$\n\n### Final answer:\n\n$$\n\\boxed{210}\n$$",
+        "We are given:\n\n- On **Monday**, 50 visitors.\n- On **Tuesday**, the library received **twice** that number: $ 2 \\times 50 = 100 $ visitors.\n- On the **remaining days** (i.e., **Wednesday through Sunday**), an average of 20 visitors.\n\n### Step-by-step:\n\n- Monday: 50 visitors  \n- Tuesday: 100 visitors  \n- Wednesday to Sunday: 20 visitors each day\n\nThere are **4 days** (Wednesday to Sunday) = 4 days × 20 visitors = 80 visitors.\n\n### Total visitors:\n\n$$\n50 + 100 + 80 = 230\n$$\n\n### Final answer:\n\n$$\n\\boxed{230}\n$$",
+        "We are given:\n\n- **Monday**: 50 visitors  \n- **Tuesday**: Twice the number of Monday → $ 2 \\times 50 = 100 $ visitors  \n- **Remaining days**: 5 days (since 7 days in a week, and 2 are used)  \n  - Each of these days: 20 visitors  \n  - Total for these days: $ 5 \\times 20 = 100 $ visitors\n\nNow, add all visitors:\n\n$$\n50 + 100 + 100 = 250\n$$\n\n### Final Answer:\n$$\n\\boxed{250}\n$$"
+      ]
+    },
+    {
+      "train_index": 180,
+      "question": "John needs to get a new seeing-eye dog.  The adoption fee cost $150 for an untrained dog.  It then takes 12 weeks of training which costs $250 a week.  After the training, she needs certification which costs $3000 but her insurance covers 90% of that.  What is her out-of-pocket cost?",
+      "selected": 3,
+      "parsed": [
+        "3150",
+        "3150",
+        "3450",
+        "450"
+      ],
+      "correct": [
+        2
+      ],
+      "conclusions": [
+        "John's out-of-pocket cost is calculated as follows:\n\n- **Adoption fee**: $150  \n- **Training cost**: $250 per week for 12 weeks = $3000  \n- **Insurance covers 90% of certification cost**: $3000 × 0.90 = $2700  \n\n**Total out-of-pocket cost**:  \n$150 + $3000 = **$3150**\n\n#### <numeric answer> 3150",
+        "John's out-of-pocket cost is calculated as follows:\n\n- **Adoption fee**: $150  \n- **Training cost**: $250 × 12 weeks = $3000  \n- **Insurance coverage**: 90% of $3000 = $2700  \n\n**Out-of-pocket cost**: $150 + $3000 = **$3150**\n\n#### <numeric answer> 3150",
+        "We are asked to find **John's out-of-pocket cost**.\n\n### Step-by-step:\n\n1. **Adoption fee**: $150  \n   - This is **out-of-pocket**.\n\n2. **Training cost**: $250 per week for 12 weeks  \n   - Total training cost = $250 × 12 = **$3,000**\n\n3. **Certification cost**: $3,000  \n   - Insurance covers **90%**, so John pays **$3,000 × 10% = $300**\n\n4. **Total out-of-pocket cost** =  \n   $150 (adoption) + $3,000 (training) + $300 (certification) = **$3,450**\n\n### Final Answer:  \n#### **$3,450**.",
+        "We are given the following costs:\n\n- **Adoption fee**: $150  \n- **Training cost**: $250 per week for 12 weeks  \n- **Certification cost**: $3000, with **90%** covered by insurance.\n\n---\n\n### Step 1: Calculate the total training cost\n\n$$\n250 \\, \\text{dollars/week} \\times 12 \\, \\text{weeks} = 3000 \\, \\text{dollars}\n$$\n\n---\n\n### Step 2: Add the adoption fee and training cost\n\n$$\n150 + 3000 = 3150 \\, \\text{dollars}\n$$\n\n---\n\n### Step 3: Subtract the insurance coverage\n\n$$\n3150 - (0.9 \\times 3000) = 3150 - 2700 = 450 \\, \\text{dollars}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{450}\n$$"
+      ]
+    },
+    {
+      "train_index": 398,
+      "question": "Geli is committed to her 3 times a week workout. On her first day, she started doing 10 push-ups. Her fitness trainer encouraged her to add 5 more push-ups each day. How many push-ups will she do in total throughout her first week?",
+      "selected": 2,
+      "parsed": [
+        "45",
+        "120",
+        "100",
+        "45"
+      ],
+      "correct": [
+        0,
+        3
+      ],
+      "conclusions": [
+        "is an arithmetic sequence with:\n- First term $ a = 10 $\n- Common difference $ d = 5 $\n- Number of terms $ n = 3 $\n\n---\n\n### Step 2: Use the formula for the sum of an arithmetic sequence\n\n$$\nS_n = \\frac{n}{2} \\times (a + l)\n$$\n\nWhere:\n- $ S_n $ is the total number of push-ups in the week\n- $ n = 3 $ (number of days)\n- $ a = 10 $ (first term)\n- $ l $ is the last term\n\nWe need to find the **last term** for 3 days:\n\n$$\nl = a + (n - 1)d = 10 + 2 \\times 5 = 20\n$$\n\nNow calculate the total:\n\n$$\nS_3 = \\frac{3}{2} \\times (10 + 20) = \\frac{3}{2} \\times 30 = 45\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{45}\n$$",
+        "Geli does 10 push-ups on her first day.  \nShe adds 5 more push-ups each day.  \n\n- First day: 10 push-ups  \n- Second day: 10 + 5 = 15  \n- Third day: 15 + 5 = 20  \n- Fourth day: 20 + 5 = 25  \n- Fifth day: 25 + 5 = 30  \n\nTotal push-ups in 1 week = 10 + 15 + 20 + 25 + 30 = **120** push-ups.  \n\n#### <numeric answer> 120",
+        "Geli does 10 push-ups on her first day.  \nEach subsequent day, she adds 5 more push-ups.  \n\n- Day 1: 10 push-ups  \n- Day 2: 10 + 5 = 15 push-ups  \n- Day 3: 15 + 5 = 20 push-ups  \n- Day 4: 20 + 5 = 25 push-ups  \n- Day 5: 25 + 5 = 30 push-ups  \n\nTotal push-ups in 1 week:  \n$$ 10 + 15 + 20 + 25 + 30 = 100 $$\n\n#### <numeric answer> 100",
+        "Geli starts with 10 push-ups on day 1. Each day she adds 5 more push-ups, so:\n\n- Day 1: $10$\n- Day 2: $10 + 5 = 15$\n- Day 3: $15 + 5 = 20$\n\nTotal for 3 days:  \n$$ 10 + 15 + 20 = 45 $$\n\nSo, the total number of push-ups she will do throughout her first week is:\n\n#### $ \\boxed{45} $"
+      ]
+    },
+    {
+      "train_index": 427,
+      "question": "Tabitha has 25 dollars. She gives her mom 8 dollars and invests half what is left in a money market. She spends some money on 5 items that costs 50 cents each. How much money does Tabitha have left?",
+      "selected": 1,
+      "parsed": [
+        "6",
+        "14",
+        "6",
+        "29/2"
+      ],
+      "correct": [
+        0,
+        2
+      ],
+      "conclusions": [
+        "Tabitha starts with **$25**.\n\n- She gives her mom **$8**, so she has **$17** left.\n- She invests **half** of the remaining money, so she invests **$8.50**.\n- She spends **5 items** costing **$0.50 each**, so she spends **$2.50**.\n\nNow, we add the money she spent and invested:\n\n- Total spent: $8.50 + $2.50 = **$11**\n- Total money left: $25 - $8 - $8.50 - $2.50 = **$25 - $19 = $6**\n\n#### <numeric answer> $6.00",
+        "Tabitha starts with **25 dollars**.\n\n1. She gives **8 dollars** to her mom:  \n   $ 25 - 8 = 17 $ dollars left.\n\n2. She invests **half** of what is left:  \n   $ \\frac{1}{2} \\times 17 = 8.5 $ dollars.\n\n3. She spends **5 items**, each costing **50 cents**:  \n   $ 5 \\times 0.50 = 2.50 $ dollars.\n\n4. Total money used:  \n   $ 8.50 + 2.50 = 11.00 $ dollars.\n\n5. Remaining money:  \n   $ 25 - 11 = \\boxed{14} $ dollars.  \n\n**Final answer:**  \n#### <numeric answer> 14.",
+        "Tabitha starts with **$25**.\n\n- She gives her mom **8 dollars**, so she has **$25 - 8 = $17** left.\n- She invests **half** of what is left in a money market, so she invests **$17 / 2 = $8.50**.\n- She spends **5 items**, each costing **50 cents**, so she spends **5 × 0.50 = $2.50**.\n\nNow, she has:\n\n- $17 (initial) - $8.50 (invested) - $2.50 (spent) = **$17 - 11 = $6**\n\nSo, the final amount is:\n\n#### $6.00.",
+        "Tabitha starts with **25 dollars**.\n\n1. She gives **8 dollars** to her mom, so she has:\n   $$\n   25 - 8 = 17 \\text{ dollars left}\n   $$\n\n2. She invests **half** of what is left in a money market:\n   $$\n   \\frac{1}{2} \\times 17 = 8.5 \\text{ dollars}\n   $$\n\n3. She spends **5 items** costing **50 cents each**:\n   $$\n   5 \\times 0.50 = 2.50 \\text{ dollars}\n   $$\n\n4. Subtract the total spent from what she had:\n   $$\n   17 - 2.50 = 14.50 \\text{ dollars}\n   $$\n\n### Final Answer:\n$$\n\\boxed{14.50}\n$$"
+      ]
+    },
+    {
+      "train_index": 537,
+      "question": "Kobe and Pau went to a restaurant. Kobe ordered five pieces of fried chicken, and Pau ordered twice as much fried chicken as Kobe did. If they order another set of fried chicken, how many pieces of fried chicken will Pau have eaten in all?",
+      "selected": 1,
+      "parsed": [
+        "20",
+        "15",
+        "10",
+        "10"
+      ],
+      "correct": [
+        0
+      ],
+      "conclusions": [
+        "Kobe ordered **5 pieces** of fried chicken.\n\nPau ordered **twice as much** as Kobe, so:\n\n$$\nPau = 2 \\times 5 = 10 \\text{ pieces}\n$$\n\nThey order **another set** of fried chicken. Since Pau ordered **10 pieces**, and they want to know how many **pieces Pau has eaten in all**, we add that:\n\n$$\nPau = 10 + 10 = 20\n$$\n\n### Final Answer:\n$$\n\\boxed{20}\n$$",
+        "Kobe ordered **5** pieces of fried chicken.\n\nPau ordered **twice as much** as Kobe, so:\n\n$$\n2 \\times 5 = 10\n$$\n\nThey order **another set** of fried chicken, so:\n\n$$\n10 + 5 = 15\n$$\n\n**Final answer:** $\\boxed{15}$ pieces of fried chicken.",
+        "Kobe ordered **5 pieces** of fried chicken.\n\nPau ordered **twice as much** as Kobe, so:\n\n$$\n2 \\times 5 = 10 \\text{ pieces}\n$$\n\nThey order another set of fried chicken, so Pau eats **10 pieces**.\n\n### Final Answer:\n$$\n\\boxed{10}\n$$",
+        "Kobe ordered **5** pieces of fried chicken.  \nPau ordered **twice** as much as Kobe, so:\n\n$$\nPau = 2 \\times 5 = 10 \\text{ pieces}\n$$\n\nIf they order **another set** of fried chicken, **Pau will eat 10 pieces**.\n\n### Final Answer:\n$$\n\\boxed{10}\n$$"
+      ]
+    },
+    {
+      "train_index": 668,
+      "question": "Teairra has 5 shirts and 24 pairs of pants in her closet. If 3 of Teairra's shirts are plaid and 5 of Teairra's pants are purple, how many shirts and pants does Teairra has which are neither plaid nor purple?",
+      "selected": 2,
+      "parsed": [
+        "21",
+        "2",
+        "2",
+        "19"
+      ],
+      "correct": [
+        0
+      ],
+      "conclusions": [
+        "the **24 pants**, **5 are purple**.\n\nWe are asked to find how many **shirts and pants** are **neither plaid nor purple**.\n\n---\n\n### Step-by-step:\n\n1. **Number of plaid shirts**: 3  \n   So, **3 shirts are plaid**.\n\n2. **Number of purple pants**: 5  \n   So, **5 pants are purple**.\n\n3. **Total shirts**: 5  \n   **3 are plaid**, so **2 are not plaid**.\n\n4. **Total pants**: 24  \n   **5 are purple**, so **24 - 5 = 19 are not purple**.\n\n---\n\n### Final Answer:\n\n- **Shirts that are neither plaid nor purple**: 2  \n- **Pants that are neither plaid nor purple**: 19\n\n**Total: 2 + 19 = 21**\n\n$$\n\\boxed{21}\n$$",
+        "purple**.\n\n---\n\n### Step 1: Count the number of shirts that are **plaid**\n\n- 3 shirts are **plaid**.\n- So, **3 shirts are plaid**.\n\n---\n\n### Step 2: Count the number of pants that are **purple**\n\n- 5 pants are **purple**.\n- So, **5 pants are purple**.\n\n---\n\n### Step 3: Subtract plaid and purple from total\n\n- Total shirts: 5  \n- Plaid shirts: 3  \n  → **Shirts not plaid**: $5 - 3 = 2$\n\n- Total pants: 24  \n- Purple pants: 5  \n  → **Pants not purple**: $24 - 5 = 19$\n\n---\n\n### Final Answer:\n\n- **Shirts not plaid**: 2  \n- **Pants not purple**: 19\n\n#### Final Answer: **2 + 19 = 21**\n\n$$\n\\boxed{21}\n$$",
+        "Teairra has:\n\n- 5 shirts  \n- 24 pairs of pants\n\nWe are told:\n\n- 3 of Teairra's shirts are **plaid**  \n- 5 of her pants are **purple**\n\nWe need to find how many **shirts and pants** are **neither plaid nor purple**.\n\n---\n\n### Step 1: Total shirts = 5  \nOf these, 3 are **plaid**.\n\nSo, the number of shirts that are **neither plaid nor purple** =  \n$$ 5 - 3 = 2 $$\n\n---\n\n### Step 2: Total pants = 24  \nOf these, 5 are **purple**.\n\nSo, the number of pants that are **neither plaid nor purple** =  \n$$ 24 - 5 = 19 $$\n\n---\n\n### ✅ Final Answer:\n\n$$ \\boxed{2 + 19 = 21} $$",
+        "Teairra has:\n\n- **5 shirts**  \n- **24 pairs of pants**\n\nOf these:\n\n- **3 shirts** are **plaid**  \n- **5 pants** are **purple**\n\nWe are asked to find how many **shirts and pants** are **neither plaid nor purple**.\n\n### Step-by-step:\n\n1. Total shirts: 5  \n2. Total pants: 24  \n3. Shirts that are **plaid**: 3  \n4. Pants that are **purple**: 5  \n\nSo:\n\n- **Shirts that are **not** plaid**: $ 5 - 3 = 2 $  \n- **Pants that are **not** purple**: $ 24 - 5 = 19 $\n\nTherefore, the number of **shirts and pants** that are **neither plaid nor purple** is:\n\n$$\n\\boxed{19}\n$$"
+      ]
+    },
+    {
+      "train_index": 978,
+      "question": "Maria has 19 cookies. She decided to give her friend 5 of them, and half of the rest to her family. From the rest, Maria decided to eat 2 cookies. How many cookies will she have left?",
+      "selected": 2,
+      "parsed": [
+        "5",
+        "12",
+        "7",
+        "5"
+      ],
+      "correct": [
+        0,
+        3
+      ],
+      "conclusions": [
+        "Maria starts with 19 cookies.  \n\n1. She gives 5 cookies to her friend:  \n   $ 19 - 5 = 14 $ cookies remain.\n\n2. She eats half of the remaining 14:  \n   $ \\frac{14}{2} = 7 $ cookies eaten.\n\n3. From the remaining 7, she eats 2 more:  \n   $ 7 - 2 = 5 $ cookies left.\n\n### Final Answer:  \n$$\n\\boxed{5}\n$$",
+        "Maria starts with **19 cookies**.\n\n1. She gives **5** cookies to her friend:  \n   $ 19 - 5 = 14 $ cookies remaining.\n\n2. She gives **half** of the remaining cookies to her family:  \n   $ \\frac{14}{2} = 7 $ cookies.\n\n3. She eats **2** cookies from the remaining:  \n   $ 14 - 2 = 12 $ cookies.\n\n**Final answer:**  \n$$\n\\boxed{12}\n$$",
+        "Maria starts with 19 cookies.\n\n1. She gives **5** cookies to her friend:  \n   $ 19 - 5 = 14 $ cookies left.\n\n2. She eats **half** of the remaining 14:  \n   $ \\frac{14}{2} = 7 $ cookies eaten.\n\n3. She has $ 14 - 7 = 7 $ cookies left.\n\n### Final Answer:\n#### $ \\boxed{7} $",
+        "Maria starts with 19 cookies.\n\n1. She gives 5 cookies to her friend:  \n   $ 19 - 5 = 14 $ cookies remaining.\n\n2. She eats half of the remaining 14 cookies:  \n   $ \\frac{14}{2} = 7 $ cookies eaten.\n\n3. She eats 2 more cookies:  \n   $ 7 - 2 = 5 $ cookies left.\n\n**Final answer:**  \n$$\n\\boxed{5}\n$$"
+      ]
+    },
+    {
+      "train_index": 1128,
+      "question": "Scott, Mary, and Ken committed to raising $4,000 for their local children’s cancer hospital. Right now, Mary’s collection is five times what Ken has, but three times Scott’s funds. If Ken has $600, by how much have the three exceeded their goal?",
+      "selected": 1,
+      "parsed": [
+        "600",
+        "1400",
+        "1400",
+        "8600"
+      ],
+      "correct": [
+        0
+      ],
+      "conclusions": [
+        "0.\n\n---\n\n### Step 1: Find Mary's collection\n\n- Since **Mary's collection is 5 times what Ken has**, and Ken has $600:\n\n$$\n\\text{Mary's collection} = 5 \\times 600 = 3000\n$$\n\n---\n\n### Step 2: Find Scott's collection\n\n- Since **Mary's collection is 3 times what Scott has**, and Mary has $3000:\n\n$$\n\\text{Scott's collection} = \\frac{3000}{3} = 1000\n$$\n\n---\n\n### Step 3: Add up all three amounts\n\n$$\n\\text{Total so far} = 3000 + 1000 + 600 = 4600\n$$\n\n---\n\n### Step 4: Find how much they have exceeded their goal\n\n$$\n\\text{Exceeded amount} = 4600 - 4000 = \\boxed{600}\n$$\n\n---\n\n### ✅ Final Answer: **600**.",
+        "We are given:\n\n- **Ken** has $600.\n- **Mary** has **5 times** what Ken has: $ 5 \\times 600 = 3000 $.\n- **Scott** has **3 times** what Ken has: $ 3 \\times 600 = 1800 $.\n\nSo, the total amount they have is:\n\n$$\n3000 + 1800 + 600 = 5400\n$$\n\nThey need to raise **$4,000**. \n\nThe amount **exceeded** their goal is:\n\n$$\n5400 - 4000 = \\boxed{1400}\n$$\n\n#### <numeric answer> = 1400.",
+        "e given:\n\n- **Ken** has $600.\n- **Mary** has 5 times what Ken has.\n- **Scott** has 3 times what Ken has.\n- **Total goal** is $4,000.\n\n---\n\n### Step 1: Find Mary's and Scott's amounts\n\n- **Ken** = $600  \n- **Mary** = 5 × Ken = $5 × 600 = **$3,000**  \n- **Scott** = 3 × Ken = $3 × 600 = **$1,800**\n\n---\n\n### Step 2: Add up all three amounts\n\n- Total = $3,000 (Mary) + $1,800 (Scott) + $600 (Ken)  \n- Total = **$5,400**\n\n---\n\n### Step 3: Find how much they **exceeded** their goal\n\n- Goal = $4,000  \n- Difference = $5,400 - $4,000 = **$1,400**\n\n---\n\n### ✅ Final Answer:\n\n#### <numeric answer> = **1400**",
+        "We are given:\n\n- **Ken** has $600.\n- **Mary** has 5 times Ken’s funds: $5 \\times 600 = 3000.\n- **Scott** has 3 times Mary’s funds: $3 \\times 3000 = 9000.\n\nTotal amount raised so far:  \n$$ 600 + 3000 + 9000 = 12600 $$\n\nGoal: Raise **$4000**.\n\nSo, the **excess** is:  \n$$ 12600 - 4000 = \\boxed{8600} $$\n\n#### <numeric answer> 8600."
+      ]
+    },
+    {
+      "train_index": 1395,
+      "question": "Traci and Harris are baking cakes together. Traci has brought flour from her own house and Harris has 400g of flour in his house. Each cake needs 100g of flour and Traci and Harris have created 9 cakes each. How much flour, in grams, did Traci bring from her own house?",
+      "selected": 3,
+      "parsed": [
+        "1300",
+        "500",
+        "500",
+        "1400"
+      ],
+      "correct": [
+        1,
+        2
+      ],
+      "conclusions": [
+        "00g** of flour.\n- Each cake requires **100g** of flour.\n- Traci and Harris have **created 9 cakes each**.\n\nLet’s find how much flour **Traci** brought from her own house.\n\n### Step 1: Calculate the total amount of flour used for the cakes\n\nEach cake uses 100g of flour.  \nThere are 9 cakes made by both Traci and Harris:\n\n$$\n\\text{Total flour used} = 9 \\text{ cakes} \\times 100\\text{g/cake} = 900\\text{g}\n$$\n\n### Step 2: Add Harris's flour to the total used\n\nHarris has 400g of flour, so:\n\n$$\n\\text{Traci's flour} = 900\\text{g} + 400\\text{g} = 1300\\text{g}\n$$\n\n### ✅ Final Answer:\n\n$$\n\\boxed{1300}\n$$",
+        "e needs **100g** of flour.\n- Traci and Harris have **created 9 cakes each**.\n\n---\n\n### Step 1: Find the total amount of flour used in the cakes\n\nEach cake requires 100g of flour, and they made **9 cakes**:\n\n$$\n9 \\text{ cakes} \\times 100\\text{g/cake} = 900\\text{g}\n$$\n\nSo, **900g** of flour was used in the cakes.\n\n---\n\n### Step 2: Find how much flour Traci brought from her own house\n\nWe know:\n\n- Harris has 400g of flour.\n- Total flour used in cakes is 900g.\n- Therefore, the remaining flour Traci brought is:\n\n$$\n900\\text{g} - 400\\text{g} = 500\\text{g}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{500}\n$$",
+        "We are given:\n\n- Harris has **400g** of flour.\n- Each cake requires **100g** of flour.\n- Traci and Harris have created **9 cakes each**, meaning they made a total of **18 cakes**.\n\n### Step 1: Find the total amount of flour used in 9 cakes\n\nEach cake uses 100g, so:\n\n$$\n9 \\times 100 = 900 \\text{g}\n$$\n\n### Step 2: Find how much flour Traci brought\n\nWe know that Traci brought flour from her own house, and Harris already has 400g. So:\n\n$$\n\\text{Traci's flour} = \\text{Total flour used in cakes} - \\text{Harris's flour} = 900 - 400 = 500 \\text{g}\n$$\n\n### Final Answer:\n\n$$\n\\boxed{500}\n$$",
+        "We are given:\n\n- Harris has **400g** of flour.\n- Each cake requires **100g** of flour.\n- Traci and Harris have created **9 cakes each**, so a total of **18 cakes**.\n- We are to find how much flour **Traci** brought from her own house.\n\n---\n\n### Step 1: Find the total amount of flour used in the 18 cakes\n\n$$\n\\text{Total flour used} = 18 \\times 100 = 1800 \\text{g}\n$$\n\n---\n\n### Step 2: Find how much flour Traci brought\n\n$$\n\\text{Flour Traci brought} = \\text{Total flour used} - \\text{Harris's flour} = 1800 - 400 = 1400 \\text{g}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{1400}\n$$"
+      ]
+    },
+    {
+      "train_index": 1655,
+      "question": "Jake has 3 snakes.  Each of them lays 2 eggs.  Most of the baby snakes sell for $250 but one super rare one costs 4 times as much.  How much did he get from selling the snakes?",
+      "selected": 3,
+      "parsed": [
+        "1270",
+        "2250",
+        "2250",
+        "2500"
+      ],
+      "correct": [
+        1,
+        2
+      ],
+      "conclusions": [
+        "Jake has **3 snakes**, and each lays **2 eggs**, so:\n\n- Total number of baby snakes: $ 3 \\times 2 = 6 $ snakes.\n\n- **Most** of the snakes sell for **$250** each, so the price for the **5** most expensive snakes is $ 5 \\times 250 = 1250 $.\n\n- **One super rare snake** sells for **4 times** as much as the price of the other snakes, so it costs $ 5 \\times 4 = 20 $.\n\nNow, total money Jake gets from selling the snakes:\n\n$$\n1250 + 20 = \\boxed{1270}\n$$\n\n#### Final answer: **$1270**.",
+        "Jake has 3 snakes. Each of them lays 2 eggs, so the total number of baby snakes is:\n\n$$ 3 \\times 2 = 6 \\text{ baby snakes} $$\n\nMost of the baby snakes sell for $250, and one super rare one sells for **4 times** as much as the others. So:\n\n- 5 snakes sell for $250 each → $5 \\times 250 = 1250\n- 1 snake sells for $1000 (4 × 250)\n\nTotal amount Jake gets from selling the snakes is:\n\n$$ 1250 + 1000 = \\boxed{2250} $$\n\n#### <numeric answer> 2250",
+        "Jake has 3 snakes. Each snake lays 2 eggs, so he has:\n\n$$\n3 \\text{ snakes} \\times 2 \\text{ eggs per snake} = 6 \\text{ baby snakes}\n$$\n\nMost of the baby snakes sell for $250, and one super rare one sells for **4 times** as much as the others. Since there are 6 baby snakes, and most sell for $250, the cost for the **5 normal snakes** is:\n\n$$\n5 \\times 250 = 1250\n$$\n\nThe super rare snake costs $1000 (4 × $250).\n\nSo, the total amount Jake got from selling the snakes is:\n\n$$\n1250 + 1000 = \\boxed{2250}\n$$\n\n**Answer:** $2250.",
+        "Jake has 3 snakes. Each of them lays 2 eggs. That means he has a total of:\n\n$$\n3 \\times 2 = 6 \\text{ baby snakes}\n$$\n\nOf these, **most** sell for $250, and **one super rare** snake sells for **4 times as much** as the others.\n\nSo, the price of the super rare snake is:\n\n$$\n250 \\times 4 = 1000\n$$\n\nThe total amount Jake gets from selling the snakes is:\n\n$$\n6 \\times 250 + 1000 = 1500 + 1000 = 2500\n$$\n\n### Final Answer:\n$$\n\\boxed{2500}\n$$"
+      ]
+    },
+    {
+      "train_index": 1665,
+      "question": "Malcolm is trying to find the fastest walk to school and is currently comparing two routes. In the first route, he walks for 6 minutes uphill, walks for twice this amount of time along a path, then finishes the journey in a third of the time it took to walk the first two stages. In the second route, he walks along a flat path for 14 minutes, then finishes the walk in twice this amount of time. In minutes, how much longer was the second route compared with the first?",
+      "selected": 1,
+      "parsed": [
+        "10",
+        "22",
+        "18",
+        "10"
+      ],
+      "correct": [
+        2
+      ],
+      "conclusions": [
+        "We are given two routes for Malcolm to walk to school:\n\n### **First Route:**\n- 6 minutes uphill\n- 2 × 6 = **12 minutes** along a path\n- 1/3 of the total time for the first two stages = 6 minutes  \n  So total time = 12 + 6 = **18 minutes**\n\n### **Second Route:**\n- 14 minutes along a flat path\n- 2 × 14 = **28 minutes** to finish the walk\n\n### **Difference in time:**\n$$\n28 - 18 = \\boxed{10} \\text{ minutes}\n$$\n\n### ✅ Final Answer: **10**.",
+        "We are given two routes for Malcolm to walk to school:\n\n---\n\n### **Route 1:**\n- 6 minutes uphill\n- 2 × 6 = **12 minutes** along a path\n- 1/3 of the time it took to walk the first two stages = 6 ÷ 3 = **2 minutes**\n\nSo, total time for Route 1:  \n6 + 12 + 2 = **20 minutes**\n\n---\n\n### **Route 2:**\n- 14 minutes along a flat path\n- 2 × 14 = **28 minutes** to finish the walk\n\nSo, total time for Route 2:  \n14 + 28 = **42 minutes**\n\n---\n\n### **Difference in time:**\n\n$$\n42 - 20 = \\boxed{22} \\text{ minutes}\n$$\n\n#### ✅ Final Answer: **22**",
+        "d that:\n\n- In the **first route**:\n  - 6 minutes uphill\n  - 6 minutes *twice* that time along a path → 12 minutes\n  - Then finishes in a third of the total time for the first two stages:  \n    $ \\frac{6 + 12}{3} = 6 $ minutes\n\n- In the **second route**:\n  - 14 minutes along a flat path\n  - Then finishes in twice that time: $ 2 \\times 14 = 28 $ minutes\n\n### Step 1: Find the total time for each route\n\n- First route: $ 6 + 12 + 6 = 24 $ minutes\n- Second route: $ 14 + 28 = 42 $ minutes\n\n### Step 2: Find the difference in time\n\n$$\n42 - 24 = 18 \\text{ minutes}\n$$\n\n### Final Answer:\n\n$$\n\\boxed{18}\n$$",
+        "We are told:\n\n- **First route**:\n  - 6 minutes uphill\n  - 2 × 6 = 12 minutes along a path\n  - 1/3 of the time it took for the first two stages = $ \\frac{1}{3} \\times 18 = 6 $ minutes\n\n- **Second route**:\n  - 14 minutes along a flat path\n  - 2 × 14 = 28 minutes\n\nNow, we want to find how much longer the **second route** was compared to the **first**.\n\n$$\n\\text{Difference} = 28 - 18 = \\boxed{10} \\text{ minutes}\n$$\n\n### ✅ Final Answer: **10**."
+      ]
+    },
+    {
+      "train_index": 1930,
+      "question": "Hamza has several empty buckets of different sizes, holding either 3, 5, or 6 liters. She fills the 5-liter bucket and pours as much as she can into the 3-liter bucket. Then, she pours the remainder into the 6-liter bucket. How much more water, in liters, can she put into the 6-liter bucket, without overflowing?",
+      "selected": 2,
+      "parsed": [
+        "4",
+        "0",
+        "2",
+        "2"
+      ],
+      "correct": [
+        0
+      ],
+      "conclusions": [
+        "1: Fill the 5-liter bucket\n- Fill the 5-liter bucket.\n\n### Step 2: Pour as much as possible into the 3-liter bucket\n- The 5-liter bucket can pour **3 liters** into the 3-liter bucket.\n- Now, the 5-liter bucket is empty.\n\n### Step 3: Pour the remainder into the 6-liter bucket\n- The remainder is **2 liters**.\n- So, pour 2 liters into the 6-liter bucket.\n\n### Step 4: How much more water can she put into the 6-liter bucket?\n\n- The 6-liter bucket currently has **2 liters**.\n- It can hold **6 liters**.\n- So, the **remaining capacity** is **6 - 2 = 4 liters**.\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4}\n$$",
+        "our into the 3-liter bucket\n\n- She pours as much as possible into the 3-liter bucket.\n\n- Since the 5-liter bucket is full, and the 3-liter bucket is empty, she pours all of the 5 liters into the 3-liter bucket.\n\n- Now, the 5-liter bucket is empty.\n\n---\n\n### Step 3: Pour the remainder into the 6-liter bucket\n\n- The remainder of the 5-liter bucket is **0**, so no water is poured into the 6-liter bucket.\n\n---\n\n### Step 4: How much more can she put into the 6-liter bucket?\n\n- She **cannot** add any water into the 6-liter bucket because it is already full.\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{0}\n$$",
+        "ince the 3-liter bucket is **smaller**, it can only hold **1 liter**.\n- So, after pouring, the 3-liter bucket has **1 liter**, and the 5-liter bucket has **4 liters left**.\n\n---\n\n### Step 3: Pour the remainder into the 6-liter bucket\n\n- The 5-liter bucket now has **4 liters**, so she pours **4 liters** into the 6-liter bucket.\n\n---\n\n### Step 4: How much more water can she put into the 6-liter bucket?\n\n- The 6-liter bucket is **already at 4 liters**.\n- It can hold up to **6 liters**, so the remaining capacity is:\n\n$$\n6 - 4 = \\boxed{2} \\text{ liters}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{2}\n$$",
+        "ch as possible into the 3-liter bucket**:\n   - The 5-liter bucket can only hold 3 liters.\n   - So, **1 liter** is poured into the 3-liter bucket.\n\n3. **Pour the remainder into the 6-liter bucket**:\n   - The 5-liter bucket had 5 liters, poured 1 into the 3-liter bucket → left with **4 liters**.\n   - These 4 liters go into the 6-liter bucket.\n\n4. **How much more can she put into the 6-liter bucket?**\n\n   - The 6-liter bucket can hold **up to 6 liters**.\n   - She already has **4 liters** in it.\n   - So, **2 more liters** can be added without overflowing.\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{2}\n$$"
+      ]
+    },
+    {
+      "train_index": 1974,
+      "question": "Every Monday to Friday morning, Alice walks 10 miles through a large grass field to get to school. To avoid the hot afternoon sun on her way home, she walks 12 miles through a forest. When she gets home on Friday, how many miles will she have walked that week?",
+      "selected": 0,
+      "parsed": [
+        "62",
+        "22",
+        "22",
+        "110"
+      ],
+      "correct": [
+        3
+      ],
+      "conclusions": [
+        "We are told:\n\n- Alice walks **10 miles** to school every Monday to Friday morning.\n- She walks **12 miles** in the forest **when she gets home on Friday**.\n\nSo, in **one full week**, she walks:\n\n- 10 miles **Monday to Friday** (5 days)  \n- 12 miles **on Friday** (1 day)\n\nTotal miles walked in the week:\n\n$$\n10 \\times 5 + 12 = 50 + 12 = \\boxed{62} \\text{ miles}\n$$\n\n### Final Answer:\n$$\n\\boxed{62}\n$$",
+        "We are told:\n\n- Alice walks **10 miles** to school **every Monday to Friday morning**.\n- She walks **12 miles** in the **forest** **when she gets home on Friday**.\n\nWe are to find how many **miles she has walked that week**.\n\n### Step-by-step:\n\n- She walks 10 miles to school **once a week** (Monday to Friday).\n- On **Friday**, she walks 12 miles in the forest.\n\nSo, the total miles she walks in the week are:\n\n$$\n10 \\text{ miles (to school)} + 12 \\text{ miles (to forest)} = 22 \\text{ miles}\n$$\n\n### Final answer:\n\n$$\n\\boxed{22}\n$$",
+        "les** every Monday to Friday morning to get to school.\n- She walks **12 miles** every Monday to Friday afternoon to get home (avoiding the hot afternoon sun).\n- She walks **10 miles** every Monday to Friday morning to get to school.\n- She walks **12 miles** every Monday to Friday afternoon to get home.\n\nWe are asked: **When she gets home on Friday, how many miles will she have walked that week?**\n\n### Step-by-step:\n\n- On **Friday**, she walks:\n  - 10 miles to school.\n  - 12 miles to home.\n- Total miles for the week:  \n  $$\n  10 + 12 = 22 \\text{ miles}\n  $$\n\n### ✅ Final Answer:\n$$\n\\boxed{22}\n$$",
+        "We are told:\n\n- Alice walks **10 miles** each Monday through Friday morning to get to school.\n- She walks **12 miles** each day in the **forest** on Fridays.\n- She walks **10 miles** each day in the **grass field** on Fridays.\n\nWe are to find the **total miles she walks in a week**.\n\n### Step-by-step:\n\n- **Monday to Friday** = 5 days.\n- Each day, she walks:\n  - 10 miles in the grass field\n  - 12 miles in the forest\n\nSo, for each day:\n$$\n10 + 12 = 22 \\text{ miles}\n$$\n\nOver 5 days:\n$$\n5 \\times 22 = 110 \\text{ miles}\n$$\n\n### Final Answer:\n$$\n\\boxed{110}\n$$"
+      ]
+    },
+    {
+      "train_index": 2045,
+      "question": "The rate for mowing a lawn is $14 per hour. David mowed for 2 hours a day for a week. He then spent half of the money he made from mowing a lawn on a pair of shoes and gave half of the remaining money to his mom. How much money did he have left?",
+      "selected": 2,
+      "parsed": [
+        "49",
+        "0",
+        "98",
+        "98"
+      ],
+      "correct": [
+        0
+      ],
+      "conclusions": [
+        "in a week**:  \n   David mows for **2 hours per day** for **7 days**.  \n   $ 2 \\, \\text{hours/day} \\times 7 \\, \\text{days} = 14 \\, \\text{hours} $.\n\n2. **Calculate total money earned**:  \n   Rate = $14 per hour  \n   Total money = $14 \\, \\text{hours} \\times 14 = 196 \\, \\text{dollars} $.\n\n3. **He spent half on shoes**:  \n   $ \\frac{196}{2} = 98 \\, \\text{dollars} $.\n\n4. **He gave half the remaining money to his mom**:  \n   Remaining money = $98 \\, \\text{dollars} $  \n   $ \\frac{98}{2} = 49 \\, \\text{dollars} $.\n\n5. **Money left**:  \n   $ 49 \\, \\text{dollars} $.\n\n### Final Answer:  \n**$ \\boxed{49} $**",
+        "g to his mom  \n\n---\n\n### Step 1: Calculate the total time he mowed\n\nDavid mowed for 2 hours a day for 7 days:\n\n$$\n2 \\, \\text{hours/day} \\times 7 \\, \\text{days} = 14 \\, \\text{hours}\n$$\n\n---\n\n### Step 2: Calculate the total money he earned\n\nAt $14 per hour, he earned:\n\n$$\n14 \\, \\text{hours} \\times 14 \\, \\text{dollars/hour} = 196 \\, \\text{dollars}\n$$\n\n---\n\n### Step 3: He spent half on shoes and half on his mom\n\n- He spent half: $ \\frac{196}{2} = 98 $  \n- He gave half to his mom: $ \\frac{196}{2} = 98 $\n\nSo, the remaining money is:\n\n$$\n196 - 98 - 98 = 0\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{0}\n$$",
+        "er of hours David mowed\n\nDavid mowed **2 hours per day for a week**.  \nThere are **7 days in a week**, so:\n\n$$\n2 \\, \\text{hours/day} \\times 7 \\, \\text{days} = 14 \\, \\text{hours}\n$$\n\n---\n\n### Step 2: Calculate the total earnings from mowing\n\n$$\n\\text{Earnings} = 14 \\, \\text{hours} \\times 14 \\, \\text{\\$/hour} = 196 \\, \\text{\\$}\n$$\n\n---\n\n### Step 3: He spent half on shoes\n\n$$\n\\text{Spent on shoes} = \\frac{196}{2} = 98 \\, \\text{\\$}\n$$\n\n---\n\n### Step 4: He gave half of the remaining money to his mom\n\n$$\n\\text{Remaining money} = 196 - 98 = 98 \\, \\text{\\$}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{98}\n$$",
+        "\n---\n\n### Step 1: Calculate total time mowed in a week\n\nDavid mows for **2 hours per day**, and there are **7 days** in a week:\n\n$$\n2 \\text{ hours/day} \\times 7 \\text{ days} = 14 \\text{ hours}\n$$\n\n---\n\n### Step 2: Calculate total earnings from mowing\n\n$$\n\\text{Earnings} = \\text{Rate} \\times \\text{Time} = 14 \\times 14 = 196 \\text{ dollars}\n$$\n\n---\n\n### Step 3: He spent half on shoes\n\n$$\n\\text{Spent on shoes} = \\frac{196}{2} = 98 \\text{ dollars}\n$$\n\n---\n\n### Step 4: Remaining money after shoes\n\n$$\n\\text{Remaining money} = 196 - 98 = 98 \\text{ dollars}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{98}\n$$"
+      ]
+    },
+    {
+      "train_index": 2069,
+      "question": "John won $155250 in the lottery and decided to give one-thousandth of the $155250  to each of the top 100 students in his college. Calculate the total amount received by the hundred students of his college.",
+      "selected": 0,
+      "parsed": [
+        "5175000",
+        "51750",
+        "15525",
+        "51750"
+      ],
+      "correct": [
+        2
+      ],
+      "conclusions": [
+        "John won **$155,250** and decided to give **one-thousandth** of the amount to each of the top 100 students. Let's break it down step by step:\n\n1. **One-thousandth** of $155,250 is:  \n   $$\n   \\frac{1}{3} \\times 155,250 = 51,750\n   $$\n\n2. **Total amount given to 100 students** is:  \n   $$\n   51,750 \\times 100 = 5,175,000\n   $$\n\n### Final Answer:\n$$\n\\boxed{5175000}\n$$",
+        "We are told:\n\n- John won **$155,250** in the lottery.\n- He decides to give **one-thousandth** of this amount to each of the **top 100 students**.\n\n---\n\n### Step 1: Calculate the amount given to one student\n\n$$\n\\frac{1}{300} \\times 155,250 = 517.5\n$$\n\n---\n\n### Step 2: Multiply by 100 to get the total amount given to all 100 students\n\n$$\n517.5 \\times 100 = 51,750\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{51750}\n$$",
+        "John won **$155,250** in the lottery and decided to give **one-thousandth** of this amount to each of the **top 100 students**.\n\n### Step 1: Calculate the amount given to one student  \nOne-thousandth of $155,250 is:  \n$$\n\\frac{155250}{1000} = 155.25\n$$\n\n### Step 2: Multiply by 100 students  \nTotal amount received by the 100 students:  \n$$\n155.25 \\times 100 = 15,525\n$$\n\n### Final Answer:\n$$\n\\boxed{15525}\n$$",
+        "We are told that John won **$155,250** and decided to give **one-thousandth** of the amount to each of the **top 100 students**.\n\n### Step 1: Calculate the amount given to one student\n$$\n\\frac{1}{300} \\times 155,250 = 517.5\n$$\n\n### Step 2: Multiply by 100 to find the total amount given to all 100 students\n$$\n517.5 \\times 100 = 51,750\n$$\n\n### Final Answer:\n$$\n\\boxed{51750}\n$$"
+      ]
+    },
+    {
+      "train_index": 2179,
+      "question": "Mitch has saved $20000 to finance his boating hobby. A new boat costs $1500 per foot in length. If Mitch needs to keep $500 for a license and registration, and three times that amount for docking fees, how many feet is the longest boat he can buy?",
+      "selected": 2,
+      "parsed": [
+        "133/100",
+        "12",
+        "11",
+        "133/100"
+      ],
+      "correct": [
+        1
+      ],
+      "conclusions": [
+        "** for **license and registration**\n- He needs **3 times that amount** for **docking fees**\n\n---\n\n### Step 1: Calculate the total amount he needs for the boat and fees\n\n- **License and registration:** $500\n- **Docking fees:** $3 × $500 = $1,500\n\n**Total cost for boat and fees:**  \n$500 + $1,500 = **$2,000**\n\n---\n\n### Step 2: Calculate the number of feet the longest boat can be\n\n- A boat costs **$1500 per foot**\n- So, the number of feet is:  \n  $$\n  \\frac{2000}{1500} = 1.333\\ldots \\text{ feet}\n  $$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{1.33}\n$$\n\nSo, the longest boat Mitch can buy is **1.33 feet**.",
+        "es**\n\n---\n\n### Step 1: Calculate total cost of boat\n\n- Cost per foot: $1,500\n- Total cost of boat: $1,500 × x \\text{ (number of feet) } $\n\n---\n\n### Step 2: Add license and registration\n\n- License and registration: $500\n- Docking fees: $3 × $500 = $1,500\n\nSo, total cost of the boat is:\n\n$$\n\\text{Total cost} = 1,500x + 500 + 1,500 = 1,500x + 2,000\n$$\n\n---\n\n### Step 3: Set total cost equal to savings\n\nMitch has saved $20,000:\n\n$$\n1,500x + 2,000 = 20,000\n$$\n\n---\n\n### Step 4: Solve for x\n\n$$\n1,500x = 18,000 \\\\\nx = \\frac{18,000}{1,500} = 12\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{12} \\text{ feet}\n$$",
+        "*license and registration**.\n- He needs **three times that amount** for **docking fees**.\n\nLet’s break it down step by step:\n\n1. **License and registration**: $500  \n2. **Docking fees**: $3 × $500 = **$1,500**\n\nTotal cost of boat and fees =  \n$1,500 (boat) + $500 (license) + $1,500 (docking) = **$3,500**\n\nMitch has $20,000 to spend. So the remaining money is:\n\n$$\n20,000 - 3,500 = 16,500\n$$\n\nThis is used to buy the boat. Since the boat costs $1,500 per foot, we divide the remaining money by the cost per foot:\n\n$$\n\\frac{16,500}{1,500} = 11 \\text{ feet}\n$$\n\n### ✅ Final Answer:  \n#### **11** feet.",
+        "ep 1: Calculate the total amount needed for the boat and fees\n\n- License and registration: $500  \n- Docking fees: $3 \\times 500 = 1500$\n\nTotal amount needed:\n$$\n500 + 1500 = 2000\n$$\n\nSo, Mitch needs **$2000** to buy the boat and pay the license and fees.\n\n---\n\n### Step 2: Calculate the number of feet\n\nWe know that a boat costs **$1,500 per foot**, so:\n\n$$\n\\text{Number of feet} = \\frac{2000}{1500} = \\frac{4}{3} \\approx 1.333\n$$\n\nSince the number of feet must be a whole number, Mitch can **buy a boat of 1.33 feet**, which is **1 foot and 10 inches**.\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{1.33}\n$$"
+      ]
+    },
+    {
+      "train_index": 2249,
+      "question": "Randy has some money in his piggy bank. He spends 2 dollars every time he goes to the store. He makes 4 trips to the store every month. If he had $104 dollars left in his piggy bank after a year, how much money, in dollars, did he have at first?",
+      "selected": 2,
+      "parsed": [
+        "8",
+        "4",
+        "8",
+        "200"
+      ],
+      "correct": [
+        3
+      ],
+      "conclusions": [
+        "to the store.\n- He makes **4 trips per month**.\n- He makes **$104** in his piggy bank after a year.\n\nLet’s solve step by step:\n\n1. **Find the total number of trips in a year:**\n   $$\n   4 \\text{ trips/month} \\times 12 \\text{ months} = 48 \\text{ trips}\n   $$\n\n2. **Calculate the total amount spent in a year:**\n   $$\n   48 \\text{ trips} \\times 2 \\text{ dollars/trip} = 96 \\text{ dollars}\n   $$\n\n3. **Find the initial amount of money in the piggy bank:**\n   $$\n   \\text{Initial amount} = \\text{Total amount after year} - \\text{Total amount spent} = 104 - 96 = 8\n   $$\n\n### Final Answer:\n$$\n\\boxed{8}\n$$",
+        "store.\n- He makes 4 trips per month.\n- After a year, he has $104 left.\n- We are to find how much money he had at first.\n\n---\n\n### Step 1: Calculate the total amount spent in a year\n\n- He makes **4 trips per month**.\n- So, in a year, he makes:\n\n$$\n4 \\text{ trips/month} \\times 12 \\text{ months} = 48 \\text{ trips}\n$$\n\n- He spends $2 per trip, so in a year:\n\n$$\n48 \\times 2 = 96 \\text{ dollars}\n$$\n\n---\n\n### Step 2: Subtract the total spent from the remaining amount\n\n- He has $104 left.\n- So, the initial amount he had is:\n\n$$\n104 - 96 = 4 \\text{ dollars}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4}\n$$",
+        "y bank.\n\nWe need to find out how much money he had at first.\n\n---\n\n### Step 1: Calculate the amount he spends each month\n\n- He makes 4 trips per month.\n- He spends $2 per trip.\n\nSo, he spends:\n\n$$\n4 \\times 2 = 8 \\text{ dollars per month}\n$$\n\n---\n\n### Step 2: Calculate the total amount spent in a year\n\n- There are 12 months in a year.\n\n$$\n8 \\text{ dollars/month} \\times 12 \\text{ months} = 96 \\text{ dollars}\n$$\n\n---\n\n### Step 3: Subtract the total spent from the remaining money\n\nHe starts with $104 and spends $96, so:\n\n$$\n104 - 96 = 8 \\text{ dollars}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{8}\n$$",
+        "We are given:\n\n- Randy spends **$2** every time he goes to the store.\n- He makes **4 trips** to the store every month.\n- After a year, he has **$104** left in his piggy bank.\n\nLet’s solve step by step:\n\n---\n\n### Step 1: Calculate total money spent in a year\n\n- He makes 4 trips per month.\n- So, per month, he spends:  \n  $ 4 \\times 2 = 8 $ dollars.\n\n- After a year, he has 104 dollars left.\n\nSo, the total money he had initially is:  \n$$\n104 + 8 \\times 12 = 104 + 96 = 200\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{200}\n$$"
+      ]
+    },
+    {
+      "train_index": 2270,
+      "question": "Reese has been practicing piano for four hours every week. How many hours will he practice after five months?",
+      "selected": 3,
+      "parsed": [
+        "20",
+        "80",
+        "20",
+        "60"
+      ],
+      "correct": [
+        1
+      ],
+      "conclusions": [
+        "Reese practices for **4 hours every week**, and we are to find out how many hours he will practice after **5 months**.\n\n- 1 week = 4 weeks  \n- 5 months = 5 weeks\n\nSo,  \n$$ 4 \\text{ hours/week} \\times 5 \\text{ weeks} = 20 \\text{ hours} $$\n\n#### Final answer: **20**.",
+        "Reese practices **4 hours every week**.  \nOver **5 months**, there are **15 weeks** (since 5 months = 5 × 4 = 20 hours).\n\nSo, the total hours he will practice after 5 months is:\n\n$$\n20 \\times 4 = \\boxed{80}\n$$\n\n#### <numeric answer> 80",
+        "Reese practices for **4 hours every week**.  \nAfter **5 months**, there are **5 weeks**.\n\nSo,  \n$$\n4 \\text{ hours/week} \\times 5 \\text{ weeks} = 20 \\text{ hours}\n$$\n\n#### <numeric answer> 20",
+        "Reese practices for **4 hours every week**.  \nOver **5 months**, there are **15 weeks**.\n\nSo, the total hours he will practice after 5 months is:\n\n$$\n4 \\, \\text{hours/week} \\times 15 \\, \\text{weeks} = 60 \\, \\text{hours}\n$$\n\n#### <numeric answer> 60"
+      ]
+    },
+    {
+      "train_index": 2348,
+      "question": "Ellie takes her little brother down to the pond to teach him how to skip stones. After he takes his first throw, she gives him pointers to improve his technique. His second throw skips two more times across the water than his first. His third throw skips twice as many times as his second. His fourth throw skips 3 fewer times than his third throw. His fifth throw skips one more time than the fourth throw. If his fifth throw skipped 8 times across the water, how many skips did he make in total between all of his throws?",
+      "selected": 3,
+      "parsed": [
+        "31",
+        "33",
+        "33",
+        "32"
+      ],
+      "correct": [
+        1,
+        2
+      ],
+      "conclusions": [
+        "s **second throw** skips $ x + 2 $ times.\n- His **third throw** skips $ 2(x + 2) = 2x + 4 $ times.\n- His **fourth throw** skips $ (2x + 4) - 3 = 2x + 1 $ times.\n- His **fifth throw** skips $ (2x + 1) + 1 = 2x + 2 $ times.\n\nWe are also told:\n\n- The **fifth throw** skipped **8 times**.\n\nSo:\n\n$$\n2x + 2 = 8\n$$\n\nSolving:\n\n$$\n2x = 6 \\quad \\Rightarrow \\quad x = 3\n$$\n\nNow, we can find the total number of skips:\n\n- First throw: $ 3 $\n- Second: $ 3 + 2 = 5 $\n- Third: $ 5 + 2 = 7 $\n- Fourth: $ 7 + 1 = 8 $\n- Fifth: $ 8 $\n\nTotal skips:\n\n$$\n3 + 5 + 7 + 8 + 8 = \\boxed{31}\n$$\n\n#### Final answer: **31** skips.",
+        "hrow**  \n- $ 2(x + 2) - 3 $: number of skips in the **fourth throw**  \n- $ 2(x + 2) - 3 + 1 $: number of skips in the **fifth throw**\n\nWe are told:\n\n- The **fifth throw** skipped **8 times**  \n- The **fifth throw** skipped $ 2(x + 2) - 3 + 1 = 8 $\n\nWe solve:\n\n$$\n2(x + 2) - 3 + 1 = 8\n$$\n$$\n2(x + 2) - 2 = 8\n$$\n$$\n2(x + 2) = 10\n$$\n$$\nx + 2 = 5\n$$\n$$\nx = 3\n$$\n\nSo:\n\n- First throw: 3 skips  \n- Second: $ 3 + 2 = 5 $ skips  \n- Third: $ 2 \\times 5 = 10 $ skips  \n- Fourth: $ 10 - 3 = 7 $ skips  \n- Fifth: 8 skips\n\nNow, total skips:\n\n$$\n3 + 5 + 10 + 7 + 8 = \\boxed{33}\n$$\n\n### ✅ Final Answer: **33 skips**.",
+        "nd: $ 2(x + 2) $\n- The **fourth throw** skips **3 fewer times** than the third: $ 2(x + 2) - 3 $\n- The **fifth throw** skips **one more time** than the fourth: $ (2(x + 2) - 3) + 1 = 8 $\n\nSo, we can write the equation:\n\n$$\n2(x + 2) - 3 + 1 = 8\n$$\n\nSimplify:\n\n$$\n2(x + 2) - 2 = 8\n$$\n\n$$\n2x + 4 - 2 = 8\n$$\n\n$$\n2x + 2 = 8\n$$\n\n$$\n2x = 6\n$$\n\n$$\nx = 3\n$$\n\nNow, let's compute the total number of skips:\n\n- First throw: $ x = 3 $\n- Second: $ x + 2 = 5 $\n- Third: $ 2(x + 2) = 10 $\n- Fourth: $ 2(x + 2) - 3 = 7 $\n- Fifth: $ 8 $\n\nTotal skips:\n\n$$\n3 + 5 + 10 + 7 + 8 = 33\n$$\n\n### Final Answer:\n\n$$\n\\boxed{33}\n$$",
+        "irst throw skip **x** times.\n\nThen:\n\n- **Second throw**: $ x + 2 $\n- **Third throw**: $ 2(x + 2) = 2x + 4 $\n- **Fourth throw**: $ 2x + 4 - 3 = 2x + 1 $\n- **Fifth throw**: $ 2x + 1 + 1 = 2x + 2 $\n\nWe are told that the **fifth throw** skips **8** times:\n\n$$\n2x + 2 = 8\n$$\n\n---\n\n### Step 2: Solve for $ x $\n\n$$\n2x + 2 = 8 \\Rightarrow 2x = 6 \\Rightarrow x = 3\n$$\n\n---\n\n### Step 3: Now find the total number of skips.\n\nWe already have:\n\n- First throw: **3**\n- Second: **5**\n- Third: **9**\n- Fourth: **7**\n- Fifth: **8**\n\n**Total skips = 3 + 5 + 9 + 7 + 8 = 32**\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{32}\n$$"
+      ]
+    },
+    {
+      "train_index": 2827,
+      "question": "Tabitha adds 1 serving of honey per cup of tea in the evening.  She usually has 2 cups of tea before bed.  She buys her honey in a 16-ounce container.  If there are 6 servings of honey per ounce, how many nights will she be able to enjoy honey in her tea before bed?",
+      "selected": 3,
+      "parsed": [
+        "48",
+        "1",
+        "1",
+        "8"
+      ],
+      "correct": [
+        0
+      ],
+      "conclusions": [
+        "Tabitha adds **1 serving of honey per cup** of tea. She uses **2 cups of tea before bed**.  \nShe buys a **16-ounce container** of honey, and there are **6 servings per ounce**.\n\n### Step-by-step:\n\n1. **Total honey per night**:  \n   - 1 serving per cup × 2 cups = 2 servings per night.\n\n2. **Total honey in container**:  \n   - 16 ounces × 6 servings/ounce = **96 ounces** of honey.\n\n3. **Number of nights**:  \n   - 96 ounces ÷ 2 servings per night = **48 nights**.\n\n### Final Answer:  \n#### **48**",
+        "unces}\n$$\n\n---\n\n### Step 2: Find how many cups of tea she uses per night\n\nShe uses **2 cups of tea before bed**, so:\n\n$$\n2 \\text{ cups of tea per night}\n$$\n\n---\n\n### Step 3: Find how many ounces of honey she uses per night\n\n$$\n1 \\text{ cup of tea} = 6 \\text{ ounces} \\Rightarrow 2 \\text{ cups} = 2 \\times 6 = 12 \\text{ ounces}\n$$\n\n---\n\n### Step 4: Find how many nights she can enjoy honey\n\n$$\n\\text{Number of nights} = \\frac{\\text{Total honey}}{\\text{Honey used per night}} = \\frac{16 \\text{ ounces}}{12 \\text{ ounces per night}} = \\frac{4}{3} \\approx 1.33\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{1}\n$$",
+        " bed}\n$$\n\n$$\n\\text{Total honey consumed per night} = 2 \\text{ cups} \\times 6 \\text{ servings per cup} = 12 \\text{ servings}\n$$\n\n---\n\n### Step 3: Find how many ounces of honey are used per night\n\n$$\n\\text{Ounces per night} = 12 \\text{ servings} \\times 1 \\text{ ounce per serving} = 12 \\text{ ounces}\n$$\n\n---\n\n### Step 4: Find how many nights she can enjoy honey\n\n$$\n\\text{Number of nights} = \\frac{16 \\text{ ounces}}{12 \\text{ ounces per night}} = \\frac{4}{3} \\approx 1.33\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{1.33}\n$$\n\nBut since she can't enjoy a fraction of a night, the answer is:\n\n$$\n\\boxed{1}\n$$",
+        "ey servings per tea\n\nShe uses 2 cups of tea before bed, and each cup uses 1 serving:\n\n$$\n2 \\text{ cups} \\times 1 \\text{ serving per cup} = 2 \\text{ servings}\n$$\n\n---\n\n### Step 2: Calculate the total ounces of honey used per night\n\nEach serving is 1 ounce, and she uses 2 servings:\n\n$$\n2 \\text{ servings} \\times 1 \\text{ ounce per serving} = 2 \\text{ ounces}\n$$\n\n---\n\n### Step 3: Calculate how many nights she can enjoy honey\n\nShe has 16 ounces of honey and uses 2 ounces per night:\n\n$$\n16 \\text{ ounces} \\div 2 \\text{ ounces per night} = 8 \\text{ nights}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{8}\n$$"
+      ]
+    },
+    {
+      "train_index": 3249,
+      "question": "Paul has five dogs. For every 10 pounds they weigh, they need 1 pound of dog food per day. One weighs 20 pounds. One weighs 40. Another weighs 10. One weighs 30 and the final one weighs 50 pounds. How much dog food does he need each day?",
+      "selected": 0,
+      "parsed": [
+        "12",
+        "5",
+        "15",
+        "12"
+      ],
+      "correct": [
+        2
+      ],
+      "conclusions": [
+        "rmine the amount of dog food needed per dog\n\nWe are told that for every **10 pounds**, the dog needs **1 pound** of dog food.\n\nSo, per **1 pound of weight**, the dog needs:\n\n$$\n\\frac{1}{10} = 0.1 \\text{ pounds of food}\n$$\n\n---\n\n### Step 2: Calculate the total dog food needed for each dog\n\n- Dog 1: 20 pounds → 20 × 0.1 = **2 pounds**\n- Dog 2: 40 pounds → 40 × 0.1 = **4 pounds**\n- Dog 3: 10 pounds → 10 × 0.1 = **1 pound**\n- Dog 4: 50 pounds → 50 × 0.1 = **5 pounds**\n\n---\n\n### Step 3: Add up all the dog food needed\n\n$$\n2 + 4 + 1 + 5 = 12 \\text{ pounds}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{12}\n$$",
+        "ight, they need **1 pound** of dog food per day.\n- One dog weighs **20 pounds**.\n- One weighs **40 pounds**.\n- Another weighs **10 pounds**.\n- The final dog weighs **50 pounds**.\n\n---\n\n### Step 1: Find the weight of the dog that weighs **50 pounds**\n\n- The dog that weighs **50 pounds** is the **final one**.\n\n---\n\n### Step 2: Use the formula to find the amount of dog food needed\n\n- For every **10 pounds**, they need **1 pound** of dog food.\n\nSo, for a dog that weighs **50 pounds**, the amount of dog food needed is:\n\n$$\n\\frac{50}{10} = 5 \\text{ pounds}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{5}\n$$",
+        "ds**, they need **1 pound of dog food per day**.\n- One dog weighs **20 pounds**.\n- Another dog weighs **40 pounds**.\n- Another dog weighs **10 pounds**.\n- One dog weighs **30 pounds**.\n- The **final dog** weighs **50 pounds**.\n\n---\n\n### Step 1: Find the total weight of all dogs\n\n$$\n20 + 40 + 10 + 30 + 50 = 150 \\text{ pounds}\n$$\n\n---\n\n### Step 2: Calculate the total dog food needed per day\n\nSince they need **1 pound of dog food per 10 pounds of body weight**, we divide the total weight by 10:\n\n$$\n\\frac{150}{10} = 15 \\text{ pounds of dog food per day}\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{15}\n$$",
+        " every **10 pounds**, they need **1 pound** of dog food per day.\n- One dog weighs **20 pounds**, another **40 pounds**, another **10 pounds**, and the final one **50 pounds**.\n\nLet’s calculate the total amount of dog food needed:\n\n- **One dog** weighs 20 lb → 20 / 10 = 2 lb of food per day  \n- **Two dogs** weigh 40 lb → 40 / 10 = 4 lb of food per day  \n- **One dog** weighs 10 lb → 10 / 10 = 1 lb of food per day  \n- **One dog** weighs 50 lb → 50 / 10 = 5 lb of food per day\n\nNow, add up the food per day for all 5 dogs:\n\n$$\n2 + 4 + 1 + 5 = 12 \\text{ lb/day}\n$$\n\n### Final answer:\n\n$$\n\\boxed{12}\n$$"
+      ]
+    },
+    {
+      "train_index": 3352,
+      "question": "Ivan has a piggy bank that can hold 100 pennies and 50 dimes. How much, in dollars, does Ivan have if he has filled his two piggy banks with those coins?",
+      "selected": 2,
+      "parsed": [
+        "6",
+        "12",
+        "6",
+        "3"
+      ],
+      "correct": [
+        1
+      ],
+      "conclusions": [
+        "Ivan has a piggy bank that can hold **100 pennies** and **50 dimes**. Let's solve this step by step:\n\n1. **Pennies**: 100 pennies = 100 cents  \n2. **Dimes**: 50 dimes = 500 cents  \n\nTotal amount = 100 cents + 500 cents = **600 cents**\n\nConvert cents to dollars:  \n600 cents = **$6**\n\n---\n\n**Final Answer:**  \n#### **6**",
+        "Ivan has two piggy banks.  \n- Each piggy bank holds **100 pennies** and **50 dimes**.  \n- So, each piggy bank contains:  \n  - $100 \\text{ pennies} = 100 \\text{ cents}$  \n  - $50 \\text{ dimes} = 500 \\text{ cents}$  \n\n- Total in one piggy bank: $100 + 500 = 600 \\text{ cents}$.  \n\n- Total in two piggy banks:  \n  $2 \\times 600 = 1200 \\text{ cents}$.  \n\nConvert cents to dollars:  \n$1200 \\text{ cents} = \\boxed{12} \\text{ dollars}$.  \n\n#### <numeric answer> 12",
+        "We are told that:\n\n- Ivan has a piggy bank that can hold **100 pennies** and **50 dimes**.\n- He has filled both piggy banks with those coins.\n\n### Step 1: Calculate the total number of coins\n\n- Pennies: 100  \n- Dimes: 50\n\nTotal coins = 100 + 50 = **150 coins**\n\n### Step 2: Convert coins to dollars\n\n- 1 penny = 0.01 dollars  \n- 1 dime = 0.10 dollars\n\nSo:\n\n- 100 pennies = 100 × 0.01 = **1.00 dollar**  \n- 50 dimes = 50 × 0.10 = **5.00 dollars**\n\n### Step 3: Add the two amounts together\n\n$$\n1.00 + 5.00 = \\boxed{6.00}\n$$\n\n### Final Answer:\n\n$$\n\\boxed{6.00}\n$$",
+        "Ivan has two piggy banks.  \n- Each piggy bank holds 100 pennies.  \n- Each piggy bank holds 50 dimes.  \n\nTotal pennies = $100 \\times 2 = 200$  \nTotal dimes = $50 \\times 2 = 100$  \n\nTotal amount = 200 pennies + 100 dimes = 300 cents = **$3.00**\n\n**Answer:** $\\boxed{3}$"
+      ]
+    },
+    {
+      "train_index": 3410,
+      "question": "If a bunny comes out of its burrow 3 times per minute, calculate the combined number of times 20 bunnies at the same pace will have come out of their burrows in 10 hours.",
+      "selected": 2,
+      "parsed": [
+        "1200",
+        "36000",
+        "720000",
+        "36000"
+      ],
+      "correct": [
+        1,
+        3
+      ],
+      "conclusions": [
+        "We are given:\n\n- A **bunny** comes out of its burrow **3 times per minute**.\n- We want to find the **combined number of times** 20 bunnies will have come out of their burrows in **10 hours**.\n\n### Step 1: Convert 10 hours to minutes\n\n$$\n10 \\text{ hours} = 10 \\times 60 = 600 \\text{ minutes}\n$$\n\n### Step 2: Find the number of times 20 bunnies will come out in 600 minutes\n\n$$\n20 \\text{ bunnies} \\times 3 \\text{ times per minute} = 60 \\text{ times}\n$$\n\n### Step 3: Multiply by 20 bunnies\n\n$$\n60 \\text{ times} \\times 20 = \\boxed{1200}\n$$\n\n### Final Answer:\n\n$$\n\\boxed{1200}\n$$",
+        "nies** will have come out of their burrows **in 10 hours**.\n\n---\n\n### Step 1: Find the rate of 1 bunny\n1 bunny = 3 times per minute.\n\nSo, 1 bunny = **3 times per minute**.\n\n---\n\n### Step 2: Find the total number of times 20 bunnies will have come out in 10 hours\n\nFirst, convert 10 hours into minutes:\n\n$$\n10 \\text{ hours} = 10 \\times 60 = 600 \\text{ minutes}\n$$\n\nNow, calculate the total number of times 20 bunnies will have come out:\n\n$$\n20 \\text{ bunnies} \\times 3 \\text{ times per minute} \\times 600 \\text{ minutes} = 20 \\times 3 \\times 600 = 36000\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{36000}\n$$",
+        "combined number of times** 20 bunnies will have come out of their burrows in **10 hours**.\n\n---\n\n### Step 1: Find the rate of 1 bunny\n\n1 bunny = 3 out of 1 minute\n\nSo, 1 bunny = 3 times per minute\n\n---\n\n### Step 2: Find the combined rate for 20 bunnies\n\n20 bunnies = 20 × 3 = **60 times per minute**\n\n---\n\n### Step 3: Convert 10 hours to minutes\n\n1 hour = 60 minutes\n\nSo, 10 hours = 10 × 60 = **600 minutes**\n\n---\n\n### Step 4: Multiply the rate by the time\n\n20 bunnies × 60 times per minute × 600 minutes = ?\n\n**20 × 60 = 1200**\n\n**1200 × 600 = 720,000**\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{720000}\n$$",
+        "*single bunny** comes out of its burrow **3 times per minute**.\n- There are **20 bunnies** at the same pace.\n- We are to find the **combined number of times** 20 bunnies will have come out of their burrows **in 10 hours**.\n\n---\n\n### Step 1: Find how many times one bunny comes out in 10 hours\n\n- 1 bunny = 3 times per minute  \n- In 10 hours, there are $10 \\times 60 = 600$ minutes\n\nSo,  \n1 bunny = 3 × 600 = **1800** times per hour\n\n---\n\n### Step 2: Find how many times 20 bunnies come out in 10 hours\n\n- 20 bunnies × 1800 times per bunny = 36,000 times\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{36000}\n$$"
+      ]
+    },
+    {
+      "train_index": 3644,
+      "question": "Dennis collected 10 rocks. He put all of them in his aquarium but his fish ate half of them. He was able to make the fish spit two out. How many of Dennis's rocks are left?",
+      "selected": 2,
+      "parsed": [
+        "3",
+        "7",
+        "5",
+        "5"
+      ],
+      "correct": [
+        1
+      ],
+      "conclusions": [
+        "Dennis collected **10 rocks**.  \nHe put all of them in the aquarium but his fish ate **half** of them.  \nThen, the fish spit **2 out**.\n\n- Total rocks: **10**\n- Fish ate half: $ 10 \\div 2 = 5 $\n- Fish spit 2 out: $ 5 - 2 = 3 $\n\nSo, the number of rocks left is:\n\n$$\n\\boxed{3}\n$$",
+        "Dennis collected **10 rocks** and put all of them in his aquarium. However, **his fish ate half** of them, leaving **5 rocks**.\n\nThen, **two of the fish spat out**. Since the fish ate half, the remaining rocks are:\n\n$$\n10 - 5 + 2 = \\boxed{7}\n$$\n\n### Final Answer: **7**.",
+        "Dennis collected **10 rocks** in total.\n\n- He put all of them in his aquarium.\n- His fish ate **half** of them.\n- Then, the fish spit **2** out.\n\n### Step-by-step:\n\n1. **Initial rocks**: 10  \n2. **Rocks eaten by fish**: $ \\frac{1}{2} \\times 10 = 5 $  \n3. **Rocks left**: $ 10 - 5 = 5 $  \n4. **Rocks spit**: 2  \n   - These are **not** counted toward the remaining rocks.  \n\n### Final answer:  \n**5**  \n\n#### <numeric answer> 5",
+        "Dennis collected **10 rocks** in total.  \nHe put all of them in his aquarium, but **his fish ate half** of them.  \n\nThen, **he was able to make the fish spit two out**.  \n\nSo, the number of rocks left is:\n\n$$\n10 - 5 = 5\n$$\n\n#### <numeric answer> = **5**"
+      ]
+    },
+    {
+      "train_index": 3706,
+      "question": "Daniel owns a textile company. Every Monday he delivers 20 yards of fabric, and every Tuesday he delivers twice the amount of fabric he delivers on Monday. Every Wednesday, he delivers 1/4 of the amount of fabric he delivers on Tuesday. If each yard of fabric costs $2 and each yard of yarn costs $3, how much does he earn from Monday to Wednesday?",
+      "selected": 3,
+      "parsed": [
+        "140",
+        "140",
+        "190",
+        "350"
+      ],
+      "correct": [
+        0,
+        1
+      ],
+      "conclusions": [
+        "We are given the following:\n\n- On **Monday**, Daniel delivers **20 yards** of fabric.\n- On **Tuesday**, he delivers **twice** the amount of fabric on Monday → **40 yards**.\n- On **Wednesday**, he delivers **1/4** of Tuesday's amount → **10 yards**.\n\n### Cost:\n- Each yard of fabric costs **$2**.\n- Each yard of yarn costs **$3**.\n\n### Total earnings:\n\n- **Monday**: $20 \\times 2 = \\$40$\n- **Tuesday**: $40 \\times 2 = \\$80$\n- **Wednesday**: $10 \\times 2 = \\$20$\n\n### Total earnings from Monday to Wednesday:\n\n$$\n40 + 80 + 20 = \\boxed{140}\n$$\n\n**Answer:** $\\boxed{140}$",
+        "We are given:\n\n- Every **Monday**, Daniel delivers **20 yards** of fabric.\n- Every **Tuesday**, he delivers **twice** the amount on Monday: $2 \\times 20 = 40$ yards.\n- Every **Wednesday**, he delivers **1/4** of Tuesday's amount: $ \\frac{1}{4} \\times 40 = 10 $ yards.\n\n### Total fabric delivered:\n$$\n20 \\text{ (Monday)} + 40 \\text{ (Tuesday)} + 10 \\text{ (Wednesday)} = 70 \\text{ yards}\n$$\n\n### Cost:\n- 1 yard costs **$2** (fabric)\n- 1 yard costs **$3** (yarn)\n\nSo, total cost is:\n$$\n70 \\times 2 = 140\n$$\n\n### Final answer:\n$$\n\\boxed{140}\n$$",
+        "Let's solve step by step:\n\n- **Monday**: Daniel delivers **20 yards** of fabric.\n- **Tuesday**: He delivers **twice** the amount on Monday, so:\n  $$\n  2 \\times 20 = 40 \\text{ yards}\n  $$\n- **Wednesday**: He delivers **1/4** of Tuesday's amount:\n  $$\n  \\frac{1}{4} \\times 40 = 10 \\text{ yards}\n  $$\n\nNow, calculate the total earnings:\n\n- **Monday**: $20 \\text{ yards} \\times 2 = 40$\n- **Tuesday**: $40 \\text{ yards} \\times 3 = 120$\n- **Wednesday**: $10 \\text{ yards} \\times 3 = 30$\n\n**Total earnings**: $40 + 120 + 30 = 190$\n\n### Final Answer:\n$$\n\\boxed{190}\n$$",
+        "We are given the following information:\n\n- Daniel delivers **20 yards of fabric** on **Monday**.\n- On **Tuesday**, he delivers **twice** the amount on Monday:  \n  $ 2 \\times 20 = 40 $ yards.\n- On **Wednesday**, he delivers **1/4** of Tuesday's amount:  \n  $ \\frac{1}{4} \\times 40 = 10 $ yards.\n\n### Total fabric delivered from Monday to Wednesday:\n$$\n20 + 40 + 10 = 70 \\text{ yards}\n$$\n\n### Cost:\n- Each yard of fabric costs **$2**  \n- Each yard of yarn costs **$3**\n\nSo, total earnings:\n$$\n70 \\times 2 + 70 \\times 3 = 140 + 210 = \\boxed{350}\n$$\n\n**Final Answer: 350**."
+      ]
+    },
+    {
+      "train_index": 3742,
+      "question": "A baseball cap factory made 320 caps the first week, 400 the second week, and 300 the third week.  If the company makes their average number of caps from the first 3 weeks during the fourth week, how many total caps will they make?",
+      "selected": 0,
+      "parsed": [
+        "680",
+        "740",
+        "680",
+        "1360"
+      ],
+      "correct": [
+        3
+      ],
+      "conclusions": [
+        "e are told the company made:\n\n- 320 caps in the first week  \n- 400 caps in the second week  \n- 300 caps in the third week  \n\nThey make their **average number of caps** from the **first 3 weeks** during the **fourth week**. That means the **average** of the first 3 weeks is used to find the **total** for the 4 weeks.\n\n### Step 1: Find the average for the first 3 weeks\n\n$$\n\\text{Average} = \\frac{320 + 400 + 300}{3} = \\frac{1020}{3} = 340\n$$\n\n### Step 2: Add the fourth week's caps (which is the same as the average)\n\n$$\n\\text{Total caps} = 340 + 340 = 680\n$$\n\n### ✅ Final Answer:\n\n$$\n\\boxed{680}\n$$",
+        "e are given the number of caps made in the first three weeks:\n\n- Week 1: 320 caps  \n- Week 2: 400 caps  \n- Week 3: 300 caps  \n\nThe company makes their **average number of caps** from the first 3 weeks during the **fourth week**. So, we will compute the average for the first 3 weeks, and then add the 400th week's caps (the number given in the problem).\n\n### Step 1: Find the average for the first 3 weeks:\n\n$$\n\\text{Average} = \\frac{320 + 400 + 300}{3} = \\frac{1020}{3} = 340\n$$\n\n### Step 2: Add the 400th week's caps:\n\n$$\n\\text{Total caps} = 340 + 400 = 740\n$$\n\n### Final Answer:\n\n$$\n\\boxed{740}\n$$",
+        "We are given:\n\n- Week 1: 320 caps  \n- Week 2: 400 caps  \n- Week 3: 300 caps  \n- Week 4: unknown number of caps\n\nWe are told the company makes their **average number of caps from the first 3 weeks during the fourth week**.\n\n### Step 1: Find the average of the first 3 weeks\n\n$$\n\\text{Average} = \\frac{320 + 400 + 300}{3} = \\frac{1020}{3} = 340\n$$\n\n### Step 2: Add the 4th week's caps to the average\n\n$$\n\\text{Total caps} = 340 + 340 = 680\n$$\n\n### ✅ Final Answer:\n\n$$\n\\boxed{680}\n$$",
+        "We are to find the **total number of caps** after **4 weeks**, which is:\n\n$$\n320 + 400 + 300 + x = 1020 + x\n$$\n\nSince the company makes **average caps from the first 3 weeks** during the **4th week**, we are to assume that the **average number of caps in the first 3 weeks** is used to find the 4th week.\n\n### Step 1: Find the average of the first 3 weeks:\n\n$$\n\\text{Average} = \\frac{320 + 400 + 300}{3} = \\frac{1020}{3} = 340\n$$\n\n### Step 2: Use this average to find the 4th week:\n\n$$\nx = 340\n$$\n\n### Step 3: Compute the total:\n\n$$\n1020 + 340 = \\boxed{1360}\n$$\n\n#### Final Answer:\n$$\n\\boxed{1360}\n$$"
+      ]
+    },
+    {
+      "train_index": 3809,
+      "question": "A publishing house decides to create a contest for new writers and will award a total of $800 in prizes to the 18 novels with the most votes. First place will get $200, second place will get $150, third place $120 and the rest of the awards will be paid with the same amount of money. How much money will each writer earn from fourth place onwards?",
+      "selected": 2,
+      "parsed": [
+        "22",
+        "2357/100",
+        "55/2",
+        "2357/100"
+      ],
+      "correct": [
+        0
+      ],
+      "conclusions": [
+        "We are told:\n\n- There are **18 novels** with the most votes.\n- Total prize money is **$800**.\n- First place gets **$200**, second **$150**, third **$120**.\n- The remaining **$800 - $200 - $150 - $120 = $330** is divided among the **15 remaining awards** (since 18 - 3 = 15).\n\nSo, the **remaining awards** are divided equally among the 15 writers:\n\n$$\n\\frac{330}{15} = 22\n$$\n\n### Final Answer:\n#### **$22**",
+        "We are told:\n\n- There are **18 novels** with the most votes.\n- The total prize money is **$800**.\n- First place gets **$200**.\n- Second place gets **$150**.\n- Third place gets **$120**.\n- The remaining **$800 - $200 - $150 - $120 = $330** will be distributed to the remaining **14** writers.\n\nEach of the **4th to 18th place** writers will get:\n\n$$\n\\frac{330}{14} \\approx \\boxed{23.57}\n$$\n\n### Final Answer:\n\n#### $23.57",
+        "We are given:\n\n- Total prize money: $800  \n- Number of awards: 18 (first, second, third, and 12 others)  \n- First place: $200  \n- Second place: $150  \n- Third place: $120  \n- The remaining 12 awards will be paid with the same amount of money.\n\nLet the amount for each of the remaining 12 awards be $ x $.\n\nSo:\n\n$$\n200 + 150 + 120 + 12x = 800\n$$\n\n$$\n470 + 12x = 800\n$$\n\n$$\n12x = 330\n$$\n\n$$\nx = \\frac{330}{12} = 27.5\n$$\n\nEach writer will earn:\n\n$$\n\\boxed{27.5}\n$$",
+        "We are given:\n\n- Total prize money: $800\n- 18 novels with the most votes\n- First place: $200\n- Second place: $150\n- Third place: $120\n- The remaining awards (4th to 18th places) will be paid with the same amount.\n\n### Step 1: Calculate the total prize money for the remaining 14 awards\n\n$$\n800 - (200 + 150 + 120) = 800 - 470 = 330\n$$\n\n### Step 2: Divide the remaining prize money by 14 (from 4th to 18th places)\n\n$$\n\\frac{330}{14} \\approx 23.57\n$$\n\n### Final Answer:\n\n$$\n\\boxed{23.57}\n$$"
+      ]
+    },
+    {
+      "train_index": 4528,
+      "question": "Daisy is a poodle puppy who loves to play with her dog toys. She often loses them in various ways, and her owner needs to replace them. On Monday, Daisy played with 5 dog toys. On Tuesday, Daisy had 3 dog toys left after losing some, and her owner went to the store and got her 3 more. On Wednesday, all of Daisy's old and new dog toys were missing, so her owner went to the store and bought her 5 more. If Daisy's owner found all the lost dog toys, including the new dog toys, how many dog toys would Daisy have now?",
+      "selected": 3,
+      "parsed": [
+        "7",
+        "11",
+        "13",
+        "11"
+      ],
+      "correct": [
+        2
+      ],
+      "conclusions": [
+        "Let's solve step by step:\n\n- **Monday**: Daisy played with 5 dog toys.  \n  So, **5 toys** are **lost**.\n\n- **Tuesday**: 3 dog toys are left after losing some.  \n  So, **3 toys** are **lost**.\n\n- **Wednesday**: All the toys are missing, and the owner buys 5 more.  \n  So, **5 toys** are **added**.\n\nNow, we add the toys:\n\n- Start with 5 (Monday)  \n- Subtract 3 (Tuesday) = 2  \n- Add 5 (Wednesday) = **2 + 5 = 7**\n\n### Final Answer:  \n**7 dog toys**.  \n\n#### <numeric answer> 7",
+        "We will track the number of dog toys Daisy has after each day:\n\n- **Monday**: 5 dog toys  \n- **Tuesday**: 3 dog toys **left** after losing some, then the owner bought 3 more → total = 3 + 3 = **6**  \n- **Wednesday**: All old and new toys were missing, so the owner bought 5 more → total = 6 + 5 = **11**\n\nSo, the final number of dog toys is:\n\n**#### 11**",
+        "Let's solve step by step:\n\n- On **Monday**, Daisy played with **5** dog toys.\n- On **Tuesday**, **3** dog toys were left after losing some, and the owner bought **3** more.\n- On **Wednesday**, all the **old and new** dog toys were missing, and the owner bought **5** more.\n\n### Total dog toys now:\n- Start with **5** on Monday.\n- Add **3** (Tuesday): $5 + 3 = 8$\n- Add **5** (Wednesday): $8 + 5 = 13$\n\n### Final answer:\n$$\n\\boxed{13}\n$$",
+        "Let's break it down step by step:\n\n- **Monday**: Daisy played with **5** dog toys.\n- **Tuesday**: After losing some, she had **3** left. Her owner got **3** more, so now she has **3 + 3 = 6** dog toys.\n- **Wednesday**: All her old and new toys were lost, and she got **5** more. So now she has **6 + 5 = 11** dog toys.\n\n**Final answer:**  \n$$\n\\boxed{11}\n$$"
+      ]
+    },
+    {
+      "train_index": 4615,
+      "question": "Brayden and Gavin were playing touch football against Cole and Freddy. Touchdowns were worth 7 points. Brayden and Gavin scored 7 touchdowns. Cole and Freddy's team scored 9 touchdowns. How many more points did Cole and Freddy have than Brayden and Gavin?",
+      "selected": 3,
+      "parsed": [
+        "14",
+        "4",
+        "14",
+        "28"
+      ],
+      "correct": [
+        0,
+        2
+      ],
+      "conclusions": [
+        "Brayden and Gavin scored **7 touchdowns**, and each touchdown is worth **7 points**, so their total points are:\n\n$$\n7 \\times 7 = 49 \\text{ points}\n$$\n\nCole and Freddy scored **9 touchdowns**, and each touchdown is worth **7 points**, so their total points are:\n\n$$\n9 \\times 7 = 63 \\text{ points}\n$$\n\nNow, the difference in points between Cole and Freddy and Brayden and Gavin is:\n\n$$\n63 - 49 = 14\n$$\n\n### Final Answer:\n$$\n\\boxed{14}\n$$",
+        "Brayden and Gavin scored 7 touchdowns each, so they scored $ 7 \\times 2 = 14 $ points.  \nCole and Freddy scored 9 touchdowns each, so they scored $ 9 \\times 2 = 18 $ points.  \n\n**Difference in points**: $ 18 - 14 = 4 $.\n\n#### <numeric answer> 4",
+        "Brayden and Gavin scored 7 touchdowns each, so their total points are:\n\n$$\n7 \\text{ touchdowns} \\times 7 \\text{ points} = 49 \\text{ points}\n$$\n\nCole and Freddy scored 9 touchdowns each, so their total points are:\n\n$$\n9 \\text{ touchdowns} \\times 7 \\text{ points} = 63 \\text{ points}\n$$\n\nNow, find the difference:\n\n$$\n63 - 49 = 14\n$$\n\n### Final Answer:\n$$\n\\boxed{14}\n$$",
+        "Brayden and Gavin scored 7 touchdowns each, so their total touchdowns = $ 7 \\times 2 = 14 $ touchdowns.  \nCole and Freddy scored 9 touchdowns each, so their total touchdowns = $ 9 \\times 2 = 18 $ touchdowns.\n\nNow, calculate the total points:\n\n- Brayden and Gavin: $ 14 \\times 7 = 98 $ points  \n- Cole and Freddy: $ 18 \\times 7 = 126 $ points  \n\nNow, find the difference:\n\n$$\n126 - 98 = 28\n$$\n\n### Final Answer:\n$$\n\\boxed{28}\n$$"
+      ]
+    },
+    {
+      "train_index": 4664,
+      "question": "My 2 cats had 3 female kittens and 2 male kittens. How many cats do I have in total?",
+      "selected": 2,
+      "parsed": [
+        "7",
+        "10",
+        "15",
+        "15"
+      ],
+      "correct": [
+        0
+      ],
+      "conclusions": [
+        "We start with 2 cats. Then, we add the 3 female kittens and 2 male kittens.  \n\n$$\n2 + 3 + 2 = 7\n$$\n\n**Answer:** 7 cats.  \n\n#### <numeric answer> 7",
+        "We start with 2 cats. Each cat has 3 female kittens and 2 male kittens, so:\n\n- 2 cats × 3 female kittens = 6 female kittens  \n- 2 cats × 2 male kittens = 4 male kittens\n\nTotal number of cats = 6 + 4 = **10**\n\n#### <numeric answer> 10",
+        "We start with 2 cats. Each cat gives birth to 3 female and 2 male kittens.  \n\n- Total kittens = $ 3 \\times 3 + 2 \\times 2 = 9 + 4 = 13 $  \n- Total cats = $ 2 + 13 = 15 $  \n\n#### <numeric answer> 15",
+        "We start with 2 cats. Each cat has 3 female kittens and 2 male kittens.  \n\n- Total kittens: $3 \\times 3 + 2 \\times 2 = 9 + 4 = 13$  \n- Total cats: $2 + 13 = \\boxed{15}$  \n\n#### <numeric answer> 15"
+      ]
+    },
+    {
+      "train_index": 4690,
+      "question": "Archer caught eight fish from the lake to sell in the market. When he reached the market, he sold the fish faster than he had anticipated and decided to go back to the lake and catch more fish. He caught 12 more fish in the second round than he had caught earlier. The demand was even greater, and he had to close the day by catching 60% more fish than the number he had caught in the second round and sold all of them in the market. How many fish did he catch that day?",
+      "selected": 1,
+      "parsed": [
+        "60",
+        "52",
+        "60",
+        "67"
+      ],
+      "correct": [
+        0,
+        2
+      ],
+      "conclusions": [
+        "caught 12 more fish** in the second round.\n- The **demand was even greater**, so he **closed the day by catching 60% more fish** than in the second round.\n- Finally, he **sold all of them** in the market.\n\n---\n\n### Step-by-step:\n\n1. **First round**: 8 fish sold.\n\n2. **Second round**: 12 more fish than the first, so:\n   $$\n   8 + 12 = 20 \\text{ fish}\n   $$\n\n3. **Third round**: 60% more than the second round, so:\n   $$\n   20 + 0.60 \\times 20 = 20 + 12 = 32 \\text{ fish}\n   $$\n\n4. **Total fish caught**: 8 (first) + 20 (second) + 32 (third) = **60 fish**.\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{60}\n$$",
+        "We are told:\n\n- Archer caught **8 fish** initially.\n- He caught **12 more fish** in the second round, making the total **20 fish**.\n- The **demand was even greater**, so he had to catch **60% more** than the second round, which is:\n  $$\n  20 + 0.6 \\times 20 = 20 + 12 = 32 \\text{ fish}\n  $$\n- He sold all 32 fish in the market.\n\n### Final Calculation:\n$$\n\\text{Total fish caught} = 8 + 12 + 32 = \\boxed{52}\n$$\n\n### Final Answer:\n$$\n\\boxed{52}\n$$",
+        "We are told the following:\n\n- Archer caught **8 fish** in the first round.\n- He caught **12 more fish** in the second round, so he caught **20 fish** in total.\n- He had **60% more fish** than the second round, so he caught **20 + 12 = 32 fish** in the third round.\n- He sold all of them in the market.\n\nSo, the total number of fish he caught that day is:\n\n$$\n8 + 20 + 32 = \\boxed{60}\n$$\n\n**Answer:** $\\boxed{60}$ fish.",
+        "that day is:\n\n$$\nx + (x + 12) + 1.60(x + 12)\n$$\n\nNow, simplify:\n\n$$\nx + x + 12 + 1.60x + 19.20 = 3.60x + 31.20\n$$\n\nWe are told he **sold all of them**, and the problem doesn’t give a specific number, so we can assume **any value** that satisfies the condition.\n\nLet’s choose a value for $ x $, say $ x = 10 $:\n\n$$\n3.60(10) + 31.20 = 36 + 31.20 = 67.20\n$$\n\nSince fish are in whole numbers, and the problem asks for a **numeric answer**, we can write:\n\n$$\n\\boxed{67.20}\n$$\n\nBut since the problem likely expects a whole number, and we can't have fractional fish, the correct answer is:\n\n$$\n\\boxed{67}\n$$"
+      ]
+    },
+    {
+      "train_index": 4703,
+      "question": "Krishna and Callum are playing a game where they earn 10 points if they win any round. If they played eight matches and Krishna won 3/4 of the matches, what is the total number of points that Callum earned?",
+      "selected": 0,
+      "parsed": [
+        "80",
+        "20",
+        "20",
+        "60"
+      ],
+      "correct": [
+        1,
+        2
+      ],
+      "conclusions": [
+        "Krishna and Callum are playing a game where they earn **10 points** if they win any round. Krishna won **3/4** of the 8 matches, and Callum won the remaining **1/4**.\n\n- Krishna won $ 8 \\times \\frac{3}{4} = 6 $ matches.\n- Therefore, Callum won $ 8 - 6 = 2 $ matches.\n\n- Total points earned by both: $ 6 \\times 10 + 2 \\times 10 = 80 $ points.\n\n### ✅ Final Answer:\n#### **80**",
+        "We are told:\n\n- Each match gives **10 points**.\n- Krishna won **3/4** of the **8 matches**.\n- Callum won the remaining **1/4** of the matches.\n\n### Step 1: Calculate how many matches Krishna won\n\nKrishna won $ \\frac{3}{4} \\times 8 = 6 $ matches.\n\n### Step 2: Calculate how many matches Callum won\n\nCallum won $ 8 - 6 = 2 $ matches.\n\n### Step 3: Calculate the total points Callum earned\n\nEach match gives **10 points**, so:\n\n$$\n2 \\times 10 = 20 \\text{ points}\n$$\n\n### Final Answer:\n\n$$\n\\boxed{20}\n$$",
+        "We are given:\n\n- Each match earns **10 points** for a win.\n- Krishna won **$\\frac{3}{4}$** of the 8 matches.\n- Callum won the remaining matches.\n\n### Step 1: Total matches played  \nThere are 8 matches in total.\n\n### Step 2: Number of matches Krishna won  \nKrishna won $ \\frac{3}{4} \\times 8 = 6 $ matches.\n\n### Step 3: Number of matches Callum won  \nCallum won $ 8 - 6 = 2 $ matches.\n\n### Step 4: Total points earned by Callum  \nEach match gives 10 points, so:  \n$$\n2 \\times 10 = 20 \\text{ points}\n$$\n\n### Final Answer:  \n$$\n\\boxed{20}\n$$",
+        "Krishna won $ \\frac{3}{4} \\times 8 = 6 $ matches.  \nSince they earned 10 points per win, Callum earned:  \n$$\n6 \\times 10 = 60 \\text{ points}\n$$\n\n#### <numeric answer> 60"
+      ]
+    }
+  ]
+}

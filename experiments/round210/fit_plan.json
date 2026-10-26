@@ -1,0 +1,5 @@
+{
+  "method": "Same103 local candidate-contrast logistic C1 objective and 65536-dimensional features; supplied program hypotheses now come from the round209 strict trace. Missing traces remain unsupported; no correctness hard gate.",
+  "source_sha256": "7a9e056ca798ec623dfcd70cf19489bf3d4d7e97841d11ef657152eb46c7b90c",
+  "test_opened": false
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "arm": "control",
+    "correct": 759,
+    "repairs": 13,
+    "harms": 6,
+    "feature_dimension": 708,
+    "asset_bytes": 15562730
+  },
+  {
+    "arm": "events",
+    "correct": 755,
+    "repairs": 12,
+    "harms": 9,
+    "feature_dimension": 725,
+    "asset_bytes": 15562932
+  },
+  {
+    "arm": "events_ord",
+    "correct": 757,
+    "repairs": 14,
+    "harms": 9,
+    "feature_dimension": 725,
+    "asset_bytes": 15563048
+  },
+  {
+    "arm": "strict",
+    "correct": 757,
+    "repairs": 11,
+    "harms": 6,
+    "feature_dimension": 711,
+    "asset_bytes": 15825206
+  },
+  {
+    "arm": "strict_events",
+    "correct": 757,
+    "repairs": 11,
+    "harms": 6,
+    "feature_dimension": 728,
+    "asset_bytes": 15825771
+  },
+  {
+    "arm": "strict_events_ord",
+    "correct": 758,
+    "repairs": 12,
+    "harms": 6,
+    "feature_dimension": 728,
+    "asset_bytes": 15825705
+  }
+]
