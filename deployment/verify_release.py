@@ -2,6 +2,8 @@
 from pathlib import Path
 import hashlib
 import json
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 manifest = json.loads((ROOT / "experiments/round214/frozen/completion_manifest.json").read_text())
@@ -9,7 +11,9 @@ checked = 0
 for name, expected in manifest["hashes"].items():
     path = ROOT / name.replace("\\", "/")
     assert path.is_file(), f"Missing frozen artifact: {name}"
-    assert hashlib.sha256(path.read_bytes()).hexdigest() == expected, name
+    content = (subprocess.check_output(["git", "show", "HEAD:" + name.replace("\\", "/")],
+                                      cwd=ROOT) if "--git" in sys.argv else path.read_bytes())
+    assert hashlib.sha256(content).hexdigest() == expected, name
     checked += 1
 bundle = ROOT / "experiments/round214/bundle"
 total = 0
