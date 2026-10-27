@@ -58,6 +58,14 @@ was transferred as a Git bundle and verified after cloning.
 
 ## Data boundary
 
+Latest authorization 2026-10-27: the user authorized one official TEST
+evaluation of the already frozen round235. Score: 394/467 (84.3683%).
+Fresh prediction 26.629646 s + official scoring 0.148024 s = 26.777670 s,
+four CPU threads on Xeon 8352V. All 85 frozen hashes remained unchanged.
+Certificate: experiments/round235/official_test_20261027/result.json.
+The candidate was selected on TRAIN/VAL before testing; no test-based
+tuning or selection was performed. Earlier unscored statements are historical.
+
 Update 2026-10-27: after round232 was frozen at VAL 762 and held 1479,
 the user authorized one official TEST evaluation. Official TEST files were
 then transferred into this independent deployment. The frozen candidate

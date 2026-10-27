@@ -8,20 +8,20 @@
     "sha256": "86bc7b23a0fb3ff76862ac2414f33807ea19402e949985c111582a2ddaab1ad4"
   },
   "README.md": {
-    "bytes": 6058,
-    "sha256": "f418fffc0f089fe89f67f9d237e3d7a8a466b804f51a63fec1dc4fee5e610d61"
+    "bytes": 6410,
+    "sha256": "58a4bd5380166a25df7c9736f36fa1c6e442b1156e4c94428de4fa121c9867f9"
   },
   "requirements.txt": {
     "bytes": 83,
     "sha256": "0b0a6005bec35f16f1034ab268b2b7c9b562c8df9dd84e96753c777306ec4375"
   },
   "SUBMISSION_README.md": {
-    "bytes": 8795,
-    "sha256": "6639ac124c372ed469fa14efe7ee13c7fd39c505b5bd6474657283d4ef1ce380"
+    "bytes": 9334,
+    "sha256": "10f9a3e2af0b03ddfd2ae4ac4b6552c5a17e4114105f7ffb9ad1b917df7633a0"
   },
   "\u4ea4\u63a5\u6587\u6863_2026-10-27.md": {
-    "bytes": 19541,
-    "sha256": "64770ac92142192a6af8b6a4aa1b3f126a53eef9c7044eb08805dfb706c56e45"
+    "bytes": 20117,
+    "sha256": "8178f6dd70cb071ac5513972e9b093edf94f5b41b9ec10de5cfedbbb7e0df3d9"
   },
   "deployment/benchmark_worker.py": {
     "bytes": 1636,
@@ -32,16 +32,20 @@
     "sha256": "6e430b13975315507400d784701d4194bbbed902532bffe07c2bb0925a6f3e6c"
   },
   "deployment/build_release.py": {
-    "bytes": 12260,
-    "sha256": "46f395a4944c9238566b8b31c14292aff5dccb842b46387dc6acb90986d49dde"
+    "bytes": 13142,
+    "sha256": "2f4ea89559d9af6fb19f81fb9698ec0221dea697459cc59c702fba741cc055ba"
   },
   "deployment/evaluate_frozen232.py": {
     "bytes": 2537,
     "sha256": "5c062db44302d8343c743239fa4e555e56276dcc6b9c6faf834cbc44db089c6f"
   },
+  "deployment/evaluate_frozen235.py": {
+    "bytes": 2537,
+    "sha256": "101862121d2beeefc8ac1261e31d7df52db67f53b9e7997be9f95ae6daf8af03"
+  },
   "deployment/README.md": {
-    "bytes": 3617,
-    "sha256": "6561c7d142af9b899196a28bae7455edfdf32faeb09c7a9e56257bd883b96eb2"
+    "bytes": 4125,
+    "sha256": "bc0bbad83e455394cfaadecba2dd6458455dafc58702c9c35fc6548c93c7855c"
   },
   "deployment/remote_inventory.py": {
     "bytes": 473,
@@ -4294,6 +4298,42 @@
   "experiments/round235/frozen/validation_score.json": {
     "bytes": 193,
     "sha256": "3e401219c50c4cc2b8038f624e4f16d6a6e33acb32901ae74bb51c95901d5fc1"
+  },
+  "experiments/round235/official_test_20261027/authorization.json": {
+    "bytes": 168,
+    "sha256": "af7886580a737f03b4b549f3f699933f7a7b60c253c904d79e772219ab037c56"
+  },
+  "experiments/round235/official_test_20261027/completion_manifest.json": {
+    "bytes": 1108,
+    "sha256": "4d512fbdbf5e7f2a856db0f94e0bf66cd645cbed886efc01200a43408da88a87"
+  },
+  "experiments/round235/official_test_20261027/prediction.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "experiments/round235/official_test_20261027/prediction.stdout": {
+    "bytes": 109,
+    "sha256": "b13994cd04f6b54fd4ed7765ea858dc8c3558811bbdce14ef21def6e3d34dfeb"
+  },
+  "experiments/round235/official_test_20261027/result.json": {
+    "bytes": 891,
+    "sha256": "06c49d33a47d8e9449409c30fc0958c432670a6fa43323585ef7f6ddf0e75163"
+  },
+  "experiments/round235/official_test_20261027/scoring.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "experiments/round235/official_test_20261027/scoring.stdout": {
+    "bytes": 180,
+    "sha256": "5909303c3b095a7c867b6775a7a863630b2b589682f9f5de05125bbb2b27e95a"
+  },
+  "experiments/round235/official_test_20261027/test_predictions.json": {
+    "bytes": 39847,
+    "sha256": "6e27ccbc0a90a5bf79b7acf24f2685960c575743f3fdd3c6990d7c5ff41fe13d"
+  },
+  "experiments/round235/official_test_20261027/test_score.json": {
+    "bytes": 180,
+    "sha256": "5909303c3b095a7c867b6775a7a863630b2b589682f9f5de05125bbb2b27e95a"
   },
   "experiments/round235/bundle/baseline/config.json": {
     "bytes": 630,

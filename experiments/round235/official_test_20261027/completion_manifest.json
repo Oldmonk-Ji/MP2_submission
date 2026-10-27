@@ -1,0 +1,12 @@
+{
+  "hashes": {
+    "experiments/round235/official_test_20261027/authorization.json": "af7886580a737f03b4b549f3f699933f7a7b60c253c904d79e772219ab037c56",
+    "experiments/round235/official_test_20261027/test_predictions.json": "6e27ccbc0a90a5bf79b7acf24f2685960c575743f3fdd3c6990d7c5ff41fe13d",
+    "experiments/round235/official_test_20261027/prediction.stdout": "b13994cd04f6b54fd4ed7765ea858dc8c3558811bbdce14ef21def6e3d34dfeb",
+    "experiments/round235/official_test_20261027/prediction.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/round235/official_test_20261027/test_score.json": "5909303c3b095a7c867b6775a7a863630b2b589682f9f5de05125bbb2b27e95a",
+    "experiments/round235/official_test_20261027/scoring.stdout": "5909303c3b095a7c867b6775a7a863630b2b589682f9f5de05125bbb2b27e95a",
+    "experiments/round235/official_test_20261027/scoring.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/round235/official_test_20261027/result.json": "06c49d33a47d8e9449409c30fc0958c432670a6fa43323585ef7f6ddf0e75163"
+  }
+}

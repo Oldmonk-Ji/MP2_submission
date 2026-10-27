@@ -1,5 +1,14 @@
 # DASE7506 MP2 — Submission Package
 
+> **Latest official certification: frozen round235.**
+> Validation **763/798 (95.6140%)**, held **1479/1582**, official TEST
+> **394/467 (84.3683%)**, following the user's explicit one-time authorization.
+> Four-thread Xeon 8352V prediction plus scoring **26.78 s**;
+> assets **16,522,247 bytes (15.7568 MiB)**. All 85 frozen hashes unchanged.
+> The following unscored statements are historical; certificate:
+> experiments/round235/official_test_20261027/result.json.
+> Report PDF still requires updating from round214 before submission.
+
 > **Latest unscored candidate: round235 (2026-10-27).**
 > Official validation **763/798 (95.6140%)**, held **1479/1582**;
 > **16,522,247 bytes (15.7568 MiB)**; 143 interface samples passed.

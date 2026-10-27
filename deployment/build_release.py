@@ -191,6 +191,16 @@ See deployment/README.md for isolated remote reproduction and timing.
             "763/798; a 467-question validation timing proxy took 24.97 seconds in "
             "fresh four-thread prediction/scoring processes. Existing official test scores "
             "below belong to their named older frozen candidates.\n\n---\n\n")
+        new_test = ROOT / 'experiments/round235/official_test_20261027/result.json'
+        if new_test.exists():
+            certified = json.loads(new_test.read_text(encoding='utf-8'))
+            prefix = prefix.replace('TEST has not been evaluated for this candidate.',
+                f"Official TEST {certified['score']['correct']}/467 ({certified['score']['accuracy']:.4f}%).")
+            prefix += (f"Authorized official TEST prediction plus scoring took **{certified['total_seconds']:.2f} seconds** "
+                "on four Xeon 8352V CPU cores. All 85 frozen hashes remained unchanged; "
+                "the candidate was selected on TRAIN/VAL before this evaluation. "
+                "See experiments/round235/official_test_20261027/result.json. "
+                "The report PDF remains the historical round214 report and requires updating before submission.\n\n")
         readme.write_text(prefix + readme.read_text(encoding='utf-8'), encoding='utf-8')
     manifest = {}
     for p in DEST.rglob("*"):
