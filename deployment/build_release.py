@@ -44,6 +44,14 @@ def main():
         for p in (ROOT / "experiments/round235").rglob("*"):
             if p.is_file() and "__pycache__" not in p.parts:
                 copy(p.relative_to(ROOT))
+    for number in (241,242,243,244,245,246):
+        stage=ROOT/f'experiments/round{number}'
+        if (stage/'result.json').exists():
+            for p in stage.rglob('*'):
+                if p.is_file() and '__pycache__' not in p.parts and p.suffix in ('.json','.npz'):
+                    copy(p.relative_to(ROOT))
+    preflight=ROOT/'experiments/round245_preflight/result.json'
+    if preflight.exists():copy(preflight.relative_to(ROOT))
     for r in ("round22", "round77", "round210", "round216", "round218",
               "round219", "round220", "round221", "round222", "round223", "round224",
               "round225", "round226", "round227", "round228", "round229", "round230",
@@ -65,6 +73,7 @@ def main():
     (DEST / "requirements.txt").write_text(
         "numpy>=1.26\nscipy>=1.11\nscikit-learn>=1.4\n"
         "lightgbm>=4.0,<5\nthreadpoolctl>=3.1\n", encoding="utf-8")
+    (DEST / 'requirements-training.txt').write_text('-r requirements.txt\ntorch>=2.8,<3\n',encoding='utf-8')
     (DEST / "README.md").write_text("""# HKU DASE7506 MP2 — frozen round214
 
 Select one of four supplied GSM8K candidate solutions using comparative
@@ -215,6 +224,18 @@ See deployment/README.md for isolated remote reproduction and timing.
                 "features. No candidate exceeded validation763 while preserving held1479. "
                 "Round235 remains selected; no additional TEST evaluation was performed. "
                 "Full outcomes are in experiments/round240/continuation_summary.json.\n")
+    neural_summary=ROOT/'experiments/round246/continuation_summary.json'
+    if neural_summary.exists():
+        readme=DEST/'README.md'
+        with readme.open('a',encoding='utf-8') as stream:
+            stream.write('\n## Independent raw-text neural research\n\n'
+                'Rounds241-246 train new word/CNN/cross-attention networks and a two-layer '
+                'Transformer from random initialization, including TRAIN-only masked-language '
+                'and number-binding pretraining. Exported research checkpoints are retained '
+                'separately from the selected bundle. The best complementary TRAIN-held '
+                'result is1481/1582, but validation remains763/798, so round235 remains '
+                'selected and no further TEST evaluation was performed. See '
+                'deployment/RAW_TEXT_MODELS.md and experiments/round246/continuation_summary.json.\n')
     manifest = {}
     for p in DEST.rglob("*"):
         if p.is_file() and ".git" not in p.parts and p.name != "release_manifest.json":

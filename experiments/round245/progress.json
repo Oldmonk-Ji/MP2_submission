@@ -1,0 +1,92 @@
+{
+  "records": [
+    {
+      "alpha": 0.05,
+      "held": {
+        "correct": 1470,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 11,
+        "changed": 145
+      }
+    },
+    {
+      "alpha": 0.1,
+      "held": {
+        "correct": 1466,
+        "baseline": 1479,
+        "fixes": 7,
+        "harms": 20,
+        "changed": 253
+      }
+    },
+    {
+      "alpha": 0.2,
+      "held": {
+        "correct": 1453,
+        "baseline": 1479,
+        "fixes": 14,
+        "harms": 40,
+        "changed": 420
+      }
+    },
+    {
+      "alpha": 0.35,
+      "held": {
+        "correct": 1455,
+        "baseline": 1479,
+        "fixes": 26,
+        "harms": 50,
+        "changed": 579
+      }
+    }
+  ],
+  "held_history": [
+    {
+      "stage": "TRAIN-only masked word/number binding",
+      "epoch": 2,
+      "loss": 4.81782970614495,
+      "seconds": 20.10720355063677
+    },
+    {
+      "stage": "TRAIN-only masked word/number binding",
+      "epoch": 4,
+      "loss": 4.052835179947803,
+      "seconds": 40.01324521750212
+    },
+    {
+      "stage": "TRAIN-only masked word/number binding",
+      "epoch": 6,
+      "loss": 3.6868377759914144,
+      "seconds": 59.44961351901293
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 10,
+      "loss": 0.4059883425202561,
+      "seconds": 157.54220168292522
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 20,
+      "loss": 0.18803809498333923,
+      "seconds": 254.45421098917723
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 30,
+      "loss": 0.13785000639469402,
+      "seconds": 350.6831580325961
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 40,
+      "loss": 0.12314685552661761,
+      "seconds": 447.0404537022114
+    }
+  ],
+  "standalone_held": 1335,
+  "asset_bytes": 241071,
+  "test_opened": false,
+  "validation_evaluated": false
+}

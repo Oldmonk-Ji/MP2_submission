@@ -1,0 +1,39 @@
+{
+  "source_hash": "e6d070df5323c75a81be5d63db1dbe7ea74bb4ced114dd216c132af78624241d",
+  "sources": [
+    241,
+    242,
+    243,
+    245
+  ],
+  "grid": [
+    [
+      "raw",
+      0.005
+    ],
+    [
+      "raw",
+      0.01
+    ],
+    [
+      "raw",
+      0.02
+    ],
+    [
+      "normalized",
+      0.025
+    ],
+    [
+      "normalized",
+      0.05
+    ],
+    [
+      "normalized",
+      0.1
+    ]
+  ],
+  "reason": "Neural score units are arbitrary; calibrate weaker/normalized increments on TRAIN-held only. No old feature or gate changes.",
+  "advance": "Choose ONE configuration per architecture by highest held, fewer harms, fewer changed choices; require strict held>1479 before an additional VAL evaluation.",
+  "accept": "VAL>763, original user held floor1477, assets<=16MiB; no TEST access.",
+  "test_opened": false
+}

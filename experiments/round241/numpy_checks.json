@@ -1,0 +1,12 @@
+{
+  "torch_numpy_max_absolute_difference": 5.7220458984375e-06,
+  "held_inference_seconds": 2.6189283654093742,
+  "training_prefix467_inference_seconds": 0.760120302438736,
+  "asset_bytes": 164305,
+  "total_with_round235_bytes": 16686552,
+  "candidate_permutation": true,
+  "batch_invariance": true,
+  "empty": true,
+  "inference_requires_torch": false,
+  "test_opened": false
+}

@@ -1,0 +1,81 @@
+{
+  "records": [
+    {
+      "alpha": 0.05,
+      "held": {
+        "correct": 1476,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 5,
+        "changed": 87
+      }
+    },
+    {
+      "alpha": 0.1,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 5,
+        "harms": 6,
+        "changed": 166
+      }
+    },
+    {
+      "alpha": 0.2,
+      "held": {
+        "correct": 1472,
+        "baseline": 1479,
+        "fixes": 9,
+        "harms": 16,
+        "changed": 273
+      }
+    },
+    {
+      "alpha": 0.35,
+      "held": {
+        "correct": 1464,
+        "baseline": 1479,
+        "fixes": 13,
+        "harms": 28,
+        "changed": 408
+      }
+    }
+  ],
+  "held_history": [
+    {
+      "epoch": 10,
+      "loss": 1.0616423154284553,
+      "seconds": 22.546648606657982
+    },
+    {
+      "epoch": 20,
+      "loss": 0.8548564427791234,
+      "seconds": 44.21027943491936
+    },
+    {
+      "epoch": 30,
+      "loss": 0.7342638851192623,
+      "seconds": 66.1701396331191
+    },
+    {
+      "epoch": 40,
+      "loss": 0.6493795901225813,
+      "seconds": 88.24830967187881
+    },
+    {
+      "epoch": 50,
+      "loss": 0.608331335624235,
+      "seconds": 109.78676246106625
+    },
+    {
+      "epoch": 60,
+      "loss": 0.6159996254766187,
+      "seconds": 131.31597753614187
+    }
+  ],
+  "standalone_held": 1306,
+  "asset_bytes": 164305,
+  "contract_checks": true,
+  "test_opened": false,
+  "validation_evaluated": false
+}

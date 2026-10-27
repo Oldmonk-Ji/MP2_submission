@@ -1,0 +1,95 @@
+{
+  "records": [
+    {
+      "alpha": 0.25,
+      "held": {
+        "correct": 1472,
+        "baseline": 1479,
+        "fixes": 11,
+        "harms": 18,
+        "changed": 322
+      }
+    },
+    {
+      "alpha": 0.5,
+      "held": {
+        "correct": 1458,
+        "baseline": 1479,
+        "fixes": 21,
+        "harms": 42,
+        "changed": 532
+      }
+    },
+    {
+      "alpha": 1.0,
+      "held": {
+        "correct": 1427,
+        "baseline": 1479,
+        "fixes": 29,
+        "harms": 81,
+        "changed": 750
+      }
+    }
+  ],
+  "held_history": [
+    {
+      "stage": "TRAIN-only masked pretraining",
+      "epoch": 2,
+      "loss": 4.274388778427057,
+      "seconds": 3.3784648701548576
+    },
+    {
+      "stage": "TRAIN-only masked pretraining",
+      "epoch": 4,
+      "loss": 3.5718222042890537,
+      "seconds": 6.700778841972351
+    },
+    {
+      "stage": "TRAIN-only masked pretraining",
+      "epoch": 6,
+      "loss": 3.335389300963555,
+      "seconds": 10.081533260643482
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 10,
+      "loss": 0.7001563299309411,
+      "seconds": 32.3708046451211
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 20,
+      "loss": 0.5345530251523657,
+      "seconds": 54.33543962240219
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 30,
+      "loss": 0.47186333631194494,
+      "seconds": 76.30281889438629
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 40,
+      "loss": 0.4351601132634545,
+      "seconds": 98.19601223617792
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 50,
+      "loss": 0.42033653964878676,
+      "seconds": 120.61446300148964
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 60,
+      "loss": 0.41720796253665343,
+      "seconds": 142.61674703657627
+    }
+  ],
+  "standalone_held": 1224,
+  "asset_bytes": 164305,
+  "contract_checks": true,
+  "test_opened": false,
+  "validation_evaluated": false
+}

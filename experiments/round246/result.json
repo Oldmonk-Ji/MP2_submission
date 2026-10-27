@@ -1,0 +1,353 @@
+{
+  "records": [
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.005,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 5
+      }
+    },
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.01,
+      "held": {
+        "correct": 1481,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 0,
+        "changed": 16
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 9
+      },
+      "model_directory": "experiments/round244/source241/full",
+      "text_asset_bytes": 164256
+    },
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.02,
+      "held": {
+        "correct": 1480,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 1,
+        "changed": 36
+      }
+    },
+    {
+      "source": 241,
+      "mode": "normalized",
+      "alpha": 0.025,
+      "held": {
+        "correct": 1480,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 0,
+        "changed": 25
+      }
+    },
+    {
+      "source": 241,
+      "mode": "normalized",
+      "alpha": 0.05,
+      "held": {
+        "correct": 1481,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 0,
+        "changed": 47
+      }
+    },
+    {
+      "source": 241,
+      "mode": "normalized",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 99
+      }
+    },
+    {
+      "source": 242,
+      "mode": "raw",
+      "alpha": 0.005,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 6
+      }
+    },
+    {
+      "source": 242,
+      "mode": "raw",
+      "alpha": 0.01,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 17
+      }
+    },
+    {
+      "source": 242,
+      "mode": "raw",
+      "alpha": 0.02,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 32
+      }
+    },
+    {
+      "source": 242,
+      "mode": "normalized",
+      "alpha": 0.025,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 24
+      }
+    },
+    {
+      "source": 242,
+      "mode": "normalized",
+      "alpha": 0.05,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 56
+      }
+    },
+    {
+      "source": 242,
+      "mode": "normalized",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 4,
+        "changed": 109
+      }
+    },
+    {
+      "source": 243,
+      "mode": "raw",
+      "alpha": 0.005,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 5
+      }
+    },
+    {
+      "source": 243,
+      "mode": "raw",
+      "alpha": 0.01,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 1,
+        "changed": 13
+      }
+    },
+    {
+      "source": 243,
+      "mode": "raw",
+      "alpha": 0.02,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 1,
+        "changed": 30
+      }
+    },
+    {
+      "source": 243,
+      "mode": "normalized",
+      "alpha": 0.025,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 1,
+        "changed": 24
+      }
+    },
+    {
+      "source": 243,
+      "mode": "normalized",
+      "alpha": 0.05,
+      "held": {
+        "correct": 1474,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 5,
+        "changed": 56
+      }
+    },
+    {
+      "source": 243,
+      "mode": "normalized",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1472,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 7,
+        "changed": 113
+      }
+    },
+    {
+      "source": 245,
+      "mode": "raw",
+      "alpha": 0.005,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 17
+      }
+    },
+    {
+      "source": 245,
+      "mode": "raw",
+      "alpha": 0.01,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 31
+      }
+    },
+    {
+      "source": 245,
+      "mode": "raw",
+      "alpha": 0.02,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 3,
+        "changed": 66
+      }
+    },
+    {
+      "source": 245,
+      "mode": "normalized",
+      "alpha": 0.025,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 26
+      }
+    },
+    {
+      "source": 245,
+      "mode": "normalized",
+      "alpha": 0.05,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 63
+      }
+    },
+    {
+      "source": 245,
+      "mode": "normalized",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1473,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 8,
+        "changed": 116
+      }
+    }
+  ],
+  "advanced": [
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.01,
+      "held": {
+        "correct": 1481,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 0,
+        "changed": 16
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 9
+      },
+      "model_directory": "experiments/round244/source241/full",
+      "text_asset_bytes": 164256
+    }
+  ],
+  "selected": null,
+  "profiles": [
+    {
+      "source": 241,
+      "torch_numpy_max_difference": 5.7220458984375e-06,
+      "held_inference_seconds": 2.6203433200716972,
+      "train_prefix467_seconds": 0.7743186131119728
+    },
+    {
+      "source": 242,
+      "torch_numpy_max_difference": 7.62939453125e-06,
+      "held_inference_seconds": 2.604259639978409,
+      "train_prefix467_seconds": 0.8005709126591682
+    },
+    {
+      "source": 243,
+      "torch_numpy_max_difference": 9.298324584960938e-06,
+      "held_inference_seconds": 2.675968311727047,
+      "train_prefix467_seconds": 0.7879681140184402
+    },
+    {
+      "source": 245,
+      "torch_numpy_max_difference": 7.62939453125e-06,
+      "held_inference_seconds": 4.616046465933323,
+      "train_prefix467_seconds": 1.3099906668066978
+    }
+  ],
+  "histories": {},
+  "test_opened": false
+}

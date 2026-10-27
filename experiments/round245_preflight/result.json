@@ -1,0 +1,7 @@
+{
+  "torch_numpy_max_difference": 8.940696716308594e-08,
+  "candidate_permutation": true,
+  "batch_invariance": true,
+  "training_only_inputs": true,
+  "test_opened": false
+}

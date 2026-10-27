@@ -1,0 +1,60 @@
+{
+  "records": [
+    {
+      "source": 241,
+      "alpha": 0.1,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 5,
+        "harms": 6,
+        "changed": 166
+      },
+      "prior_stricter_held_floor": 1479,
+      "validation": {
+        "correct": 759,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 4,
+        "changed": 63
+      },
+      "model_directory": "experiments/round244/source241/full",
+      "text_asset_bytes": 164256
+    }
+  ],
+  "histories": {
+    "241": [
+      {
+        "epoch": 10,
+        "loss": 1.0692305489730514,
+        "seconds": 36.63044714182615
+      },
+      {
+        "epoch": 20,
+        "loss": 0.9157325594253789,
+        "seconds": 72.24632453173399
+      },
+      {
+        "epoch": 30,
+        "loss": 0.7751783525079156,
+        "seconds": 108.18100929260254
+      },
+      {
+        "epoch": 40,
+        "loss": 0.7127300008751284,
+        "seconds": 144.1678542420268
+      },
+      {
+        "epoch": 50,
+        "loss": 0.6648791353837764,
+        "seconds": 178.78421940654516
+      },
+      {
+        "epoch": 60,
+        "loss": 0.6551084056348959,
+        "seconds": 213.31113978475332
+      }
+    ]
+  },
+  "test_opened": false
+}

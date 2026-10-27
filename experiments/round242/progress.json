@@ -1,0 +1,105 @@
+{
+  "records": [
+    {
+      "alpha": 0.05,
+      "held": {
+        "correct": 1476,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 4,
+        "changed": 89
+      }
+    },
+    {
+      "alpha": 0.1,
+      "held": {
+        "correct": 1474,
+        "baseline": 1479,
+        "fixes": 5,
+        "harms": 10,
+        "changed": 178
+      }
+    },
+    {
+      "alpha": 0.2,
+      "held": {
+        "correct": 1468,
+        "baseline": 1479,
+        "fixes": 10,
+        "harms": 21,
+        "changed": 304
+      }
+    },
+    {
+      "alpha": 0.35,
+      "held": {
+        "correct": 1463,
+        "baseline": 1479,
+        "fixes": 14,
+        "harms": 30,
+        "changed": 463
+      }
+    }
+  ],
+  "held_history": [
+    {
+      "stage": "TRAIN-only masked pretraining",
+      "epoch": 2,
+      "loss": 4.274388778427057,
+      "seconds": 3.485383875668049
+    },
+    {
+      "stage": "TRAIN-only masked pretraining",
+      "epoch": 4,
+      "loss": 3.5718222042890537,
+      "seconds": 6.897333100438118
+    },
+    {
+      "stage": "TRAIN-only masked pretraining",
+      "epoch": 6,
+      "loss": 3.335389300963555,
+      "seconds": 10.307664215564728
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 10,
+      "loss": 0.9897735677765578,
+      "seconds": 32.59968914836645
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 20,
+      "loss": 0.7810036929224685,
+      "seconds": 54.851588785648346
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 30,
+      "loss": 0.6509332328195702,
+      "seconds": 76.98031629621983
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 40,
+      "loss": 0.5754946319410522,
+      "seconds": 99.12086721509695
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 50,
+      "loss": 0.543238170206905,
+      "seconds": 121.69551101326942
+    },
+    {
+      "stage": "supervised selection",
+      "epoch": 60,
+      "loss": 0.546785313922444,
+      "seconds": 144.5219240412116
+    }
+  ],
+  "standalone_held": 1307,
+  "asset_bytes": 164305,
+  "contract_checks": true,
+  "test_opened": false,
+  "validation_evaluated": false
+}

@@ -1,0 +1,118 @@
+{
+  "records": [
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.005,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 5
+      }
+    },
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.01,
+      "held": {
+        "correct": 1481,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 0,
+        "changed": 16
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 9
+      },
+      "model_directory": "experiments/round244/source241/full",
+      "text_asset_bytes": 164256
+    },
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.02,
+      "held": {
+        "correct": 1480,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 1,
+        "changed": 36
+      }
+    },
+    {
+      "source": 241,
+      "mode": "normalized",
+      "alpha": 0.025,
+      "held": {
+        "correct": 1480,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 0,
+        "changed": 25
+      }
+    },
+    {
+      "source": 241,
+      "mode": "normalized",
+      "alpha": 0.05,
+      "held": {
+        "correct": 1481,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 0,
+        "changed": 47
+      }
+    },
+    {
+      "source": 241,
+      "mode": "normalized",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 99
+      }
+    }
+  ],
+  "advanced": [
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.01,
+      "held": {
+        "correct": 1481,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 0,
+        "changed": 16
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 9
+      },
+      "model_directory": "experiments/round244/source241/full",
+      "text_asset_bytes": 164256
+    }
+  ],
+  "profiles": [
+    {
+      "source": 241,
+      "torch_numpy_max_difference": 5.7220458984375e-06,
+      "held_inference_seconds": 2.6203433200716972,
+      "train_prefix467_seconds": 0.7743186131119728
+    }
+  ],
+  "histories": {},
+  "test_opened": false
+}

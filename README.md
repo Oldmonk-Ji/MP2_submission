@@ -107,3 +107,7 @@ research, packaging and deployment assistance used OpenAI Codex.
 ## Subsequent TRAIN/VAL continuation
 
 Rounds236-240 evaluated 30 predefined configurations across answer-group evidence, nonlinear semantic regions, question-only context, sparse lexical conditioning and reduced contextual features. No candidate exceeded validation763 while preserving held1479. Round235 remains selected; no additional TEST evaluation was performed. Full outcomes are in experiments/round240/continuation_summary.json.
+
+## Independent raw-text neural research
+
+Rounds241-246 train new word/CNN/cross-attention networks and a two-layer Transformer from random initialization, including TRAIN-only masked-language and number-binding pretraining. Exported research checkpoints are retained separately from the selected bundle. The best complementary TRAIN-held result is1481/1582, but validation remains763/798, so round235 remains selected and no further TEST evaluation was performed. See deployment/RAW_TEXT_MODELS.md and experiments/round246/continuation_summary.json.

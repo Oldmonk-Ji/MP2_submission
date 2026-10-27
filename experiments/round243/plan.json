@@ -1,0 +1,31 @@
+{
+  "method": "Independent locally pretrained raw-text network learns residual corrections to cross-fitted TRAIN ranking scores.",
+  "source_hashes": {
+    "round241_text.py": "154b679b62dd3bd426fb27907a7fde02cc3eb38105894454bbe1c235e7e18ba6",
+    "round241_network.py": "dc18e76395587310d41cab86cdb82f54700570d7b4d28b2e4bc78d31ee9bc68c",
+    "round241_train.py": "e5f8b93f05fe56592f258f5a865245409ab4eeb8520968d5f24ac9c36e603ddb",
+    "round242_pretrain.py": "425d55cdf1f9abf5d0b9d17ac31ed35b9b3509bb5a024a51200f45f9a319ba93",
+    "round243_residual.py": "d71c6025d3368adcb24e9e8d7a206ae8298f60fd2e7f22a03d2054e7e0e2d079",
+    "round243_train.py": "cfee168019f58bfb995ab0f76288bfcdd4cbb48279539c229f33ee92fdad1c7f"
+  },
+  "seed": 241241,
+  "epochs": 60,
+  "alphas": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "vocab_max": 2048,
+  "question_length": 80,
+  "candidate_length": 192,
+  "external_data": false,
+  "pretrained_weights": false,
+  "gpu": false,
+  "threads": 4,
+  "selection": "VAL>763 and held>=1479; then validation,held,smaller alpha.",
+  "validation_role": "Reused development set; no TEST access or test-driven choices.",
+  "test_opened": false,
+  "pretrain_epochs": 6,
+  "offsets": "Fit folds: round225 fit-only fusion plus round227 cross-fitted quadratic; held fold: round235 held scores. No fitting-label-dependent in-sample teacher.",
+  "inference": "Export raw neural correction only, same architecture/assets as241; add to round235 before fixed gate."
+}

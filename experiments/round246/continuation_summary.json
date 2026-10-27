@@ -1,0 +1,140 @@
+{
+  "models": [
+    {
+      "source": 241,
+      "parameters_including_quantization_scales": 66945,
+      "standalone_held": 1306,
+      "standalone_role": "independent selector",
+      "best_initial_fused_held": 1478,
+      "held_asset_bytes": 164305,
+      "source_hashes_verified": true
+    },
+    {
+      "source": 242,
+      "parameters_including_quantization_scales": 66945,
+      "standalone_held": 1307,
+      "standalone_role": "independent selector",
+      "best_initial_fused_held": 1476,
+      "held_asset_bytes": 164305,
+      "source_hashes_verified": true
+    },
+    {
+      "source": 243,
+      "parameters_including_quantization_scales": 66945,
+      "standalone_held": 1224,
+      "standalone_role": "correction diagnostic only",
+      "best_initial_fused_held": 1472,
+      "held_asset_bytes": 164305,
+      "source_hashes_verified": true
+    },
+    {
+      "source": 245,
+      "parameters_including_quantization_scales": 145505,
+      "standalone_held": 1335,
+      "standalone_role": "independent selector",
+      "best_initial_fused_held": 1470,
+      "held_asset_bytes": 241071,
+      "source_hashes_verified": true
+    }
+  ],
+  "original_user_held_floor": 1477,
+  "previous_extra_conservative_floor": 1479,
+  "floor_amendment": "Recorded before any VAL evaluation of the new neural models, using TRAIN-held results only.",
+  "neural_validation_records": [
+    {
+      "source": 241,
+      "alpha": 0.1,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 5,
+        "harms": 6,
+        "changed": 166
+      },
+      "prior_stricter_held_floor": 1479,
+      "validation": {
+        "correct": 759,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 4,
+        "changed": 63
+      },
+      "model_directory": "experiments/round244/source241/full",
+      "text_asset_bytes": 164256
+    },
+    {
+      "source": 241,
+      "mode": "raw",
+      "alpha": 0.01,
+      "held": {
+        "correct": 1481,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 0,
+        "changed": 16
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 9
+      },
+      "model_directory": "experiments/round244/source241/full",
+      "text_asset_bytes": 164256
+    }
+  ],
+  "best_train_held_candidate": {
+    "source": 241,
+    "mode": "raw",
+    "alpha": 0.01,
+    "held": {
+      "correct": 1481,
+      "baseline": 1479,
+      "fixes": 2,
+      "harms": 0,
+      "changed": 16
+    },
+    "validation": {
+      "correct": 763,
+      "baseline": 763,
+      "fixes": 0,
+      "harms": 0,
+      "changed": 9
+    },
+    "model_directory": "experiments/round244/source241/full",
+    "text_asset_bytes": 164256
+  },
+  "selected_new": null,
+  "selected_submission_round": 235,
+  "baseline_validation": 763,
+  "baseline_held": 1479,
+  "profiles": [
+    {
+      "source": 241,
+      "torch_numpy_max_difference": 5.7220458984375e-06,
+      "held_inference_seconds": 2.6203433200716972,
+      "train_prefix467_seconds": 0.7743186131119728
+    },
+    {
+      "source": 242,
+      "torch_numpy_max_difference": 7.62939453125e-06,
+      "held_inference_seconds": 2.604259639978409,
+      "train_prefix467_seconds": 0.8005709126591682
+    },
+    {
+      "source": 243,
+      "torch_numpy_max_difference": 9.298324584960938e-06,
+      "held_inference_seconds": 2.675968311727047,
+      "train_prefix467_seconds": 0.7879681140184402
+    },
+    {
+      "source": 245,
+      "torch_numpy_max_difference": 7.62939453125e-06,
+      "held_inference_seconds": 4.616046465933323,
+      "train_prefix467_seconds": 1.3099906668066978
+    }
+  ],
+  "test_opened": false,
+  "conclusion": "Raw-text held signal improves, but no new model has validation>763. Preserve frozen235; no TEST authorization requested."
+}

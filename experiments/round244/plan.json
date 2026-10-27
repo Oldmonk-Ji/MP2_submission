@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-27T04:22:08.375318+00:00",
+  "source_hash": "4b69a3485a8f9ca7dc539acb96d4265c6261de41f174de9392c06c08087ffa32",
+  "sources": [
+    241,
+    242,
+    243
+  ],
+  "held_floor": 1477,
+  "validation_must_exceed": 763,
+  "reason": "Return to original explicit user held floor1477. Prior1479 was an extra conservative research heuristic. Amendment made using TRAIN-held evidence only, before any VAL evaluation of these text models.",
+  "selection": "VAL>763 and held>=1477, then validation,held,smaller alpha,earlier source. Preserve complete records and report any held regression.",
+  "training": "Same fixed raw-text recipes, all eligible TRAIN rows for final fit. Use exact NumPy inference for held/VAL decisions.",
+  "test_opened": false
+}

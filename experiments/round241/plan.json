@@ -1,0 +1,26 @@
+{
+  "method": "Randomly initialized word24 embeddings, question-number binding, strided CNN, decomposable cross attention and group comparison; TRAIN-only matching auxiliary.",
+  "source_hashes": {
+    "round241_text.py": "154b679b62dd3bd426fb27907a7fde02cc3eb38105894454bbe1c235e7e18ba6",
+    "round241_network.py": "dc18e76395587310d41cab86cdb82f54700570d7b4d28b2e4bc78d31ee9bc68c",
+    "round241_train.py": "e5f8b93f05fe56592f258f5a865245409ab4eeb8520968d5f24ac9c36e603ddb"
+  },
+  "seed": 241241,
+  "epochs": 60,
+  "alphas": [
+    0.05,
+    0.1,
+    0.2,
+    0.35
+  ],
+  "vocab_max": 2048,
+  "question_length": 80,
+  "candidate_length": 192,
+  "external_data": false,
+  "pretrained_weights": false,
+  "gpu": false,
+  "threads": 4,
+  "selection": "VAL>763 and held>=1479; then validation,held,smaller alpha.",
+  "validation_role": "Reused development set; no TEST access or test-driven choices.",
+  "test_opened": false
+}

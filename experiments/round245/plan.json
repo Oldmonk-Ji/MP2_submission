@@ -1,0 +1,21 @@
+{
+  "method": "Two-layer joint question/candidate Transformer48/4heads/FF96, strided local encoder, TRAIN-only masked words and numeric-bindings pretraining.",
+  "source_hashes": {
+    "round245_text.py": "00a95893099a600ac63a4484d7853b779d1b41e972881da8dddecb1e91b0597c",
+    "round245_network.py": "539b678b5a7e0b2a8a74af30254b35314e6f86b66a9f47fbfb1ca6a2a93b37ad",
+    "round245_train.py": "c7b6e0d474dd5402deb2e6925b5460ee521d2a648f1c4070afaffb62e96d93e0"
+  },
+  "seed": 245245,
+  "epochs": 40,
+  "pretrain_epochs": 6,
+  "alphas": [
+    0.05,
+    0.1,
+    0.2,
+    0.35
+  ],
+  "vocab_max": 1728,
+  "resources": "Embedding int8 per row with FP16 scales, remaining weights FP16; no external pretrained weights, four CPU threads, no GPU.",
+  "selection": "VAL>763 and held>=1477 (original user floor); then validation,held,smaller alpha.",
+  "test_opened": false
+}
