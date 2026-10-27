@@ -35,6 +35,15 @@ Reproduce the guarded validation and proxy timing with:
 
 ## Directory isolation
 
+Final round257 is frozen and optimization has stopped at the user's request.
+The final authorized official TEST scored394/467 (84.3683%), with27.59135s
+fresh prediction+scoring on four Xeon8352V cores. Assets16,686,526bytes;
+146 interface samples passed;89 frozen hashes unchanged. VAL763/798,
+TRAIN-held1481/1582. Final checkpoint experiments/round257/bundle;
+entrypoint experiments/round257/frozen/method/entrypoint.py. Final report
+and submission instructions now describe257. Older pending/unscored notes
+below are historical deployment records. No further TEST rerun or tuning.
+
 New frozen round235 is deployed alongside round232. It reproduced VAL 763
 locally with 143 interface samples passing and 85 frozen hashes unchanged.
 Its checkpoint has 16,522,247 bytes (15.7568 MiB). Remote Xeon 8352V also

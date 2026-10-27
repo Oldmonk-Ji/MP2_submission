@@ -1,174 +1,127 @@
 ---
-title: "Verification-Aware Comparative Ranking for Selecting Reliable LLM Reasoning"
-subtitle: "DASE7506 · Advanced Machine Learning Methods · MP2 Final Report"
+title: "Verification-Aware Ranking with a Small Text Expert"
+subtitle: "DASE7506 Advanced Machine Learning Methods - MP2 Final Report"
 author: "Student ID: (to be filled)"
-date: "31 October 2026"
-geometry: margin=2.4cm
+date: "27 October 2026"
+papersize: a4
+geometry: margin=2cm
 fontsize: 11pt
 header-includes:
   - \usepackage{booktabs}
-  - \setlength{\parskip}{2pt}
+  - \setlength{\parskip}{3pt}
 ---
 
 # Summary
 
-This report describes a system that selects one of four LLM-generated solutions for each GSM8K problem. The final method combines (i) an ensemble of eight base scorers over question/candidate features, (ii) comparative fusion features derived from the four candidates' derivations — question-context influence, conditional quantity-flow scores, arithmetic relation scores, and local program-structure scores — fused by a LambdaRank model, (iii) a parse-and-repair gate that reconciles the ranked choice with the boxed answer actually present in the text, and (iv) a strict numerical verification score with a conservative gap-based override rule.
+The final system selects one of four supplied LLM solutions for each GSM8K question. It combines comparative ranking, a conditional quadratic expert, a small text network trained from random initialization, and conservative numerical consistency rules. It outputs a candidate index; it never rewrites a candidate or generates a replacement answer.
 
-On the official evaluation protocol the method selects the correct candidate on **760/798 validation questions (95.24%)** and **391/467 test questions (83.73%)**, improving the historical baseline test score of 386 (82.66%) by five questions. Inference assets total **15.09 MiB** (limit 16 MiB) and a fresh test prediction plus scoring process completes in **25.5 s** on the local machine using four threads (limit 30 s on the reference Xeon 8457C). All 137 verifier checks of the official validation harness pass: frozen hashes unchanged, batch and candidate-permutation invariance, no reference-answer reads on the prediction path, and no test use before the method was frozen.
+The frozen final method obtains **763/798 validation questions (95.61%)** and **394/467 test questions (84.37%)** under the unchanged official parser and scorer. The internal TRAIN-held result is **1481/1582 (93.62%)**. Required inference files total **16,686,526 bytes (15.9135 MiB)**. Fresh test prediction and official scoring take **27.59 seconds** on four Xeon Platinum 8352V CPU threads. These measurements are from the deployed server; they do not certify timing on the course reference Xeon 8457C.
 
-# Method
+The final candidate was selected using TRAIN/VAL before its final authorized TEST evaluation. All 89 frozen file hashes remained unchanged, and all 146 interface samples passed. Optimization stopped after this test, as requested.
 
-The system receives a question, four candidate solutions (free text with reasoning and a final boxed answer), and fixed numerical representations of shape [4, 1024]. It outputs exactly one candidate index per question. All components are trained only on the 4,743 training questions (twelve defective/ambiguous questions excluded by a standing convention; 3-fold split used for auxiliary models, with fold 2 held out as a 1,582-question internal sanity set). The validation set (798 questions) is used for development and method selection only. The test set remained sealed until the method was frozen.
+# Task and data protocol
 
-## Base expert scorers
+Each input consists of a question, four candidate solution texts, and four supplied 1024-dimensional representations. The official label is whether the unchanged numeric parser extracts the same final value from the selected candidate and the reference answer. Multiple candidates can therefore be correct. The system must still return exactly one index in $\{0,1,2,3\}$ for every question.
 
-Eight base members score each candidate independently, then their scores are combined with learned weights ($w$ in the bundle configuration):
+Only course-provided data are used. Final experts are fitted on the 4,743 eligible TRAIN questions, following the standing exclusion of twelve previously identified defective or ambiguous TRAIN rows. No validation or test question is excluded from evaluation. Three-fold cross-fitting supplies training predictions for downstream learning and development. The 1,582-question fold-2 score is computed with the corresponding fitting models excluding that fold; it is a repeatedly used development measure, not an untouched statistical test. Final expert fitting uses all eligible TRAIN questions.
 
-1. **MLP-base** (width 128, mixed loss, EMA 0.98, seed 20261014, 180 epochs): embedding features derived from the fixed representations plus 14 hand-crafted text features (answer parses, answer-agreement counts, length, equation counts, formatting markers, word overlap with the question, revision markers); weight 0.307.
-2. **MLP-ground** (width 128, 35 epochs): numeric/grounded features (arithmetic correctness of the derivation's equation chain, answer magnitude/fraction properties, number reuse between question and candidate); weight 0.495.
-3. **MLP-answer** (width 128, 35 epochs): answer-focused features; weight 0.620.
-4. **TF-IDF text scorer** (ngram 1–2, sublinear TF, C=100): logistic scorer over the raw reasoning text; weight 0.160.
-5. **Four seed-diverse MLPs** (width 96, uniform-positive loss, seeds 25025/25026 over ground/answer features): diversity members with fixed weight 0.125 each.
+VAL is a reused development and selection set. For the final candidate, VAL tied the numeric-only pipeline at 763 while TRAIN-held improved from 1479 to 1481. This comparison motivated a small text correction, not a claim of statistically established generalization improvement. The user explicitly authorized a final test despite the validation tie. The checkpoint, source, weights and selection were fixed before that run; TEST outcomes did not determine parameters or a subsequent method choice. Research did not inspect test references or per-question test errors.
 
-The member weights are learned by a small fusion fit on training data. The heterogeneous families (MLP vs. linear text model, mixed vs. uniform-positive losses, multiple seeds) provide decorrelated evidence, which matters more for ranking than any single member's accuracy.
+\newpage
 
-## Comparative fusion features
+# Final method
 
-A candidate can look plausible in isolation and still be wrong; the strongest evidence comes from comparing the four derivations against each other and against the question. The fusion model consumes a 708-dimensional per-candidate feature surface built from:
+## Base experts and comparative fusion
 
-- **Expert component scores**: the eight base members' out-of-fold scores (three-fold cross-fit on training data).
-- **Question-context influence (PCA-64)**: a projection of the question's fixed representation; the feature measures how strongly a candidate's conclusion vector aligns with the question context.
-- **Conditional quantity-flow scores (16,384 sparse dims)**: a contrastive logistic regression over hashed features of how quantities flow between equations (which quantity increases/decreases/is unused, conditioned on the operation), trained on candidate pairs from training data.
-- **Arithmetic relation scores (16,384 sparse dims)**: a six-class classifier (ADD/SUB/SUB_REVERSE/MUL/DIV/DIV_REVERSE) over normalized derivation chains, adapted from the relation extraction approach of Roy and Roth (2015). It scores the plausibility of each candidate's operation sequence; it is auxiliary evidence, never a hard validity rule.
-- **Local program-structure scores (65,536 sparse dims)**: hashed local structure features over a parsed program representation of each derivation (local arm).
-- **Row base score**: the combined base expert score, also used as the ranking model's init score.
+Eight base scorers use the supplied representations and deterministic evidence extracted from the question and candidate texts. They include an embedding MLP, numeric-grounding and answer-focused MLPs, a TF-IDF text scorer, and four additional MLP members. Their fixed weights are approximately 0.3071, 0.4946, 0.6196, 0.1596, followed by four weights of 0.125.
 
-The surface is fused by a **LambdaRank gradient-boosted model** (LightGBM, 200 trees, 7 leaves, min data 100/leaf, learning rate 0.03, $\ell_2$=50, truncation level 1, seed 68068). Because the final answer only matters, ranking loss is more appropriate than pointwise classification.
+Comparative features describe each candidate relative to its alternatives. The 708-dimensional ranking surface includes base-expert outputs, representation context, conditional quantity-flow scores, arithmetic relation probabilities and local program-structure scores. The relation channel distinguishes addition, subtraction and its reversal, multiplication, division and its reversal. These channels measure evidence in a proposed derivation; they are not independent proofs that the word problem has been interpreted correctly.
 
-## Parse-and-repair gate
+A LightGBM LambdaRank model learns a correction to the weighted base score. Its fixed configuration uses 200 trees, seven leaves, at least 100 examples per leaf, learning rate 0.03, L2 penalty 50, truncation level one, and seed 68068. The model ranks candidates within their question instead of treating the four decisions as unrelated examples.
 
-The ranked choice is passed through a deterministic gate (margin limit 4). The gate parses each candidate's final boxed answer and, when the top-ranked candidate's boxed answer does not match its parsed final numeric answer, proposes re-selection among candidates whose boxed answers are consistent; it also supports an arithmetic-repair path in which a recomputed chain agrees with another candidate. Overrides are applied only when the top two candidates' score gap is within the margin. The gate never edits text — it only re-selects an index. On the frozen fusion, the gate nets +7 validation questions (13 repairs, 6 harms).
+## Conditional quadratic expert
 
-## Strict verification and the gap rule
+The quadratic expert uses the shared and differing parts of the supplied representations. For candidate $i$, let $e_i$ be its representation, $\bar e$ the mean of the four representations, and $r_i=e_i-\bar e$. PCA projections fitted on the relevant TRAIN partition produce 128 whitened residual coordinates and 32 whitened shared-context coordinates. Their values are clipped to a bounded range for stability.
 
-The final component re-reads each derivation as a *program*: every equation line is parsed, both sides evaluated with exact rational arithmetic (fractions), operands are bound to prior lines, quantities are taint-tracked, single-variable linear systems are solved symbolically, and floor/ceil markup is checked. A candidate's trace is **verified** when its final answer is derivable from its own accepted equation chain. A contrastive logistic weight (C=1, liblinear, seed 80080) is trained over 65,536-dimensional hashed features of these verified traces on candidate pairs from training data, yielding a strict score per candidate.
+The feature map contains residual coordinates, all residual/context products, upper-triangular quadratic products of the first 32 residual coordinates, and 82 standardized deterministic text/numeric/grounding features with row-centered counterparts. It also crosses the 32 shared-context coordinates with those 82 features. This final interaction allows the importance of a numerical check to depend on the semantic context of the question. The resulting map has 7,540 coordinates.
 
-Verification alone is informative but noisy, so it is used only as a *decisive-override* signal:
+A regularized pairwise logistic model, C=1 and seed 227227, compares correct and incorrect candidates from the same TRAIN question. Pair weights are normalized per question. PCA, whitening and standardization are fitted only on the corresponding training partition. The final expert fits all eligible TRAIN questions and occupies 697,208 bytes.
 
-1. Let $b$ be the gated fusion choice and $s$ the strict scores. Let $a = \arg\max s$.
-2. Flip the choice to $a$ only if all of: $s[a] - s[b] > \tau$ (gap exceeds threshold), $a$ is within the fusion's raw top-2, the gate did not override the argmax, and $a \ne b$.
+## Scratch-trained text expert
 
-With $\tau$ = 3.0 the rule flips exactly two validation rows: one repairs a genuine error (the only row whose strict advantage exceeds 3.0), the other is a both-correct flip that changes nothing; net +1 (759 $\to$ **760**), 0 harms. The threshold was designed on training folds with clean out-of-fold scores; the same configuration leaves the held-out fold at 1477 (unchanged), and the whole configuration is stable across a regularization grid (Section 3.5).
+The text expert receives the original question and reasoning texts, rather than the manually designed arithmetic features. Its 2,048-token vocabulary is fitted on TRAIN. Numeric occurrences are bound to matching quantities in the question, using question-relative quantity tokens; other numerical indicators describe their input magnitudes. There are no question-ID features or stored answer lookups.
 
-# Experiments
+Questions use at most 80 tokens and candidates at most 192. Longer inputs retain both an initial segment and a final segment, preserving question targets and candidate conclusions. The network has learned 24-dimensional word embeddings, a stride-two local CNN, layer normalization, and bidirectional question/candidate attention. The attention projection has 16 dimensions. Aligned vectors are compared using their values, differences and products, then projected to 32 dimensions. Mean/max pooling over both sequences yields a 128-dimensional candidate vector. Its concatenation with the difference from the four-candidate mean is scored by a 48-unit head.
 
-## Setup
+Training starts from random initialization, with seed 241241, 60 fixed epochs, AdamW, learning rate 0.001 with cosine decay, weight decay 0.02, and an exponential moving average of 0.98. The objective combines within-question pairwise ranking, probability mass assigned to the correct candidate set, binary correctness loss, and a small in-batch question/solution matching auxiliary loss. That auxiliary uses supplied TRAIN text only. No external corpus or pretrained text weights are loaded.
 
-Training data: 4,743 official training questions (12 excluded by convention: rows 34, 56, 1442, 1445, 1854, 2174, 2351, 2912, 4296, 4331, 4382, 4644). Fold 2 (1,582 questions) is never used to train the fusion or the strict scorer and serves as internal held-out sanity. Development decisions are made on training folds 0–1 and validated on the official validation set (798 questions). The official scorer parses the original candidate text by index only; the predictions therefore carry indices and nothing else.
+The network has about 67,000 parameters. Its final weights and vocabulary require 164,256 bytes. Weights are stored in FP16 and evaluated with float32 arithmetic. Training uses PyTorch; inference is implemented in NumPy and does not require Torch.
 
-## Main results
+## Score combination and consistency rules
 
-| Split | Correct | Total | Accuracy |
-|:------|--------:|------:|---------:|
-| Validation (official scorer) | 760 | 798 | 95.24% |
-| Held-out training fold (internal) | 1477 | 1582 | 93.36% |
-| **Test (official scorer)** | **391** | **467** | **83.73%** |
-| Historical baseline test (2026-10-21 freeze) | 386 | 467 | 82.66% |
+Let $u_i$ denote the base-plus-LambdaRank score, $q_i$ the conditional quadratic score, and $t_i$ the text-network score. Before applying the consistency rules, the final score is
 
-The frozen validation evaluation reproduces the development result exactly (760/798), and every check of the official harness passes (137 cases: interface, batch invariance, candidate-permutation invariance, empty/identical candidate handling, blocked reference reads on the prediction path, unchanged frozen hashes).
+$$
+s_i=u_i+0.25\,(q_i-\bar q)+0.01\,(t_i-\bar t),
+$$
 
-## Ablations
+where each mean is over the four candidates. The text coefficient is deliberately small: the text network supplies complementary evidence rather than replacing the stronger numerical/comparative ranker.
 
-Cumulative contribution of each component of the fusion surface, each added on top of the previous (validation accuracy, gate included, margin 4):
+The deterministic parse-and-repair policy proposes a candidate using parser alignment and arithmetic consistency. It accepts a proposed replacement only when its score deficit relative to the current winner is at most four. This policy selects an existing index and never edits the text or changes the official parser.
 
-| Configuration | Validation |
-|:--------------|-----------:|
-| Base expert ensemble + gate only | 752 |
-| + question-context influence | 754 |
-| + quantity-flow scores | 756 |
-| + relation scores | 758 |
-| + local structure scores (frozen fusion) | 759 |
-| + strict gap rule, $\tau$ = 3.0 (final) | **760** |
+A strict verifier additionally parses numerical derivation traces, tracks bindings to prior quantities and scores local program compatibility. Exact rational calculations, supported symbolic equations and bounded floor/ceiling handling reduce extraction errors. Its contrastive TRAIN model produces a strict score $v_i$. Verification is evidence of internal consistency, not a guarantee that the story was translated correctly.
 
-The gate margin itself was swept over {0, 0.25, 0.5, 1, 2, 3, 4, 8}; margin 4 is optimal (val 759, held 1477), and larger margins do not help. The strict-score channel was also tried *inside* the fusion surface (as event features with and without ordinal binding, 755–758) — it helps more as a post-hoc override than as a fusion input, because fusion averaging dilutes the rare decisive signal.
+Let $b$ be the parse-and-repair result and $a=\arg\max_i v_i$. The strict rule changes $b$ to $a$ only when $a\ne b$, $v_a-v_b>3$, $a$ lies in the raw top two under $s$, and $b$ still equals the raw argmax under $s$. Otherwise it keeps $b$.
 
-Alternative model families on the same feature surface were all inferior to the frozen 200-tree 7-leaf LambdaRank model:
+# Evaluation and interpretation
 
-| Alternative | Validation | Held-out |
-|:------------|-----------:|---------:|
-| MLP fusion (cross-entropy, 4 configs) | 744–746 | 1472 |
-| Two-stage pairwise flip model | 758 | — |
-| Logistic flip model on top-2 features | 757 | — |
-| 12-configuration LightGBM grid | $\leq$ 759 | $\leq$ 1478 |
+| Evaluation | Correct / total | Accuracy |
+|:---|---:|---:|
+| Official VAL | 763 / 798 | 95.61% |
+| TRAIN-held development fold | 1481 / 1582 | 93.62% |
+| Official final TEST | 394 / 467 | 84.37% |
 
-## The gap rule in detail
+The final candidate's fresh official validation predictions match its frozen development predictions exactly. The 146 interface samples cover batch consistency, candidate permutation at the parsed-answer level, unseen IDs, empty inputs and identical candidates. Prediction-time attempts to open reference files are blocked. All 89 frozen hashes are unchanged before and after the final test.
 
-Design evidence for the strict-gap rule (clean out-of-fold strict scores on training folds, restricted to top-2 and gate-first):
+The text contribution has a modest development ablation: disabling it gives VAL763 and held1479; enabling its fixed weight gives VAL763 and held1481. This result supports retaining it as a small complementary signal, while emphasizing uncertainty about its marginal benefit. The final test observation did not trigger any further model selection or tuning.
 
-| $\tau$ | Design (n=3161) | Held-out (n=1582) | Validation (n=798) |
-|--:|----------------:|------------------:|-------------------:|
-| 2.0 | 2909 (+17/−8) | 1475 | 759 |
-| 2.5 | 2913 (+7/−3) | 1476 | 760 |
-| **3.0** | **2916 (+4/−0)** | **1477** | **760** |
-| 3.5 | 2916 (+4/−0) | 1478 | 759 |
-| 4.0 | 2916 (+1/−0) | 1478 | 759 |
+The remaining errors include plausible but semantically incorrect interpretations, incorrect condition scope, and consistent arithmetic applied to the wrong quantities. Numerical trace consistency cannot eliminate these errors, and the small text model is not a complete mathematical reasoner. The validation score is a development estimate and should not be read as an unbiased forecast of test accuracy. Different candidate-bank geometries further limit direct comparison between the two percentages.
 
-$\tau$ = 3.0 is the only configuration with a positive validation gain and no loss on either training split; smaller $\tau$ trades fixes for harms, larger $\tau$ is inert on validation. Retraining the strict contrastive weight across a regularization grid (C $\in$ {0.1, 0.3, 1, 3, 10}, with C=1 reproducing the frozen scores bit-exactly) and re-running the rule sweep reproduces the same plateau: validation 760 with held-out 1477 appears for several (C, $\tau$) pairs, and every configuration that reaches 761 on validation costs 4–6 held-out questions — a clear over-fitting signature. Score-level and rule-level ensembles across C add nothing beyond the plateau. The rule's behavior is therefore not an artifact of one lucky threshold.
-
-## Error analysis
-
-The validation errors were inspected (39 rows at the pre-rule stage; the rule removes one, leaving 38). 25 of the 39 have the correct candidate ranked second by the fusion (so re-ranking alone has a theoretical ceiling of about 783/798); the top-1/top-2 score gaps on these rows are small (median 0.53), meaning the fusion is genuinely uncertain rather than confidently wrong. Seven errors are gate harms (the raw argmax was correct and the gate flipped it away); the gate is a net positive overall but its repair heuristic misfires on near-ties. The strict argmax itself is correct on 16 of the 39 rows, but the correct candidate's strict-score advantage over the chosen one exceeds the 3.0 threshold on exactly one row — which is exactly why a decisive-override rule with $\tau$ = 3.0 repairs one question and why verification scores cannot be used as a primary signal.
-
-The validation–test gap (95.24% vs. 83.73%) is consistent with the test bank being harder by construction (test groups contain at least two different valid parsed answers, i.e., more genuine near-ties).
-
-# Research questions
-
-**Does reading the reasoning actually help?** Yes, but only through structure, not surface style. Style features (length, formatting, revision words) are part of the base surface yet the largest gains come from features that *re-derive* the reasoning: flow, relations and local structure together contribute +7 validation questions over the base ensemble, and the strict verification trace powers the final +1. The TF-IDF text member contributes modestly (weight 0.16). A wrong answer looks convincing mainly when its chain is internally consistent — so consistency features (verified chains, relation plausibility) discriminate better than fluency features.
-
-**Should a solution be judged on its own?** No. Every comparative addition (context influence, quantity flow, relations, structure) improved the ensemble on top of per-candidate scoring, and the ranking model consumes the whole group jointly. The decisive-override rule also compares candidates through score gaps rather than absolutes.
-
-**Can the method recognise its own uncertainty?** Partially. On hard rows the fusion's top-1/top-2 margin is small and correlates with error; but calibration of the strict score is weak (correct candidates often have near-zero or negative advantages), which is why only large gaps are trusted. The gate's 7 harms show that heuristic repairs on near-ties are risky.
-
-**When does more computation pay off?** The final pipeline is cheap: 15.1 MiB of assets and 25.5 s end-to-end on test. The strict trace is the most expensive single step (~2 ms per candidate) and buys exactly one validation question through the rule — the smallest but only positive marginal improvement found after the fusion plateau; every more elaborate alternative (MLP fusion, pairwise stage-2, logistic flipper, score ensembles) either lost accuracy or returned the same plateau at higher complexity. The report records these negative results because they bound the method's uncertainty honestly.
+\newpage
 
 # Resources and reproducibility
 
-**Inference assets** (uncompressed, total 15,824,973 bytes = 15.09 MiB $\leq$ 16 MiB):
+| Required asset group | Bytes |
+|:---|---:|
+| Base, fusion, verification assets and configuration | 15,825,062 |
+| Conditional quadratic expert | 697,208 |
+| Text expert weights and vocabulary | 164,256 |
+| **Total required inference files** | **16,686,526** |
 
-| Asset | Size | Role |
-|:------|-----:|:-----|
-| 8 base expert models (MLP weights + TF-IDF vocabulary) | ~12.0 MB | base scorers |
-| meta.txt (LambdaRank fusion) | 214 KB | ranking model |
-| space.npz / flow.npz / relation.npz / structure.npz | ~0.98 MB | comparative channels |
-| strict.npz (contrastive verification weight) | 262 KB | strict score |
-| config.json + member weights | < 1 KB | fusion weights |
+The total is measured directly from the final bundle, including configuration and file-container overhead. Archival checkpoint copies and research-only checkpoints are not loaded for prediction. The final deployment is CPU only, using four library threads. Fresh TEST prediction took 27.44065 seconds and official scoring took 0.15071 seconds, for **27.59135 seconds** including process startup, imports and checkpoint loading.
 
-**Runtime** (local machine: Intel Core i7-11800H, 4 threads, fresh process including startup, imports, and asset loading): test prediction 25.07 s + official scoring 0.46 s = **25.5 s** (validation prediction 36.9 s for 798 questions). The reference machine (Xeon Platinum 8457C) determines eligibility and is expected to be faster.
+Inference dependencies are Python, NumPy, SciPy, scikit-learn, LightGBM and threadpoolctl. PyTorch 2.8 is needed only for neural training. Representative fixed seeds are 20261014 and 25025/25026 for base experts, 68068 for ranking, 80080 for strict verification, 227227 for the quadratic projection/ranker, and 241241 for the text network. The complete training configuration and frozen source closure are archived with the candidate.
 
-**Training cost** (CPU): each base MLP trains for 35–180 epochs on 4,743 questions in minutes; the fusion and comparative channels train in seconds to a few minutes (context 39 s, flow 207 s, relations 14 s + 199 s, local structure 91 s, strict weight 159 s). All experiments run under threadpool_limits(4).
-
-**Seeds**: experts 20261014 / 25025 / 25026; PCA 79079; LambdaRank 68068; contrastive strict weight 80080; 3-fold split seed fixed in the shared harness.
-
-**Dependencies**: Python 3.11; numpy, scipy, scikit-learn (liblinear/logistic), lightgbm 4.x, threadpoolctl. No external data, models, or APIs. Data and official scorer (protocol v5) unchanged.
-
-**Commands** (from the project root):
+With the provided course files placed in their original data directory and an activated inference environment, reproduce VAL from the repository root:
 
 ```text
-python research/round214_freeze.py            # rebuild the frozen bundle + validation cache
-python research/feature_validation.py \
-  --selection experiments/round214/final_feature_selection.json \
-  --method research/round214_selector.py \
-  --output experiments/round214/frozen --with-test
+python DASE7506-MP2-main/code/predict.py \
+  --method experiments/round257/frozen/method/entrypoint.py \
+  --checkpoint experiments/round257/bundle \
+  --split validation --output remote-work/validation_predictions.json
+python DASE7506-MP2-main/code/score_predictions.py \
+  --predictions remote-work/validation_predictions.json \
+  --split validation --output remote-work/validation_score.json
 ```
 
-The frozen prediction interface, bundle (experiments/round214/bundle), official evaluation JSONs, and a full asset-hash manifest are in experiments/round214/frozen/. The selector reads only the question, candidate texts and fixed representations; no IDs, no lookup tables, no cached predictions.
+Expected VAL is 763/798. The canonical checkpoint is experiments/round257/bundle. Its immutable validation/interface certificate is experiments/round257/frozen. The separately authorized final TEST certificate is experiments/round257/official_test_20261027. The public repository contains the source, required checkpoint and evaluation provenance. No additional test rerun is needed for routine validation reproduction. Optimization is complete.
 
 # AI assistance and reuse disclosure
 
-Substantive AI coding assistance (Claude Code) was used throughout development: design of features, training loops, ablations, and this report. All code was reviewed and validated against the official harness before freezing. Reused work: the relation features adapt the operation-relation supervision of Roy and Roth (2015); the data and scorer are the official DASE7506-MP2 distribution (GSM8K-derived, MIT license); candidate solutions were prepared by the course with Qwen3-0.6B. No other external weights or data were used.
+Claude Code and OpenAI Codex provided substantive assistance with feature design, training code, inference implementations, experiments, packaging and this report. The data, fixed representations, candidate texts, parser and scorer are from the official DASE7506-MP2 distribution. Candidate solutions were supplied by the course. Arithmetic-relation supervision follows the operation-relation approach of Roy and Roth (2015). No additional external datasets, pretrained weights or inference APIs were used.
 
 # References
 
-1. Roy, S., & Roth, D. (2015). Solving General Arithmetic Word Problems. *Proceedings of EMNLP 2015* (D15-1202).
-2. Cobbe, K., et al. (2021). Training Verifiers to Solve Math Word Problems. *arXiv:2110.14168*.
-3. DASE7506-MP2 official guide and evaluation harness (course distribution).
+1. DASE7506-MP2 official guide, data manifest and evaluation harness, course distribution.
+2. Roy, S., and Roth, D. (2015). Solving General Arithmetic Word Problems. Proceedings of EMNLP, D15-1202.
+3. Cobbe, K., et al. (2021). Training Verifiers to Solve Math Word Problems. arXiv:2110.14168.
