@@ -1,5 +1,16 @@
 # DASE7506 MP2 — Submission Package
 
+> **2026-10-27 update: the pre-test selected frozen candidate is round232.**
+> Official validation **762/798**, held **1479/1582**, authorized official test
+> **393/467 (84.1542%)**. Assets **16,511,713 bytes (15.7468 MiB)**;
+> fresh four-thread Xeon 8352V prediction plus scoring **27.05 s**.
+> Use experiments/round232/frozen/method/entrypoint.py and
+> experiments/round232/bundle with the unchanged official predict.py.
+> Certification: experiments/round232/official_test_20261027/result.json.
+> All 85 frozen hashes remained unchanged. Test was not used for tuning or
+> selection. The report PDF and the historical package details below still
+> describe round214; update the report before website submission.
+
 **Method:** Verification-Aware Comparative Ranking (frozen round214, arm `strict_gap_t3`)
 **Official scores:** validation **760/798 (95.24%)**, test **391/467 (83.73%)**
 **Student ID:** *(to be filled)* · **Deadline:** 2026-10-31 23:59 UTC+8

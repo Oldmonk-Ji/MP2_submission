@@ -152,6 +152,24 @@ See deployment/README.md for isolated remote reproduction and timing.
 ---
 
 """ + readme.read_text(encoding="utf-8"), encoding="utf-8")
+    test_record = ROOT / 'experiments/round232/official_test_20261027/result.json'
+    if test_record.exists():
+        result = json.loads(test_record.read_text(encoding='utf-8'))
+        readme = DEST / 'README.md'
+        contents = readme.read_text(encoding='utf-8')
+        contents = contents.replace('Its TEST score has not been measured.',
+            f"Official TEST: {result['score']['correct']}/467 ({100*result['score']['correct']/467:.4f}%).")
+        contents = contents.replace('The remote deployment deliberately omits every test input/reference file.',
+            'The independent remote deployment received official TEST files only for the separately authorized round232 evaluation.')
+        certificate = (f"\n## Authorized frozen round232 test evaluation\n\n"
+            f"Official TEST: **{result['score']['correct']}/467**; fresh four-thread prediction "
+            f"plus scoring: **{result['total_seconds']:.2f} seconds** on Xeon Platinum 8352V. "
+            "This is not timing certification on the course reference Xeon 8457C. "
+            "The candidate was selected on TRAIN/VAL before testing. All 85 frozen hashes "
+            "remained unchanged; no test-based tuning or method selection was performed. "
+            "See experiments/round232/official_test_20261027/result.json. "
+            "The original validation-only frozen certificate is retained unchanged.\n\n")
+        readme.write_text(certificate + contents, encoding='utf-8')
     manifest = {}
     for p in DEST.rglob("*"):
         if p.is_file() and ".git" not in p.parts and p.name != "release_manifest.json":

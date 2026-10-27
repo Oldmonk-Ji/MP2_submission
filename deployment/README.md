@@ -49,6 +49,13 @@ was transferred as a Git bundle and verified after cloning.
 
 ## Data boundary
 
+Update 2026-10-27: after round232 was frozen at VAL 762 and held 1479,
+the user authorized one official TEST evaluation. Official TEST files were
+then transferred into this independent deployment. The frozen candidate
+scored 393/467 (84.1542%); fresh prediction plus scoring took 27.05 seconds
+on four Xeon 8352V CPU cores. All 85 frozen hashes were unchanged.
+The following paragraph describes the earlier validation-only deployment.
+
 Only the provided TRAIN and validation inputs/references, the frozen model,
 and TRAIN/validation research caches were transferred. No test input or test
 reference file was included. Existing aggregate frozen test records remain

@@ -1,9 +1,14 @@
+
+## Authorized frozen round232 test evaluation
+
+Official TEST: **393/467**; fresh four-thread prediction plus scoring: **27.05 seconds** on Xeon Platinum 8352V. This is not timing certification on the course reference Xeon 8457C. The candidate was selected on TRAIN/VAL before testing. All 85 frozen hashes remained unchanged; no test-based tuning or method selection was performed. See experiments/round232/official_test_20261027/result.json. The original validation-only frozen certificate is retained unchanged.
+
 # HKU DASE7506 MP2 — current research and frozen results
 
 ## New frozen candidate: round232
 
 **Validation 762/798; internal held 1479/1582; 15.7468 MiB; 146 interface
-samples passed. Its TEST score has not been measured.**
+samples passed. Official TEST: 393/467 (84.1542%).**
 
 This candidate adds a TRAIN-only quadratic expert over whitened candidate
 residuals and shared semantic context to the previous pipeline. Raw score
@@ -82,7 +87,7 @@ document; use the commands above for the standalone frozen checkpoint.
 The test result above is the already recorded result. Ongoing development
 uses training and validation only. A new method must pass validation >760
 and internal held >=1477 before a separately authorized test evaluation.
-The remote deployment deliberately omits every test input/reference file.
+The independent remote deployment received official TEST files only for the separately authorized round232 evaluation.
 
 AI assistance: the original pipeline/report disclosed Claude Code; subsequent
 research, packaging and deployment assistance used OpenAI Codex.

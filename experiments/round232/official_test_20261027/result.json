@@ -1,0 +1,36 @@
+{
+  "before": {
+    "frozen_hashes_verified": 85,
+    "asset_bytes": 16511713,
+    "canonical_matches_frozen": true,
+    "benchmark_data_opened": false
+  },
+  "threads": 4,
+  "affinity": [
+    60,
+    61,
+    62,
+    63
+  ],
+  "machine": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+  "test_used_for_tuning_or_selection": false,
+  "reference_machine_certified": false,
+  "prediction_seconds": 26.91252639144659,
+  "scoring_seconds": 0.13704733550548553,
+  "score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 393,
+    "n": 467,
+    "accuracy": 84.1541755888651,
+    "scoring_seconds": 0.02798742800951004
+  },
+  "total_seconds": 27.049573726952076,
+  "after": {
+    "frozen_hashes_verified": 85,
+    "asset_bytes": 16511713,
+    "canonical_matches_frozen": true,
+    "benchmark_data_opened": false
+  },
+  "frozen_hashes_unchanged": true
+}
