@@ -1,0 +1,14 @@
+{
+  "source_hashes": {
+    "round239_features.py": "d6ba023df3b9beb5e3979c3bbe98bbf005b031b047823900972db4380854833c",
+    "round239_train.py": "25408911306aa0caac4162965aeafd04643c5f96ca0d61486db5f6b9038746e7"
+  },
+  "alphas": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "method": "Hashed question unigrams/bigrams crossed directly with 32 TRAIN-selected varying numerical features;32768 weights;fixed C1 pairwise loss.",
+  "selection": "VAL>763 and held>=1479, then validation,held,smaller alpha.",
+  "test_opened": false
+}

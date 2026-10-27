@@ -1,0 +1,118 @@
+{
+  "records": [
+    {
+      "arm": "group_mean",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1476,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 5,
+        "changed": 67
+      }
+    },
+    {
+      "arm": "group_mean",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 12
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 2,
+        "changed": 7
+      }
+    },
+    {
+      "arm": "group_mean",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 81
+      }
+    },
+    {
+      "arm": "group_extrema",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 71
+      }
+    },
+    {
+      "arm": "group_extrema",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 1,
+        "changed": 16
+      }
+    },
+    {
+      "arm": "group_extrema",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 5,
+        "harms": 6,
+        "changed": 85
+      }
+    },
+    {
+      "arm": "evidence_curvature",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 64
+      }
+    },
+    {
+      "arm": "evidence_curvature",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 2
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 0
+      }
+    },
+    {
+      "arm": "evidence_curvature",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1476,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 5,
+        "changed": 77
+      }
+    }
+  ],
+  "test_opened": false
+}

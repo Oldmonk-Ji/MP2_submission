@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 66
+      }
+    },
+    {
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 12
+      },
+      "validation": {
+        "correct": 760,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 3,
+        "changed": 12
+      }
+    },
+    {
+      "alpha": 0.5,
+      "held": {
+        "correct": 1476,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 5,
+        "changed": 82
+      }
+    }
+  ],
+  "selected": null,
+  "seconds": 62.71977730002254,
+  "test_opened": false
+}

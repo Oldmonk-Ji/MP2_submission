@@ -103,3 +103,7 @@ The independent remote deployment received official TEST files only for the sepa
 
 AI assistance: the original pipeline/report disclosed Claude Code; subsequent
 research, packaging and deployment assistance used OpenAI Codex.
+
+## Subsequent TRAIN/VAL continuation
+
+Rounds236-240 evaluated 30 predefined configurations across answer-group evidence, nonlinear semantic regions, question-only context, sparse lexical conditioning and reduced contextual features. No candidate exceeded validation763 while preserving held1479. Round235 remains selected; no additional TEST evaluation was performed. Full outcomes are in experiments/round240/continuation_summary.json.

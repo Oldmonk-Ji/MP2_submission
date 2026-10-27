@@ -47,7 +47,8 @@ def main():
     for r in ("round22", "round77", "round210", "round216", "round218",
               "round219", "round220", "round221", "round222", "round223", "round224",
               "round225", "round226", "round227", "round228", "round229", "round230",
-              "round231", "round233", "round234", "deployment_20261027"):
+              "round231", "round233", "round234", "round236", "round237",
+              "round238", "round239", "round240", "deployment_20261027"):
         for p in (ROOT / "experiments" / r).glob("*.json"):
             if p.stat().st_size < 1_000_000:
                 copy(p.relative_to(ROOT))
@@ -202,6 +203,18 @@ See deployment/README.md for isolated remote reproduction and timing.
                 "See experiments/round235/official_test_20261027/result.json. "
                 "The report PDF remains the historical round214 report and requires updating before submission.\n\n")
         readme.write_text(prefix + readme.read_text(encoding='utf-8'), encoding='utf-8')
+    continuation = ROOT / 'experiments/round240/continuation_summary.json'
+    if continuation.exists():
+        development = json.loads(continuation.read_text(encoding='utf-8'))
+        readme = DEST / 'README.md'
+        with readme.open('a', encoding='utf-8') as stream:
+            stream.write(f"\n## Subsequent TRAIN/VAL continuation\n\n"
+                f"Rounds236-240 evaluated {development['configurations']} predefined "
+                "configurations across answer-group evidence, nonlinear semantic regions, "
+                "question-only context, sparse lexical conditioning and reduced contextual "
+                "features. No candidate exceeded validation763 while preserving held1479. "
+                "Round235 remains selected; no additional TEST evaluation was performed. "
+                "Full outcomes are in experiments/round240/continuation_summary.json.\n")
     manifest = {}
     for p in DEST.rglob("*"):
         if p.is_file() and ".git" not in p.parts and p.name != "release_manifest.json":

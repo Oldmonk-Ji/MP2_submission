@@ -1,0 +1,125 @@
+{
+  "records": [
+    {
+      "arm": "no_surface",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 65
+      }
+    },
+    {
+      "arm": "no_surface",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 2
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 4
+      }
+    },
+    {
+      "arm": "no_surface",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1476,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 5,
+        "changed": 82
+      }
+    },
+    {
+      "arm": "verified_only",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 64
+      }
+    },
+    {
+      "arm": "verified_only",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 3
+      },
+      "validation": {
+        "correct": 762,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 1,
+        "changed": 5
+      }
+    },
+    {
+      "arm": "verified_only",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1475,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 6,
+        "changed": 87
+      }
+    },
+    {
+      "arm": "binding_only",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 65
+      }
+    },
+    {
+      "arm": "binding_only",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 5
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 7
+      }
+    },
+    {
+      "arm": "binding_only",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 85
+      }
+    }
+  ],
+  "test_opened": false
+}

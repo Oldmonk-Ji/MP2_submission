@@ -1,0 +1,15 @@
+{
+  "source_hashes": {
+    "round238_context_features.py": "6ad6c5112f3865bb7db51590a481ac80cc45b7263ecfb5a978d2e8fad7126a2a",
+    "round238_question_conditioning.py": "a45ae309cc2e86a56c6164b07ef33b9573052027ca4c6ac9469d7a8a179c7851"
+  },
+  "alphas": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "method": "Question-only hashed4096 TF-IDF -> SVD16, FP16 projection, crossed with numeric/ground evidence.",
+  "training": "IDF/SVD/normalization fit corresponding TRAIN rows; same pairwise C1 loss and gate.",
+  "selection": "VAL>763 and held>=1479, then validation, held, smaller alpha.",
+  "test_opened": false
+}

@@ -1,0 +1,51 @@
+{
+  "records": [
+    {
+      "alpha": 0.1,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 21
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 2,
+        "changed": 14
+      }
+    },
+    {
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 3,
+        "changed": 62
+      },
+      "validation": {
+        "correct": 760,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 3,
+        "changed": 27
+      }
+    },
+    {
+      "alpha": 0.5,
+      "held": {
+        "correct": 1476,
+        "baseline": 1479,
+        "fixes": 4,
+        "harms": 7,
+        "changed": 102
+      }
+    }
+  ],
+  "selected": null,
+  "seconds": 30.36096020002151,
+  "test_opened": false
+}

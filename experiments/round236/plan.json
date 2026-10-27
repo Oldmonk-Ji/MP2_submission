@@ -1,0 +1,17 @@
+{
+  "source_hash": "7ecdd39cab0a8bb3398d98453487d3e846241fb9dbb60069e2ccafcbe1e14456",
+  "arms": [
+    "group_mean",
+    "group_extrema",
+    "evidence_curvature"
+  ],
+  "alphas": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "selection": "VAL>763 and held>=1479, then VAL, held, smaller alpha.",
+  "training": "Same TRAIN-fitted PCA, C1 pairwise loss and parent normalization; same gate/strict rule.",
+  "validation_role": "Reused development set; no unbiased confidence claim.",
+  "test_opened": false
+}

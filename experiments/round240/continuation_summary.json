@@ -1,0 +1,142 @@
+{
+  "baseline": {
+    "round": 235,
+    "validation": 763,
+    "held": 1479
+  },
+  "rounds": [
+    {
+      "round": 236,
+      "configurations": 9,
+      "validation_evaluated": 2,
+      "best_held": 1479,
+      "best_validation": {
+        "arm": "evidence_curvature",
+        "alpha": 0.25,
+        "held": {
+          "correct": 1479,
+          "baseline": 1479,
+          "fixes": 0,
+          "harms": 0,
+          "changed": 2
+        },
+        "validation": {
+          "correct": 763,
+          "baseline": 763,
+          "fixes": 0,
+          "harms": 0,
+          "changed": 0
+        }
+      },
+      "selected": null,
+      "test_opened": false
+    },
+    {
+      "round": 237,
+      "configurations": 6,
+      "validation_evaluated": 2,
+      "best_held": 1479,
+      "best_validation": {
+        "arm": "rectified_context",
+        "alpha": 0.25,
+        "held": {
+          "correct": 1479,
+          "baseline": 1479,
+          "fixes": 0,
+          "harms": 0,
+          "changed": 9
+        },
+        "validation": {
+          "correct": 763,
+          "baseline": 763,
+          "fixes": 0,
+          "harms": 0,
+          "changed": 4
+        }
+      },
+      "selected": null,
+      "test_opened": false
+    },
+    {
+      "round": 238,
+      "configurations": 3,
+      "validation_evaluated": 1,
+      "best_held": 1479,
+      "best_validation": {
+        "alpha": 0.25,
+        "held": {
+          "correct": 1479,
+          "baseline": 1479,
+          "fixes": 0,
+          "harms": 0,
+          "changed": 12
+        },
+        "validation": {
+          "correct": 760,
+          "baseline": 763,
+          "fixes": 0,
+          "harms": 3,
+          "changed": 12
+        }
+      },
+      "selected": null,
+      "test_opened": false
+    },
+    {
+      "round": 239,
+      "configurations": 3,
+      "validation_evaluated": 2,
+      "best_held": 1479,
+      "best_validation": {
+        "alpha": 0.1,
+        "held": {
+          "correct": 1479,
+          "baseline": 1479,
+          "fixes": 1,
+          "harms": 1,
+          "changed": 21
+        },
+        "validation": {
+          "correct": 761,
+          "baseline": 763,
+          "fixes": 0,
+          "harms": 2,
+          "changed": 14
+        }
+      },
+      "selected": null,
+      "test_opened": false
+    },
+    {
+      "round": 240,
+      "configurations": 9,
+      "validation_evaluated": 3,
+      "best_held": 1479,
+      "best_validation": {
+        "arm": "no_surface",
+        "alpha": 0.25,
+        "held": {
+          "correct": 1479,
+          "baseline": 1479,
+          "fixes": 0,
+          "harms": 0,
+          "changed": 2
+        },
+        "validation": {
+          "correct": 763,
+          "baseline": 763,
+          "fixes": 0,
+          "harms": 0,
+          "changed": 4
+        }
+      },
+      "selected": null,
+      "test_opened": false
+    }
+  ],
+  "configurations": 30,
+  "validation_evaluations": 10,
+  "improved": false,
+  "test_opened": false,
+  "validation_role": "Repeated development evidence, not an untouched statistical test."
+}

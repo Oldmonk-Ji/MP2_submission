@@ -1,0 +1,16 @@
+{
+  "source_hash": "a02e9fd98d8acc3fc6727891194bcb3f0ab105640d1c6cef0b602bf2ed26697a",
+  "arms": [
+    "rectified_context",
+    "rbf_context"
+  ],
+  "alphas": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "selection": "VAL>763 and held>=1479; then validation, held, smaller alpha.",
+  "method": "Numeric evidence conditioned on rectified or smooth semantic regions; fixed pairwise C1 and frozen gate.",
+  "region_fitting": "Every center, bandwidth and normalization fitted on corresponding TRAIN partition only.",
+  "test_opened": false
+}
