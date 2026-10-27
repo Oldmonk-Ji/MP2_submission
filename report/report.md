@@ -1,12 +1,14 @@
 ---
 title: "Verification-Aware Ranking with a Small Text Expert"
 subtitle: "DASE7506 Advanced Machine Learning Methods - MP2 Final Report"
-author: "Student ID: (to be filled)"
+author: "纪弘泽 — Student ID: 3036801840"
 date: "27 October 2026"
 papersize: a4
 geometry: margin=2cm
 fontsize: 11pt
 header-includes:
+  - \usepackage{xeCJK}
+  - \setCJKmainfont{Microsoft YaHei}
   - \usepackage{booktabs}
   - \setlength{\parskip}{3pt}
 ---

@@ -11,7 +11,7 @@
 | Fresh four-thread TEST prediction + scoring | **27.59135 s** on Xeon Platinum 8352V |
 | Interface | **146 samples passed** |
 | Freeze audit | **89 file hashes unchanged** before/after TEST |
-| Student ID | **To be filled** |
+| Student | **纪弘泽 (3036801840)** |
 | Deadline | **2026-10-31 23:59 UTC+8** |
 
 Optimization is complete. The final candidate was selected before its one authorized final TEST run, using VAL first and TRAIN-held second. VAL tied round235 while held improved by two. The user explicitly requested this final test and stopping afterwards. No post-TEST parameter or method reselection was performed. Old certified models remain archival records.
@@ -25,7 +25,7 @@ Optimization is complete. The final candidate was selected before its one author
 - Authorized final TEST certificate: experiments/round257/official_test_20261027/result.json and completion_manifest.json.
 - Public repository: https://github.com/Oldmonk-Ji/MP2_submission.
 
-Student ID must be filled in the report and this document before website submission. Publishing the repository has not submitted an MP2 website entry. The measured server is not the course reference Xeon8457C; no reference-machine timing certificate is claimed.
+The report and this document identify the student as 纪弘泽 (3036801840). Publishing the repository has not submitted an MP2 website entry. The measured server is not the course reference Xeon8457C; no reference-machine timing certificate is claimed.
 
 ## Reproduce inference
 

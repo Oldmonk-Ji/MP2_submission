@@ -22,7 +22,8 @@
   "test_used_for_tuning_or_selection": false,
   "pre_test_git_commit": "a41d8ab",
   "pre_test_tag": "round257-val763-held1481",
-  "student_id": null,
+  "student_id": "3036801840",
   "website_submitted": false,
-  "no_further_model_optimization": true
+  "no_further_model_optimization": true,
+  "student_name": "纪弘泽"
 }

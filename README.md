@@ -6,7 +6,7 @@ Official TEST: **394/467 (84.3683%)**; fresh four-thread Xeon8352V prediction pl
 
 Selected before TEST by TRAIN/VAL: round235 plus the scratch raw-text expert at centered-logit weight0.01, before the unchanged parse/repair and strict rules. The user authorized one final test despite validation tying round235 and requested that optimization stop afterwards. No post-test parameter or method reselection is permitted.
 
-Entrypoint: experiments/round257/frozen/method/entrypoint.py; checkpoint: experiments/round257/bundle/. The final English report is report/report.pdf (four A4 pages), and FINAL_RESULT.json records the completed freeze. Student ID remains to be filled; the MP2 website submission has not been performed. Older method scores are retained only in their named archives.
+Entrypoint: experiments/round257/frozen/method/entrypoint.py; checkpoint: experiments/round257/bundle/. The final English report is report/report.pdf (four A4 pages), and FINAL_RESULT.json records the completed freeze. Student: 纪弘泽 (3036801840); the MP2 website submission has not been performed. Older method scores are retained only in their named archives.
 
 ---
 
@@ -31,7 +31,7 @@ Expected validation:763/798. The unchanged official scorer determines numeric co
 - [Official TEST certificate](experiments/round257/official_test_20261027/result.json).
 - [VAL/interface freeze](experiments/round257/frozen/summary.json).
 
-Student ID remains a placeholder. Fill it in before website submission; the MP2 website entry has not been submitted by publishing this repository. Deadline:2026-10-31 23:59 UTC+8. Timing is measured on Xeon8352V and is not reference-Xeon8457C certification.
+Student: 纪弘泽 (3036801840). the MP2 website entry has not been submitted by publishing this repository. Deadline:2026-10-31 23:59 UTC+8. Timing is measured on Xeon8352V and is not reference-Xeon8457C certification.
 
 ## Provenance and research archive
 

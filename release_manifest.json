@@ -8,12 +8,12 @@
     "sha256": "86bc7b23a0fb3ff76862ac2414f33807ea19402e949985c111582a2ddaab1ad4"
   },
   "FINAL_RESULT.json": {
-    "bytes": 951,
-    "sha256": "4e6518ed6ccf7a1ffe37d8927c5c403e0b90065daefd0bcf9899ae56017af7a3"
+    "bytes": 1019,
+    "sha256": "c64fe4ac33c56952628ff3b06cab5ef57ccbae4cd9283ee3ce16eddb2cf9c2b4"
   },
   "README.md": {
-    "bytes": 3548,
-    "sha256": "f12d3be8d15ae35f95d43652212a00b209d788500aade45a8fcfc312377c399e"
+    "bytes": 3509,
+    "sha256": "e1c131fbc1b7bc96f1b3ec33d649cc5e6a410987eeb518a1fd196c3588bfdac9"
   },
   "requirements-training.txt": {
     "bytes": 36,
@@ -24,8 +24,8 @@
     "sha256": "0b0a6005bec35f16f1034ab268b2b7c9b562c8df9dd84e96753c777306ec4375"
   },
   "SUBMISSION_README.md": {
-    "bytes": 4832,
-    "sha256": "a20d81152580e2af36faa0955037337dbc312e078732328f70cd32aba4a21672"
+    "bytes": 4891,
+    "sha256": "85e8bd34f5bcf5618dd4602072037ff58c42770b31e7cf3ef26b3b502a3f2283"
   },
   "\u4ea4\u63a5\u6587\u6863_2026-10-27.md": {
     "bytes": 31942,
@@ -40,8 +40,8 @@
     "sha256": "898fd760cc38ed82af1f3f2d5c70005f165f6cc94e03377ac8f926f011fab026"
   },
   "deployment/build_release.py": {
-    "bytes": 22427,
-    "sha256": "cf4d805a1e51f8aa0a2aede8eff8a6f49bbdb14599a5a5efc4f557fadccd668f"
+    "bytes": 22744,
+    "sha256": "cd85cb2e455862d9639e2bb923d75bafc03b6277fa0ca86ec3b43a4dc52e38b7"
   },
   "deployment/evaluate_frozen232.py": {
     "bytes": 2537,
@@ -84,12 +84,12 @@
     "sha256": "6cc0abcabfa2735b7d43dff61b110bb0b2314f689ffaafd53bc0758e87f92a49"
   },
   "report/report.md": {
-    "bytes": 13421,
-    "sha256": "aab2cbe0dc41c93c1967d1c6c70b4efea3f71f4382193ed3e07c03ab2e9ba344"
+    "bytes": 13620,
+    "sha256": "9e49ede9bd71004acd31f62c83e15438d39a0c4074d2c7a8b2c2918c6cdce4b2"
   },
   "report/report.pdf": {
-    "bytes": 52828,
-    "sha256": "ab231de70605bbacbf993eee03a215c529a2d72102a8decdc0e2f5d5fdf72ce9"
+    "bytes": 59416,
+    "sha256": "c2aa922ad3627ebf201921258db1ca43e352c96b5e1dca24b31bc14a904a0c66"
   },
   "research/adjudicate_review01.py": {
     "bytes": 3288,
