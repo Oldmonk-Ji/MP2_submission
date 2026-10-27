@@ -1,0 +1,15 @@
+{
+  "source_hashes": {
+    "round253_attention.py": "59242eda98841db9461b0fddf646637265070281961981a6bbc75afeb446b025",
+    "round255_features.py": "9e2fa3846914df5d67a605bee8a7ca0e0f394c559ec55c7abb582d680c8ecd7c",
+    "round255_train.py": "778ea8a3969373a63905d93648d5423e23fd14c0d79c89075121eaa42b551f60"
+  },
+  "arms": [
+    "alignment_utility",
+    "alignment_text_anchored"
+  ],
+  "method": "Read coordinate-invariant question/candidate attention grounding from frozen241, plus four relative confidence channels.",
+  "learning": "Same cross-fitted TRAIN geometry248; fixed stronger L2 C0.1 for24-dimensional rare-benefit readout. No regularization/threshold search.",
+  "selection": "VAL>763 and held>=1477.",
+  "test_opened": false
+}

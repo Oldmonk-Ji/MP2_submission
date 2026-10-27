@@ -1,0 +1,22 @@
+{
+  "method": "round235 plus raw-centered scratch text expert coefficient0.01 before unchanged gate/strict rule.",
+  "validation": 763,
+  "held": 1481,
+  "asset_bytes": 16686526,
+  "final_optimization_stop": true,
+  "latest_user_authorization": "在测试集上试一下 完成这组之后不改了",
+  "authorized_single_final_trial_despite_no_val_gain_over235": true,
+  "test_authorized": true,
+  "test_opened": false,
+  "test_used_for_tuning_or_selection": false,
+  "after_test": "Stop model optimization and preserve frozen method, irrespective of test outcome.",
+  "source_hashes": {
+    "round257_selector.py": "44f3a80926821a0feee71e852044543ceafb792605352f4c57d5f56352a6f647",
+    "round241_numpy.py": "c19e63e53b4957c3acc97d67d6c263f0540a4f8097892cebdd74329edb014bfc",
+    "round241_text.py": "154b679b62dd3bd426fb27907a7fde02cc3eb38105894454bbe1c235e7e18ba6"
+  },
+  "text_model_hashes": {
+    "model.npz": "2bf5745d787de67f249699c9174c935e56ba68c1bb65688af51df592a27157f9",
+    "vocab.json": "8fad16b00ff6bd8cad3b81aa94698c22b5575082aac6946c826b7a95717aea56"
+  }
+}

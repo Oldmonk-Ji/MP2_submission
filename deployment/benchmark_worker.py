@@ -11,7 +11,7 @@ from common import load_inputs, load_bank, read_jsonl, parse_answer
 parser = argparse.ArgumentParser()
 parser.add_argument("mode", choices=("predict", "score"))
 parser.add_argument("--count", type=int, default=467)
-parser.add_argument("--round", type=int, choices=(214, 232, 235), default=214)
+parser.add_argument("--round", type=int, choices=(214, 232, 235, 257), default=214)
 args = parser.parse_args()
 dest = ROOT / f"remote-work/round{args.round}/validation_proxy_predictions.json"
 if args.mode == "predict":

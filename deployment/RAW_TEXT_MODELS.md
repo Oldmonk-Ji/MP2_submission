@@ -60,3 +60,22 @@ below1e-5 on all1582 TRAIN-held questions. A467-question TRAIN-held prefix
 took about0.8 seconds for the attention network and1.31 seconds for the
 Transformer alone. These are component timing proxies, not full official
 TEST timings. The selected round235 bundle remains unchanged.
+
+## Complementarity continuation247–256
+
+Four extra fixed-recipe text fits generate held-excluded two-fold and final
+three-fold TRAIN predictions. They generate training inputs only; inference
+still uses one all-TRAIN text expert. Utility policies learn whether a
+text-supported alternative improves numeric correctness over the frozen
+choice. Further variants enforce scale invariance, textual support, monotone
+evidence or read learned attention grounding over question-relative numbers.
+
+Thirteen fixed policies were evaluated; ten passed held1477 and reached VAL.
+The strongest held policy scored1484/1582 (six fixes, one harm), but no new
+VAL score exceeded763. Best new VAL was762. No new method was selected and
+no TEST evaluation was requested. Summary: experiments/round256/result.json.
+
+Inner-design policy fitting excludes fold2 labels. Final three-fold OOF
+expert/policy fitting intentionally uses all TRAIN. A previously unscoped
+metadata flag in248 was corrected to distinguish those populations without
+changing any model or prediction. The selected round235 remains intact.

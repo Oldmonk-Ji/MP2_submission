@@ -1,0 +1,5 @@
+{
+  "source_hash": "49fc3e032ea06882122825bfd8116a28ed5310a753a9ca776e22a0ed847d7a72",
+  "method": "Audit utility of new text scorer, including gate/strict masking and answer-group effects.",
+  "test_opened": false
+}

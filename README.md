@@ -1,3 +1,15 @@
+# Final frozen candidate: round257
+
+**VAL763/798; held1481/1582; 15.9135 MiB;146 interface samples passed.**
+
+Official TEST is pending the single authorized final evaluation.
+
+Selected before TEST by TRAIN/VAL: round235 plus the scratch raw-text expert at centered-logit weight0.01, before the unchanged parse/repair and strict rules. The user authorized one final test despite validation tying round235 and requested that optimization stop afterwards. No post-test parameter or method reselection is permitted.
+
+Entrypoint: experiments/round257/frozen/method/entrypoint.py; checkpoint: experiments/round257/bundle/. Existing older test scores below belong to their named archived methods.
+
+---
+
 # New frozen development candidate: round235
 
 **Validation 763/798 (95.6140%); held 1479/1582; 15.7568 MiB. Official TEST 394/467 (84.3683%).**
@@ -111,3 +123,7 @@ Rounds236-240 evaluated 30 predefined configurations across answer-group evidenc
 ## Independent raw-text neural research
 
 Rounds241-246 train new word/CNN/cross-attention networks and a two-layer Transformer from random initialization, including TRAIN-only masked-language and number-binding pretraining. Exported research checkpoints are retained separately from the selected bundle. The best complementary TRAIN-held result is1481/1582, but validation remains763/798, so round235 remains selected and no further TEST evaluation was performed. See deployment/RAW_TEXT_MODELS.md and experiments/round246/continuation_summary.json.
+
+## Cross-fitted complementary correction research
+
+Rounds247-256 generate additional TRAIN cross-fitted predictions and learn when the text expert should correct round235. Thirteen fixed utility, scale-invariant, monotone and learned-attention variants were evaluated; ten passed the held floor and reached VAL. The best held result rose to1484/1582, but the best new VAL result was762/798, below the baseline763. Round235 remains selected and no TEST evaluation was requested or run. See experiments/round256/result.json. Cross-fitted text checkpoints and readouts are archived; large training-only quadratic/attention intermediates remain in the isolated research deployment or can be regenerated.

@@ -1,0 +1,139 @@
+{
+  "histories": {
+    "design_0": [
+      {
+        "epoch": 10,
+        "loss": 1.0576737726790995,
+        "seconds": 11.954611875116825
+      },
+      {
+        "epoch": 20,
+        "loss": 0.7963100495217722,
+        "seconds": 23.398867838084698
+      },
+      {
+        "epoch": 30,
+        "loss": 0.6233958805663676,
+        "seconds": 34.830591671168804
+      },
+      {
+        "epoch": 40,
+        "loss": 0.5990014590794527,
+        "seconds": 46.332521855831146
+      },
+      {
+        "epoch": 50,
+        "loss": 0.5621255509461028,
+        "seconds": 57.47697580605745
+      },
+      {
+        "epoch": 60,
+        "loss": 0.5378447623192509,
+        "seconds": 68.66347493231297
+      }
+    ],
+    "design_1": [
+      {
+        "epoch": 10,
+        "loss": 1.0590998980156008,
+        "seconds": 11.094088777899742
+      },
+      {
+        "epoch": 20,
+        "loss": 0.8052751250767692,
+        "seconds": 22.545735992491245
+      },
+      {
+        "epoch": 30,
+        "loss": 0.6770998528680795,
+        "seconds": 33.939690090715885
+      },
+      {
+        "epoch": 40,
+        "loss": 0.6145832367821029,
+        "seconds": 45.28122724592686
+      },
+      {
+        "epoch": 50,
+        "loss": 0.5586500647398281,
+        "seconds": 56.490801967680454
+      },
+      {
+        "epoch": 60,
+        "loss": 0.5759910099646625,
+        "seconds": 67.5981146544218
+      }
+    ],
+    "oof_0": [
+      {
+        "epoch": 10,
+        "loss": 1.0463543392901629,
+        "seconds": 24.494681537151337
+      },
+      {
+        "epoch": 20,
+        "loss": 0.8392636187087125,
+        "seconds": 47.94965273886919
+      },
+      {
+        "epoch": 30,
+        "loss": 0.7405594548117428,
+        "seconds": 70.36619058996439
+      },
+      {
+        "epoch": 40,
+        "loss": 0.6560990781741833,
+        "seconds": 94.06929925084114
+      },
+      {
+        "epoch": 50,
+        "loss": 0.6184544959149731,
+        "seconds": 116.36436219513416
+      },
+      {
+        "epoch": 60,
+        "loss": 0.6083247309844001,
+        "seconds": 138.9153746291995
+      }
+    ],
+    "oof_1": [
+      {
+        "epoch": 10,
+        "loss": 1.0441820993100848,
+        "seconds": 22.266148060560226
+      },
+      {
+        "epoch": 20,
+        "loss": 0.8784588872915274,
+        "seconds": 44.30002725124359
+      },
+      {
+        "epoch": 30,
+        "loss": 0.7250073083472938,
+        "seconds": 66.52491095662117
+      },
+      {
+        "epoch": 40,
+        "loss": 0.6750104082863126,
+        "seconds": 88.72531375288963
+      },
+      {
+        "epoch": 50,
+        "loss": 0.6187459321818018,
+        "seconds": 111.18956810235977
+      },
+      {
+        "epoch": 60,
+        "loss": 0.5992470224032551,
+        "seconds": 133.34182818979025
+      }
+    ]
+  },
+  "seconds": 528.8939225748181,
+  "held_labels_used_for_fitting": true,
+  "prediction_ensemble": false,
+  "test_opened": false,
+  "inner_design_uses_fold2_labels": false,
+  "final_oof_uses_fold2_labels": true,
+  "metadata_note": "Original unscoped false referred to inner-design fitting only. Corrected after provenance review; training code, models and predictions are unchanged."
+}

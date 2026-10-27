@@ -1,0 +1,14 @@
+{
+  "source_hashes": {
+    "round250_train.py": "3db5cf455a37707e53050a4b3141991b075e9d78c308a7d8d237275dec9f7972",
+    "round250_features.py": "67e02b615d4784bcedf966d1cfd4bb033c31dca80fedac854c76f1bbf80e7d11"
+  },
+  "arms": [
+    "scale_free",
+    "text_anchored"
+  ],
+  "hypothesis": "OOF-to-full scorer calibration drift or old-expert-only features cause new utility overrides to misfire. Enforce independent affine score invariance; optionally make all evidence proportional to text support.",
+  "structure": "Top2 family fixed from highest TRAIN-held count in249 (not chosen from VAL). Binary benefit/harm, fixed C1 and zero-utility cutoff.",
+  "selection": "VAL>763 and held>=1477, then validation,held,fewer harms.",
+  "test_opened": false
+}

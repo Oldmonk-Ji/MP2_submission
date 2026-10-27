@@ -15,6 +15,8 @@ paths.extend(p for p in (stage/"frozen").rglob("*")
              if p.is_file() and "bundle" not in p.relative_to(stage/"frozen").parts
              and "__pycache__" not in p.parts)
 paths.extend(stage/"bundle"/n for n in ("config.json","quadratic.npz"))
+if (stage/'bundle/text').exists():
+    paths.extend(p for p in (stage/'bundle/text').rglob('*') if p.is_file())
 paths.extend(ROOT/"deployment"/n for n in
              ("validate_remote.py","benchmark_worker.py","verify_release.py"))
 target=ROOT/f".deploy-private/mp2_candidate{args.round}.tar.gz"

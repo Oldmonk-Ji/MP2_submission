@@ -1,0 +1,11 @@
+{
+  "source_hash": "e999ba561ceadb3225b5584781c82fcf693e35bdd5131a76ce469fa77e7a47be",
+  "hypothesis": "Refitting the calibration policy on a different OOF/training-size geometry may erase transferable utility; test the fixed inner-TRAIN policy with the all-TRAIN experts.",
+  "policy_selection": "Highest TRAIN-held utility, then fewer harms/changes, from249. One policy only; no VAL-dependent policy choice.",
+  "policy_training_rows": "folds0/1 only, with held-excluded cross-fitted inputs; no final policy refit.",
+  "final_expert_training": "Existing round235 experts and round241 text expert fit all4743 eligible TRAIN. No question permanently excluded from expert fitting.",
+  "selected_arm": "top2_benefit_vs_harm",
+  "policy_sha256": "4a2ff3b8275b0801b406d9938f177d5d147912abf18be940032b50feca6eb63d",
+  "selection": "VAL>763 and held>=1477.",
+  "test_opened": false
+}

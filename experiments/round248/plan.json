@@ -1,0 +1,15 @@
+{
+  "source_hashes": {
+    "round248_crossfit.py": "c88cbab2dd972e5d97b1201e693ae4a5dda658674fae342bd09ce1b0b1788a1c",
+    "round241_text.py": "154b679b62dd3bd426fb27907a7fde02cc3eb38105894454bbe1c235e7e18ba6",
+    "round241_network.py": "dc18e76395587310d41cab86cdb82f54700570d7b4d28b2e4bc78d31ee9bc68c",
+    "round241_numpy.py": "c19e63e53b4957c3acc97d67d6c263f0540a4f8097892cebdd74329edb014bfc",
+    "round227_quadratic.py": "a5335bee19cb9199acd2c7ab3741c4fb1e5d3cd17792d300839a70831c5616c7",
+    "round234_semantic_verification.py": "c0e8c0bb11d6e715fbecbc1e90233614f846f5dbda4e7be6775511195889b1b3"
+  },
+  "method": "Two-fold OOF on folds0/1 for held-excluded arbiter fitting; three-fold OOF over all TRAIN for final arbiter fitting.",
+  "neural": "Fixed original round241 recipe; same seed/epochs, no seed ensemble. Additional models generate training features only.",
+  "teacher": "Cached fit-only/3-fold OOF old fusion plus separately TRAIN-fitted context-ground quadratic experts.",
+  "fitting": "Every vocabulary/projection/normalizer fits the corresponding fitting TRAIN partition only.",
+  "test_opened": false
+}

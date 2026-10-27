@@ -1,0 +1,126 @@
+{
+  "records": [
+    {
+      "arm": "alignment_utility",
+      "training": {
+        "features": [
+          "base_normalized_delta",
+          "text_normalized_delta",
+          "strict_normalized_delta",
+          "text_group_mean_delta",
+          "alignment_delta_question_same_quantity_mass",
+          "alignment_delta_question_min_same_quantity_mass",
+          "alignment_delta_question_wrong_quantity_mass",
+          "alignment_delta_question_quantity_support",
+          "alignment_delta_question_quantity_top_match",
+          "alignment_delta_candidate_same_quantity_mass",
+          "alignment_delta_candidate_min_same_quantity_mass",
+          "alignment_delta_candidate_wrong_quantity_mass",
+          "alignment_delta_candidate_quantity_support",
+          "alignment_delta_candidate_quantity_top_match",
+          "alignment_delta_question_quantity_entropy",
+          "alignment_delta_candidate_quantity_entropy",
+          "alignment_delta_target_to_conclusion_mass",
+          "alignment_delta_target_entropy",
+          "alignment_delta_new_number_to_question_quantity_mass",
+          "alignment_delta_new_number_entropy",
+          "alignment_delta_question_quantity_attention_peak",
+          "alignment_delta_candidate_quantity_attention_peak",
+          "alignment_delta_question_word_match_mass",
+          "alignment_delta_target_word_match_mass"
+        ],
+        "benefit_pairs": 58,
+        "harm_pairs": 171,
+        "C": 0.1
+      },
+      "held": {
+        "correct": 1475,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 5,
+        "changed": 6
+      }
+    },
+    {
+      "arm": "alignment_text_anchored",
+      "training": {
+        "features": [
+          "text_strength",
+          "text_strength_x_base_normalized_delta",
+          "text_strength_x_strict_normalized_delta",
+          "text_strength_x_text_group_mean_delta",
+          "text_strength_x_question_same_quantity_mass",
+          "text_strength_x_question_min_same_quantity_mass",
+          "text_strength_x_question_wrong_quantity_mass",
+          "text_strength_x_question_quantity_support",
+          "text_strength_x_question_quantity_top_match",
+          "text_strength_x_candidate_same_quantity_mass",
+          "text_strength_x_candidate_min_same_quantity_mass",
+          "text_strength_x_candidate_wrong_quantity_mass",
+          "text_strength_x_candidate_quantity_support",
+          "text_strength_x_candidate_quantity_top_match",
+          "text_strength_x_question_quantity_entropy",
+          "text_strength_x_candidate_quantity_entropy",
+          "text_strength_x_target_to_conclusion_mass",
+          "text_strength_x_target_entropy",
+          "text_strength_x_new_number_to_question_quantity_mass",
+          "text_strength_x_new_number_entropy",
+          "text_strength_x_question_quantity_attention_peak",
+          "text_strength_x_candidate_quantity_attention_peak",
+          "text_strength_x_question_word_match_mass",
+          "text_strength_x_target_word_match_mass"
+        ],
+        "benefit_pairs": 58,
+        "harm_pairs": 171,
+        "C": 0.1
+      },
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 3,
+        "changed": 4
+      },
+      "validation": {
+        "correct": 760,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 3,
+        "changed": 3
+      },
+      "full_training": {
+        "features": [
+          "text_strength",
+          "text_strength_x_base_normalized_delta",
+          "text_strength_x_strict_normalized_delta",
+          "text_strength_x_text_group_mean_delta",
+          "text_strength_x_question_same_quantity_mass",
+          "text_strength_x_question_min_same_quantity_mass",
+          "text_strength_x_question_wrong_quantity_mass",
+          "text_strength_x_question_quantity_support",
+          "text_strength_x_question_quantity_top_match",
+          "text_strength_x_candidate_same_quantity_mass",
+          "text_strength_x_candidate_min_same_quantity_mass",
+          "text_strength_x_candidate_wrong_quantity_mass",
+          "text_strength_x_candidate_quantity_support",
+          "text_strength_x_candidate_quantity_top_match",
+          "text_strength_x_question_quantity_entropy",
+          "text_strength_x_candidate_quantity_entropy",
+          "text_strength_x_target_to_conclusion_mass",
+          "text_strength_x_target_entropy",
+          "text_strength_x_new_number_to_question_quantity_mass",
+          "text_strength_x_new_number_entropy",
+          "text_strength_x_question_quantity_attention_peak",
+          "text_strength_x_candidate_quantity_attention_peak",
+          "text_strength_x_question_word_match_mass",
+          "text_strength_x_target_word_match_mass"
+        ],
+        "benefit_pairs": 85,
+        "harm_pairs": 234,
+        "C": 0.1
+      }
+    }
+  ],
+  "selected": null,
+  "test_opened": false
+}

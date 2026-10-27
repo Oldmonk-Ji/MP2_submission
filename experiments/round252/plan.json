@@ -1,0 +1,15 @@
+{
+  "source_hashes": {
+    "round252_features.py": "780bb9be1e13105c8a58b91d0066c02d825720970b8eddc3b93a0573ce554e96",
+    "round252_train.py": "9b4c053bf36b0b3cf9af1f0c556add89799b93cd934fdbdbe0e67395a3e7bac0"
+  },
+  "arms": [
+    "monotone_linear",
+    "monotone_text_gate"
+  ],
+  "method": "Four dimensionless evidence channels, nonnegative coefficients, fixed L2 penalty1. Text-gated arm fixes the zero-text prior to TRAIN benefit/harm odds.",
+  "hypotheses": "Prevent spurious nonmonotonic associations and reliance on scorer absolute scale. Top2 eligibility remains fixed from TRAIN evidence.",
+  "fitting": "Same held-excluded design OOF and final3fold OOF sources from248; no new data or threshold/regularization scan.",
+  "selection": "VAL>763 and held>=1477.",
+  "test_opened": false
+}

@@ -1,0 +1,295 @@
+{
+  "baseline": {
+    "round": 235,
+    "validation": 763,
+    "held": 1479
+  },
+  "audit": {
+    "train_held": {
+      "n": 1582,
+      "baseline_correct": 1479,
+      "neural_correct": 1306,
+      "neural_argmax_repairs": 39,
+      "neural_argmax_harms": 212,
+      "any_neural_supported_correct_alternative": 51,
+      "neural_argmax_repairs_in_baseline_top2": 21,
+      "neural_argmax_repairs_with_strict_agreement": 14,
+      "neural_argmax_repairs_after_gate_flip": 1
+    },
+    "validation_aggregate_only": {
+      "n": 798,
+      "baseline_correct": 763,
+      "neural_correct": 673,
+      "neural_argmax_repairs": 12,
+      "neural_argmax_harms": 102,
+      "any_neural_supported_correct_alternative": 17,
+      "neural_argmax_repairs_in_baseline_top2": 6,
+      "neural_argmax_repairs_with_strict_agreement": 5,
+      "neural_argmax_repairs_after_gate_flip": 0
+    },
+    "test_opened": false
+  },
+  "additional_text_fits": 4,
+  "configurations": 13,
+  "validation_evaluations": 10,
+  "records": [
+    {
+      "round": 249,
+      "arm": "supported_benefit_vs_harm",
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 10,
+        "harms": 11,
+        "changed": 24
+      },
+      "validation": {
+        "correct": 753,
+        "baseline": 763,
+        "fixes": 4,
+        "harms": 14,
+        "changed": 18
+      }
+    },
+    {
+      "round": 249,
+      "arm": "supported_expected_gain",
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 9,
+        "harms": 9,
+        "changed": 21
+      },
+      "validation": {
+        "correct": 756,
+        "baseline": 763,
+        "fixes": 3,
+        "harms": 10,
+        "changed": 13
+      }
+    },
+    {
+      "round": 249,
+      "arm": "joint_benefit_vs_harm",
+      "held": {
+        "correct": 1474,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 8,
+        "changed": 13
+      },
+      "validation": null
+    },
+    {
+      "round": 249,
+      "arm": "joint_expected_gain",
+      "held": {
+        "correct": 1473,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 9,
+        "changed": 14
+      },
+      "validation": null
+    },
+    {
+      "round": 249,
+      "arm": "top2_benefit_vs_harm",
+      "held": {
+        "correct": 1484,
+        "baseline": 1479,
+        "fixes": 6,
+        "harms": 1,
+        "changed": 10
+      },
+      "validation": {
+        "correct": 755,
+        "baseline": 763,
+        "fixes": 1,
+        "harms": 9,
+        "changed": 10
+      }
+    },
+    {
+      "round": 249,
+      "arm": "top2_expected_gain",
+      "held": {
+        "correct": 1484,
+        "baseline": 1479,
+        "fixes": 7,
+        "harms": 2,
+        "changed": 12
+      },
+      "validation": {
+        "correct": 755,
+        "baseline": 763,
+        "fixes": 1,
+        "harms": 9,
+        "changed": 10
+      }
+    },
+    {
+      "round": 250,
+      "arm": "scale_free",
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 3
+      },
+      "validation": {
+        "correct": 758,
+        "baseline": 763,
+        "fixes": 1,
+        "harms": 6,
+        "changed": 7
+      }
+    },
+    {
+      "round": 250,
+      "arm": "text_anchored",
+      "held": {
+        "correct": 1480,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 0,
+        "changed": 2
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 2,
+        "changed": 2
+      }
+    },
+    {
+      "round": 252,
+      "arm": "monotone_linear",
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 0
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 2,
+        "changed": 3
+      }
+    },
+    {
+      "round": 252,
+      "arm": "monotone_text_gate",
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 2
+      },
+      "validation": {
+        "correct": 762,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 1,
+        "changed": 1
+      }
+    },
+    {
+      "round": 255,
+      "arm": "alignment_utility",
+      "held": {
+        "correct": 1475,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 5,
+        "changed": 6
+      },
+      "validation": null
+    },
+    {
+      "round": 255,
+      "arm": "alignment_text_anchored",
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 3,
+        "changed": 4
+      },
+      "validation": {
+        "correct": 760,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 3,
+        "changed": 3
+      }
+    },
+    {
+      "round": 251,
+      "arm": "fixed_inner_train_policy",
+      "held": {
+        "correct": 1484,
+        "baseline": 1479,
+        "fixes": 6,
+        "harms": 1,
+        "changed": 10
+      },
+      "validation": {
+        "correct": 755,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 8,
+        "changed": 8
+      }
+    }
+  ],
+  "best_held": {
+    "round": 249,
+    "arm": "top2_benefit_vs_harm",
+    "held": {
+      "correct": 1484,
+      "baseline": 1479,
+      "fixes": 6,
+      "harms": 1,
+      "changed": 10
+    },
+    "validation": {
+      "correct": 755,
+      "baseline": 763,
+      "fixes": 1,
+      "harms": 9,
+      "changed": 10
+    }
+  },
+  "best_validation": {
+    "round": 252,
+    "arm": "monotone_text_gate",
+    "held": {
+      "correct": 1479,
+      "baseline": 1479,
+      "fixes": 1,
+      "harms": 1,
+      "changed": 2
+    },
+    "validation": {
+      "correct": 762,
+      "baseline": 763,
+      "fixes": 0,
+      "harms": 1,
+      "changed": 1
+    }
+  },
+  "selected_submission_round": 235,
+  "accepted_new": false,
+  "test_opened": false,
+  "source_hashes_verified": 19,
+  "provenance": "Inner-policy training excludes fold2 labels. Final OOF policy training intentionally uses all TRAIN; held statistics always use the held-excluded policy.",
+  "conclusion": "Complementarity improves held to1484, but every new VAL result is below763. Do not request/evaluate TEST."
+}

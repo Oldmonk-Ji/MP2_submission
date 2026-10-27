@@ -1,0 +1,27 @@
+{
+  "attention_features": [
+    "question_same_quantity_mass",
+    "question_min_same_quantity_mass",
+    "question_wrong_quantity_mass",
+    "question_quantity_support",
+    "question_quantity_top_match",
+    "candidate_same_quantity_mass",
+    "candidate_min_same_quantity_mass",
+    "candidate_wrong_quantity_mass",
+    "candidate_quantity_support",
+    "candidate_quantity_top_match",
+    "question_quantity_entropy",
+    "candidate_quantity_entropy",
+    "target_to_conclusion_mass",
+    "target_entropy",
+    "new_number_to_question_quantity_mass",
+    "new_number_entropy",
+    "question_quantity_attention_peak",
+    "candidate_quantity_attention_peak",
+    "question_word_match_mass",
+    "target_word_match_mass"
+  ],
+  "raw_logits_unchanged": true,
+  "max_difference": 0.0,
+  "test_opened": false
+}

@@ -1,0 +1,24 @@
+{
+  "arm": "top2_benefit_vs_harm",
+  "mode": "top2",
+  "held": {
+    "correct": 1484,
+    "baseline": 1479,
+    "fixes": 6,
+    "harms": 1,
+    "changed": 10
+  },
+  "validation": {
+    "correct": 755,
+    "baseline": 763,
+    "fixes": 0,
+    "harms": 8,
+    "changed": 8
+  },
+  "policy": "experiments/round249/top2_benefit_vs_harm_held.npz",
+  "text_model": "experiments/round244/source241/full",
+  "policy_uses_all_train": false,
+  "experts_use_all_train": true,
+  "test_opened": false,
+  "accepted": false
+}

@@ -1,0 +1,25 @@
+{
+  "train_held": {
+    "n": 1582,
+    "baseline_correct": 1479,
+    "neural_correct": 1306,
+    "neural_argmax_repairs": 39,
+    "neural_argmax_harms": 212,
+    "any_neural_supported_correct_alternative": 51,
+    "neural_argmax_repairs_in_baseline_top2": 21,
+    "neural_argmax_repairs_with_strict_agreement": 14,
+    "neural_argmax_repairs_after_gate_flip": 1
+  },
+  "validation_aggregate_only": {
+    "n": 798,
+    "baseline_correct": 763,
+    "neural_correct": 673,
+    "neural_argmax_repairs": 12,
+    "neural_argmax_harms": 102,
+    "any_neural_supported_correct_alternative": 17,
+    "neural_argmax_repairs_in_baseline_top2": 6,
+    "neural_argmax_repairs_with_strict_agreement": 5,
+    "neural_argmax_repairs_after_gate_flip": 0
+  },
+  "test_opened": false
+}

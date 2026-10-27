@@ -1,0 +1,8 @@
+{
+  "candidate_permutation": true,
+  "batch_invariance": true,
+  "affine_score_invariance": true,
+  "finite": true,
+  "empty": true,
+  "test_opened": false
+}

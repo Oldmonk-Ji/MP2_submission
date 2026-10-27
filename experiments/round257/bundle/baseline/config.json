@@ -1,0 +1,36 @@
+{
+  "members": [
+    {
+      "directory": "member0",
+      "weight": 0.3070675831737607
+    },
+    {
+      "directory": "member1",
+      "weight": 0.4945616415920872
+    },
+    {
+      "directory": "member2",
+      "weight": 0.619620248758748
+    },
+    {
+      "directory": "member3",
+      "weight": 0.15961461990709364
+    },
+    {
+      "directory": "member4",
+      "weight": 0.125
+    },
+    {
+      "directory": "member5",
+      "weight": 0.125
+    },
+    {
+      "directory": "member6",
+      "weight": 0.125
+    },
+    {
+      "directory": "member7",
+      "weight": 0.125
+    }
+  ]
+}

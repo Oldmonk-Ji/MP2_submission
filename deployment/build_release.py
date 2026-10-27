@@ -44,12 +44,18 @@ def main():
         for p in (ROOT / "experiments/round235").rglob("*"):
             if p.is_file() and "__pycache__" not in p.parts:
                 copy(p.relative_to(ROOT))
-    for number in (241,242,243,244,245,246):
+    if (ROOT/'experiments/round257/frozen/completion_manifest.json').exists():
+        for p in (ROOT/'experiments/round257').rglob('*'):
+            if p.is_file() and '__pycache__' not in p.parts:copy(p.relative_to(ROOT))
+    for number in (241,242,243,244,245,246,248,249,250,251,252,254,255,256):
         stage=ROOT/f'experiments/round{number}'
         if (stage/'result.json').exists():
             for p in stage.rglob('*'):
                 if p.is_file() and '__pycache__' not in p.parts and p.suffix in ('.json','.npz'):
                     copy(p.relative_to(ROOT))
+    for name in ('plan.json','feature_checks.json','aggregate.json'):
+        audit=ROOT/'experiments/round247'/name
+        if audit.exists():copy(audit.relative_to(ROOT))
     preflight=ROOT/'experiments/round245_preflight/result.json'
     if preflight.exists():copy(preflight.relative_to(ROOT))
     for r in ("round22", "round77", "round210", "round216", "round218",
@@ -236,6 +242,42 @@ See deployment/README.md for isolated remote reproduction and timing.
                 'result is1481/1582, but validation remains763/798, so round235 remains '
                 'selected and no further TEST evaluation was performed. See '
                 'deployment/RAW_TEXT_MODELS.md and experiments/round246/continuation_summary.json.\n')
+    complement_summary=ROOT/'experiments/round256/result.json'
+    if complement_summary.exists():
+        readme=DEST/'README.md'
+        with readme.open('a',encoding='utf-8') as stream:
+            stream.write('\n## Cross-fitted complementary correction research\n\n'
+                'Rounds247-256 generate additional TRAIN cross-fitted predictions and learn '
+                'when the text expert should correct round235. Thirteen fixed utility, '
+                'scale-invariant, monotone and learned-attention variants were evaluated; '
+                'ten passed the held floor and reached VAL. The best held result rose '
+                'to1484/1582, but the best new VAL result was762/798, below the baseline763. '
+                'Round235 remains selected and no TEST evaluation was requested or run. '
+                'See experiments/round256/result.json. Cross-fitted text checkpoints and '
+                'readouts are archived; large training-only quadratic/attention intermediates '
+                'remain in the isolated research deployment or can be regenerated.\n')
+    final_summary=ROOT/'experiments/round257/frozen/summary.json'
+    if final_summary.exists():
+        final=json.loads(final_summary.read_text(encoding='utf-8'))
+        certificate=ROOT/'experiments/round257/official_test_20261027/result.json'
+        status='Official TEST is pending the single authorized final evaluation.'
+        if certificate.exists():
+            certified=json.loads(certificate.read_text(encoding='utf-8'))
+            status=(f"Official TEST: **{certified['score']['correct']}/467 "
+                f"({certified['score']['accuracy']:.4f}%)**; fresh four-thread Xeon8352V prediction "
+                f"plus scoring **{certified['total_seconds']:.2f} s**.")
+        prefix=('# Final frozen candidate: round257\n\n'
+            f"**VAL763/798; held1481/1582; {final['asset_MiB']:.4f} MiB;146 interface samples passed.**\n\n"
+            +status+'\n\n'
+            'Selected before TEST by TRAIN/VAL: round235 plus the scratch raw-text expert '
+            'at centered-logit weight0.01, before the unchanged parse/repair and strict rules. '
+            'The user authorized one final test despite validation tying round235 and '
+            'requested that optimization stop afterwards. No post-test parameter or '
+            'method reselection is permitted.\n\n'
+            'Entrypoint: experiments/round257/frozen/method/entrypoint.py; '
+            'checkpoint: experiments/round257/bundle/. '
+            'Existing older test scores below belong to their named archived methods.\n\n---\n\n')
+        readme=DEST/'README.md';readme.write_text(prefix+readme.read_text(encoding='utf-8'),encoding='utf-8')
     manifest = {}
     for p in DEST.rglob("*"):
         if p.is_file() and ".git" not in p.parts and p.name != "release_manifest.json":

@@ -1,0 +1,21 @@
+{
+  "source_hashes": {
+    "round249_train.py": "b88264f566b906ead9444c8c1ad304298fa136685b348559604a2462309ca6fb",
+    "round249_features.py": "24f5e75024a58d83bbc29b3cd26f4a824cd81b1108ef2cf228f5c40d9bf28a30"
+  },
+  "method": "Expected accuracy-gain classifier for replacing the final frozen choice with a text-supported candidate.",
+  "modes": [
+    "supported",
+    "joint",
+    "top2"
+  ],
+  "objectives": [
+    "benefit_vs_harm",
+    "expected_gain"
+  ],
+  "model": "Fixed L2 logistic C1; binary conditional benefit/harm or multinomial expected utility; no threshold/C/seed search.",
+  "target": "Binary classifier conditions on benefit/harm; multinomial retains negative/neutral/positive utility outcomes. Normalize eligible pair weights per question.",
+  "data": "Fit arbiter on folds0/1 using held-excluded OOF text/old model predictions; evaluate fold2. Final arbiter fits all TRAIN with3-fold OOF predictions.",
+  "selection": "VAL>763 and held>=1477, then validation,held,fewer VAL harms.",
+  "test_opened": false
+}

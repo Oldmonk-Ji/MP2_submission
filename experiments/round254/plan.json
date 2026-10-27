@@ -1,0 +1,9 @@
+{
+  "source_hashes": {
+    "round253_attention.py": "59242eda98841db9461b0fddf646637265070281961981a6bbc75afeb446b025",
+    "round254_attention_cache.py": "ef22228c9e8d383b6321a128ab309e616bcab1b2a2c50f8721a69bf63994b609"
+  },
+  "method": "Extract learned question/candidate attention grounding, with fixed semantic axes rather than unaligned hidden units.",
+  "source": "Same cross-fitted networks248 and original held/full241; no new network fitting.",
+  "test_opened": false
+}

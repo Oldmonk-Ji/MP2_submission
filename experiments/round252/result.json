@@ -1,0 +1,116 @@
+{
+  "records": [
+    {
+      "arm": "monotone_linear",
+      "training": {
+        "features": [
+          "base_relative_advantage",
+          "text_relative_support",
+          "strict_relative_support",
+          "text_group_support"
+        ],
+        "benefit_pairs": 58,
+        "harm_pairs": 171,
+        "positive_coefficients": true,
+        "coefficients": [
+          0.220307968256091,
+          0.11455897164127851,
+          0.3523610054145504,
+          0.0
+        ],
+        "intercept": -0.9817141499730194,
+        "iterations": 11
+      },
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 0
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 2,
+        "changed": 3
+      },
+      "full_training": {
+        "features": [
+          "base_relative_advantage",
+          "text_relative_support",
+          "strict_relative_support",
+          "text_group_support"
+        ],
+        "benefit_pairs": 85,
+        "harm_pairs": 234,
+        "positive_coefficients": true,
+        "coefficients": [
+          0.6173895249782116,
+          0.0,
+          0.42333417103367293,
+          0.15502376754838093
+        ],
+        "intercept": -0.5915795560437219,
+        "iterations": 11
+      }
+    },
+    {
+      "arm": "monotone_text_gate",
+      "training": {
+        "features": [
+          "text_strength",
+          "text_x_base",
+          "text_x_strict",
+          "text_x_group"
+        ],
+        "benefit_pairs": 58,
+        "harm_pairs": 171,
+        "positive_coefficients": true,
+        "coefficients": [
+          0.14527165728807248,
+          0.2429642724690914,
+          0.40515349640170084,
+          0.0
+        ],
+        "intercept": -1.0753554265038423,
+        "iterations": 9
+      },
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 2
+      },
+      "validation": {
+        "correct": 762,
+        "baseline": 763,
+        "fixes": 0,
+        "harms": 1,
+        "changed": 1
+      },
+      "full_training": {
+        "features": [
+          "text_strength",
+          "text_x_base",
+          "text_x_strict",
+          "text_x_group"
+        ],
+        "benefit_pairs": 85,
+        "harm_pairs": 234,
+        "positive_coefficients": true,
+        "coefficients": [
+          0.07300894232112798,
+          0.6375912732991474,
+          0.331141401206321,
+          0.32694584913723485
+        ],
+        "intercept": -1.008387197075384,
+        "iterations": 10
+      }
+    }
+  ],
+  "selected": null,
+  "test_opened": false
+}

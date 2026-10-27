@@ -1,0 +1,8 @@
+{
+  "features": 30,
+  "finite": true,
+  "candidate_permutation": true,
+  "batch_invariance": true,
+  "empty": true,
+  "test_opened": false
+}
