@@ -1,5 +1,12 @@
 # DASE7506 MP2 — Submission Package
 
+> **Latest unscored candidate: round235 (2026-10-27).**
+> Official validation **763/798 (95.6140%)**, held **1479/1582**;
+> **16,522,247 bytes (15.7568 MiB)**; 143 interface samples passed.
+> Guarded entrypoint experiments/round235/frozen/method/entrypoint.py;
+> checkpoint experiments/round235/bundle. TEST remains unmeasured for235.
+> The following TEST result belongs to previously scored round232.
+
 > **2026-10-27 update: the pre-test selected frozen candidate is round232.**
 > Official validation **762/798**, held **1479/1582**, authorized official test
 > **393/467 (84.1542%)**. Assets **16,511,713 bytes (15.7468 MiB)**;

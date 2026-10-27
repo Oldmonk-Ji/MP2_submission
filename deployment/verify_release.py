@@ -8,7 +8,7 @@ import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
-parser.add_argument("--round", type=int, choices=(214,232), default=214)
+parser.add_argument("--round", type=int, choices=(214,232,235), default=214)
 parser.add_argument("--git", action="store_true")
 args = parser.parse_args()
 stage = f"round{args.round}"
@@ -30,6 +30,7 @@ for path in bundle.rglob("*"):
     twin = ROOT / f"experiments/{stage}/frozen/bundle" / rel
     assert path.read_bytes() == twin.read_bytes(), str(rel)
     total += path.stat().st_size
-assert total == (15824973 if args.round == 214 else 16511713) and total <= 16 * 2**20
+expected = json.loads((ROOT / f"experiments/{stage}/frozen/summary.json").read_text())["asset_bytes"]
+assert total == expected and total <= 16 * 2**20
 print(json.dumps(dict(frozen_hashes_verified=checked, asset_bytes=total,
                       canonical_matches_frozen=True, benchmark_data_opened=False)))

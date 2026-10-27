@@ -1,0 +1,27 @@
+{
+  "source_hash": "8214be662f8f050648f95cd72c1df9609f70a045895744e0e27f0dfff59ebfe6",
+  "variants": [
+    [
+      "uniform_positive",
+      false
+    ],
+    [
+      "any_positive",
+      false
+    ],
+    [
+      "any_positive",
+      true
+    ]
+  ],
+  "alphas": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "purpose": "Change ranking objective, retain TRAIN-fitted spaces, dimension and inference architecture.",
+  "selection": "Validation>762 and held>=1479; then validation, held, fewer changes.",
+  "validation_role": "Reused development set",
+  "test_opened": false
+}

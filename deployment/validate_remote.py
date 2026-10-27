@@ -11,7 +11,7 @@ import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
-parser.add_argument("--round", type=int, choices=(214,232), default=214)
+parser.add_argument("--round", type=int, choices=(214,232,235), default=214)
 parser.add_argument("--expected", type=int, default=760)
 args = parser.parse_args()
 stage = f"round{args.round}"

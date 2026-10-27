@@ -40,10 +40,14 @@ def main():
         for p in (ROOT / "experiments/round232").rglob("*"):
             if p.is_file() and "__pycache__" not in p.parts:
                 copy(p.relative_to(ROOT))
+    if (ROOT / "experiments/round235/frozen/completion_manifest.json").exists():
+        for p in (ROOT / "experiments/round235").rglob("*"):
+            if p.is_file() and "__pycache__" not in p.parts:
+                copy(p.relative_to(ROOT))
     for r in ("round22", "round77", "round210", "round216", "round218",
               "round219", "round220", "round221", "round222", "round223", "round224",
               "round225", "round226", "round227", "round228", "round229", "round230",
-              "round231", "deployment_20261027"):
+              "round231", "round233", "round234", "deployment_20261027"):
         for p in (ROOT / "experiments" / r).glob("*.json"):
             if p.stat().st_size < 1_000_000:
                 copy(p.relative_to(ROOT))
@@ -170,6 +174,24 @@ See deployment/README.md for isolated remote reproduction and timing.
             "See experiments/round232/official_test_20261027/result.json. "
             "The original validation-only frozen certificate is retained unchanged.\n\n")
         readme.write_text(certificate + contents, encoding='utf-8')
+    candidate_summary = ROOT / 'experiments/round235/frozen/summary.json'
+    if candidate_summary.exists():
+        summary = json.loads(candidate_summary.read_text(encoding='utf-8'))
+        readme = DEST / 'README.md'
+        prefix = ("# New frozen development candidate: round235\n\n"
+            f"**Validation {summary['validation_correct']}/798 (95.6140%); held 1479/1582; "
+            f"{summary['asset_MiB']:.4f} MiB. TEST has not been evaluated for this candidate.**\n\n"
+            "The quadratic expert now conditions numerical verification features on the "
+            "shared semantic context (32 whitened context coordinates crossed with 82 "
+            "standardized numeric/grounding features). This adds 10,534 checkpoint bytes "
+            "relative to round232. All projections and weights fit supplied TRAIN only; "
+            "TRAIN/VAL development selected the new candidate.\n\n"
+            "Guarded entrypoint: experiments/round235/frozen/method/entrypoint.py. "
+            "Checkpoint: experiments/round235/bundle/. Remote Xeon 8352V reproduced "
+            "763/798; a 467-question validation timing proxy took 24.97 seconds in "
+            "fresh four-thread prediction/scoring processes. Existing official test scores "
+            "below belong to their named older frozen candidates.\n\n---\n\n")
+        readme.write_text(prefix + readme.read_text(encoding='utf-8'), encoding='utf-8')
     manifest = {}
     for p in DEST.rglob("*"):
         if p.is_file() and ".git" not in p.parts and p.name != "release_manifest.json":

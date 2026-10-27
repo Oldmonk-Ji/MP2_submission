@@ -1,0 +1,16 @@
+{
+  "source_hash": "c0e8c0bb11d6e715fbecbc1e90233614f846f5dbda4e7be6775511195889b1b3",
+  "arms": [
+    "context_ground",
+    "residual_ground",
+    "both_ground"
+  ],
+  "alphas": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "method": "Semantic context/residual crossed with deterministic numerical verification; same PCA spaces and fixed pairwise training.",
+  "selection": "VAL>762 and held>=1479; choose validation then held then smaller alpha.",
+  "test_opened": false
+}

@@ -1,0 +1,33 @@
+{
+  "machine": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+  "python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]",
+  "threads": 4,
+  "affinity": [
+    60,
+    61,
+    62,
+    63
+  ],
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "official_test_repeated": false,
+  "reference_machine_certified": false,
+  "validation_prediction_seconds": 40.44792157411575,
+  "validation_scoring_seconds": 0.14663229882717133,
+  "proxy_prediction_seconds": 24.84863840788603,
+  "proxy_scoring_seconds": 0.1245342269539833,
+  "validation": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "validation",
+    "correct": 763,
+    "n": 798,
+    "accuracy": 95.6140350877193,
+    "scoring_seconds": 0.0441599041223526
+  },
+  "proxy_total_seconds": 24.97317263484001
+}

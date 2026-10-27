@@ -1,0 +1,144 @@
+{
+  "records": [
+    {
+      "arm": "context_ground",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1477,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 5,
+        "changed": 68
+      }
+    },
+    {
+      "arm": "context_ground",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 0,
+        "harms": 0,
+        "changed": 6
+      },
+      "validation": {
+        "correct": 763,
+        "baseline": 762,
+        "fixes": 1,
+        "harms": 0,
+        "changed": 11
+      }
+    },
+    {
+      "arm": "context_ground",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1476,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 5,
+        "changed": 79
+      }
+    },
+    {
+      "arm": "residual_ground",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 4,
+        "changed": 67
+      }
+    },
+    {
+      "arm": "residual_ground",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1479,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 1,
+        "changed": 35
+      },
+      "validation": {
+        "correct": 760,
+        "baseline": 762,
+        "fixes": 1,
+        "harms": 3,
+        "changed": 26
+      }
+    },
+    {
+      "arm": "residual_ground",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1475,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 6,
+        "changed": 101
+      }
+    },
+    {
+      "arm": "both_ground",
+      "alpha": 0.1,
+      "held": {
+        "correct": 1478,
+        "baseline": 1479,
+        "fixes": 3,
+        "harms": 4,
+        "changed": 74
+      }
+    },
+    {
+      "arm": "both_ground",
+      "alpha": 0.25,
+      "held": {
+        "correct": 1480,
+        "baseline": 1479,
+        "fixes": 1,
+        "harms": 0,
+        "changed": 34
+      },
+      "validation": {
+        "correct": 761,
+        "baseline": 762,
+        "fixes": 1,
+        "harms": 2,
+        "changed": 24
+      }
+    },
+    {
+      "arm": "both_ground",
+      "alpha": 0.5,
+      "held": {
+        "correct": 1475,
+        "baseline": 1479,
+        "fixes": 2,
+        "harms": 6,
+        "changed": 101
+      }
+    }
+  ],
+  "selected": {
+    "arm": "context_ground",
+    "alpha": 0.25,
+    "held": {
+      "correct": 1479,
+      "baseline": 1479,
+      "fixes": 0,
+      "harms": 0,
+      "changed": 6
+    },
+    "validation": {
+      "correct": 763,
+      "baseline": 762,
+      "fixes": 1,
+      "harms": 0,
+      "changed": 11
+    }
+  },
+  "seconds": 136.97955020004883,
+  "test_opened": false
+}

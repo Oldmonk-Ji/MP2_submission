@@ -1,0 +1,18 @@
+{
+  "method": "semantic_ground",
+  "validation_correct": 763,
+  "validation_n": 798,
+  "validation_accuracy": 95.6140350877193,
+  "asset_bytes": 16522247,
+  "asset_MiB": 15.756842613220215,
+  "validation_fresh_seconds": 35.06347499997355,
+  "test_evaluated": false,
+  "test_used_for_tuning_or_selection": false,
+  "selected_for_submission": "round235",
+  "reference_machine_certified": false,
+  "local_cpu": "Intel Core i7-11800H",
+  "threads": 4,
+  "leaderboard_submitted": false,
+  "frozen_hashes_unchanged": true,
+  "completed_utc": "2026-10-27T03:32:53.474252+00:00"
+}

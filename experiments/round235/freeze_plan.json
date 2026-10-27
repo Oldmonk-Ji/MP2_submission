@@ -1,0 +1,29 @@
+{
+  "selected": {
+    "arm": "context_ground",
+    "alpha": 0.25,
+    "held": {
+      "correct": 1479,
+      "baseline": 1479,
+      "fixes": 0,
+      "harms": 0,
+      "changed": 6
+    },
+    "validation": {
+      "correct": 763,
+      "baseline": 762,
+      "fixes": 1,
+      "harms": 0,
+      "changed": 11
+    }
+  },
+  "asset_bytes": 16522247,
+  "test_opened": false,
+  "test_authorized": false,
+  "source_hashes": {
+    "round234_semantic_verification.py": "c0e8c0bb11d6e715fbecbc1e90233614f846f5dbda4e7be6775511195889b1b3",
+    "round235_quadratic_inference.py": "c5d43e50273c9ffd8f85ac2ac9c69db0e77cff6481cffd7e95e11c7c1eaedd7f",
+    "round235_selector.py": "4fafc621ce497b493fe1d46687f526089710a36ca40f7e64618b971198c66a58"
+  },
+  "note": "All new decisions use TRAIN/VAL only; previous aggregate test results are not an optimization criterion."
+}

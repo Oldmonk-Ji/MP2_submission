@@ -1,3 +1,13 @@
+# New frozen development candidate: round235
+
+**Validation 763/798 (95.6140%); held 1479/1582; 15.7568 MiB. TEST has not been evaluated for this candidate.**
+
+The quadratic expert now conditions numerical verification features on the shared semantic context (32 whitened context coordinates crossed with 82 standardized numeric/grounding features). This adds 10,534 checkpoint bytes relative to round232. All projections and weights fit supplied TRAIN only; TRAIN/VAL development selected the new candidate.
+
+Guarded entrypoint: experiments/round235/frozen/method/entrypoint.py. Checkpoint: experiments/round235/bundle/. Remote Xeon 8352V reproduced 763/798; a 467-question validation timing proxy took 24.97 seconds in fresh four-thread prediction/scoring processes. Existing official test scores below belong to their named older frozen candidates.
+
+---
+
 
 ## Authorized frozen round232 test evaluation
 

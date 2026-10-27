@@ -35,6 +35,15 @@ Reproduce the guarded validation and proxy timing with:
 
 ## Directory isolation
 
+New frozen round235 is deployed alongside round232. It reproduced VAL 763
+locally with 143 interface samples passing and 85 frozen hashes unchanged.
+Its checkpoint has 16,522,247 bytes (15.7568 MiB). Remote Xeon 8352V also
+reproduced 763; the 467-question validation timing proxy took 24.97 seconds
+in fresh four-thread prediction/scoring processes. Its TEST is unmeasured;
+the remote validation command is:
+
+    nice -n 10 taskset -c 60-63 ../.venv/bin/python deployment/validate_remote.py --round 235 --expected 763
+
 The deployment uses its own dase7506-mp2 directory with:
 
 - repo/: project sources, frozen checkpoint, private train/validation data.

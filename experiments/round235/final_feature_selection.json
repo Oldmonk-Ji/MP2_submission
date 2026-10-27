@@ -1,0 +1,10 @@
+{
+  "best_new": {
+    "arm": "semantic_ground",
+    "correct": 763,
+    "bundle": "experiments/round235/bundle"
+  },
+  "selected": "round235",
+  "test_target_fixed_before_test": true,
+  "test_used_for_selection": false
+}
